@@ -1,50 +1,50 @@
 [
   {
     "comando": "/captcha 1",
-    "descricao": "utiliza para tirar ant fakes"
+    "descripcion": "se usa para activar el antífakes"
   },
   {
     "comando": "/rei",
-    "descricao": "falará qual nação você é o rei"
+    "descripcion": "dirá de qué nación eres el rey"
   },
   {
     "comando": "/ceu",
-    "descricao": "falará se você vai pro céu ou não..."
+    "descripcion": "dirá si vas al cielo o no..."
   },
   {
     "comando": "/inferno",
-    "descricao": "diz quantos % de chance você vai pro inferno"
+    "descripcion": "indica el porcentaje de probabilidad de que vayas al infierno"
   },
   {
     "comando": "/preto",
-    "descricao": "dissera que tipo de preto você 🫵 é"
+    "descripcion": "dirá qué tipo de negro eres 🫵"
   },
   {
     "comando": "/namorada",
-    "descricao": "dissera até quando sua namorada virá"
+    "descripcion": "dirá hasta cuándo vendrá tu novia"
   },
   {
     "comando": "/job",
-    "descricao": "falará se você é do job ou não"
+    "descripcion": "dirá si eres del trabajo o no"
   },
   {
     "comando": "/noia",
-    "descricao": "verá sua porcentagem de noia!!!"
+    "descripcion": "mostrará tu porcentaje de paranoia!!!"
   },
   {
     "comando": "/gimage2",
-    "descricao": "mandara sempre imagens em hd+"
+    "descripcion": "siempre enviará imágenes en HD+"
   },
   {
     "comando": "/fechargp",
-    "descricao": "ele ira fechar o grupo no horário marcado é será todos os dias"
+    "descripcion": "cerrará el grupo en el horario marcado todos los días"
   },
   {
     "comando": "/videobug",
-    "descricao": "fazera um vídeo bug atravéz dê uma foto quê voce manda"
+    "descripcion": "hará un vídeo bug a partir de una foto que envíes"
   },
   {
     "comando": "/antiflood",
-    "descricao": "funcionara se mandarem 25 mensagens por minuto"
+    "descripcion": "funcionará si envían 25 mensajes por minuto"
   }
 ]
