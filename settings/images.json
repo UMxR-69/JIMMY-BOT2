@@ -4,7 +4,7 @@
   },
   "Main": {
     "comment": "Logo principal da BOT, é usada no Menu e em alguns comandos, recomendado usar uma logo na vertical.",
-    "value": "https://files.catbox.moe/grbi2u.png"
+    "value": "https://i.pinimg.com/originals/4d/47/d7/4d47d7e49cd325f8a13014d4950203b3.jpg"
   },
   "Level": {
     "comment": "Fundo nescessário para a criação da imagem (através da API)  notificar a conquista de um novo level, como também a verificação do seu patente atual.",
