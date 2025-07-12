@@ -3,7 +3,7 @@
 <h1 align="center">
 <p>
 <!-- Aquí pon el logo o imagen de JIMMY-BOT2 -->
-<img src="[https://tuimagen.com/logo.png](https://i.ytimg.com/vi/US1k1QYVwJw/maxresdefault.jpg)" alt="JIMMY-BOT2" width="720">
+<img src="https://i.pinimg.com/originals/4d/47/d7/4d47d7e49cd325f8a13014d4950203b3.jpg" alt="JIMMY-BOT2" width="720">
 </p>
 
 <p align="center">
