@@ -1,394 +1,449 @@
 exports.registerUserLFM = (p) => {
-    return `Você esqueceu de colocar o user do LastFM após o comando. Lembre-se de sincronizar com o Spotify!`   
- }
+    return `Olvidaste colocar el usuario de LastFM después del comando. ¡Recuerda sincronizar con Spotify!`
+}
 
 exports.ErrorBaileys_401 = () => {
-response = ["Houve uma desconexão, re-escaneie o QR, se preciso... Estou reiniciando!", "Minha sessão desconectou, pode reconectar e escanear o QR novamente? Gerando qr-code!", "Você me desconectou? A sessão precisa ser escaneada novamente... Estou reiniciando!"]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "Hubo una desconexión, vuelve a escanear el QR si es necesario... ¡Estoy reiniciando!",
+        "Mi sesión se desconectó, ¿puedes reconectar y escanear el QR otra vez? ¡Generando código QR!",
+        "¿Me desconectaste? La sesión debe escanearse de nuevo... ¡Estoy reiniciando!"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_408 = () => {
-response = ["A sessão sofreu um timeout, recarregando...", "O tempo de resposta esgotou, recarregando...", "Recarregando a sessão por conta de um timeout..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "La sesión sufrió un timeout, recargando...",
+        "Se agotó el tiempo de respuesta, recargando...",
+        "Recargando la sesión debido a un timeout..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_411 = () => {
-response = ["A sessão salva não bate com a conexão salva, reiniciando sua sessão...", "O arquivo de sessão parece incorreto, estou tentando recarregar...", "Falha ao conectar, pois a sessão parece incorreta, recarregando..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "La sesión guardada no coincide con la conexión, reiniciando sesión...",
+        "El archivo de sesión parece incorrecto, intentando recargar...",
+        "Error al conectar, la sesión parece incorrecta, recargando..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_428 = () => {
-response = ["A conexão fechou, sua internet pode ter caído? Tentando reconectar...", "Não foi possível manter a conexão com o WhatsApp, tentando de novo...", "Sua conexão com o WhatsApp parece ter caído, reconectando..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "La conexión se cerró, ¿tu internet se cayó? Intentando reconectar...",
+        "No se pudo mantener la conexión con WhatsApp, intentando de nuevo...",
+        "Parece que tu conexión con WhatsApp cayó, reconectando..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_440 = () => {
-response = ["Outra sessão do WhatsApp Web foi aberta no meu número, feche-a...", "Você possui outra sessão do WhatsApp no meu número? Fecha para usar...", "Existem muitas sessões do WhatsApp conectadas no meu número, feche-as..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "Otra sesión de WhatsApp Web fue abierta en mi número, ciérrala...",
+        "¿Tienes otra sesión de WhatsApp en mi número? Ciérrala para usar este...",
+        "Hay demasiadas sesiones de WhatsApp conectadas en mi número, ciérralas..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_500 = () => {
-response = ["A sessão parece mal configurada, estarei tentando reconectar...", "Uma reconexão será feita, pois a sessão foi considerada incorreta...", "A sessão parece incorreta, a conexão estará sendo reinicializada..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "La sesión parece mal configurada, intentaré reconectar...",
+        "Se hará una reconexión porque la sesión se consideró incorrecta...",
+        "La sesión parece incorrecta, la conexión será reiniciada..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.ErrorBaileys_515 = () => {
-response = ["Estou reiniciando, pois a sessão pediu que fosse atualizada...", "O sistema pediu para reiniciar, estou fazendo isso automaticamente...", "Meu código será reinicializado para estabilizar a conexão..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "Estoy reiniciando porque la sesión pidió actualización...",
+        "El sistema solicitó reinicio, lo hago automáticamente...",
+        "Mi código será reiniciado para estabilizar la conexión..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.open = () => {
-response = ["Sessão aberta com o WhatsApp-Web com sucesso! Próximos logs abaixo:", "Conectado(a) com sucesso ao WhatsApp-Web! Próximos logs abaixo:", "Sessão carregada com sucesso senhor(a), próximos logs abaixo:", "Online, conexão estabilizada com sucesso senhor(a), próximo logs abaixo:"]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "Sesión abierta con WhatsApp-Web con éxito. Próximos logs abajo:",
+        "Conectado exitosamente a WhatsApp-Web. Próximos logs abajo:",
+        "Sesión cargada con éxito, próximos logs abajo:",
+        "Online, conexión estabilizada con éxito, próximos logs abajo:"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.connecting = () => {
-response = ["Inicializando ou reiniciando meu sistema, aguarde mestre...", "Só um segundinho, estou carregando as informações nescessárias.", "Inicialização do bot está em andamento! Carregando informações, aguarde...", "Já tomou um copo de água hoje? Se não vai lá! Iniciando bot...", "Oiiieee fofuxo, tudo baum? Já tô iniciando gostoso, calma aí..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "Inicializando o reiniciando el sistema, espera un momento...",
+        "Un segundo, estoy cargando la información necesaria.",
+        "El bot está iniciando, carga en progreso, aguarda...",
+        "¿Ya tomaste un vaso de agua hoy? Si no, ve por uno. Iniciando bot...",
+        "¡Hola, bonito! Ya estoy arrancando, calma un poco..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
-exports.blackList = (GroupMetadata_, sab2) => { 
-participant = sab2.participants[0].split("@")[0]
-response = [`*@${participant}* foi removido do *${GroupMetadata_.subject}* por estar na lista negra...`, `Olha quem deu as caras por aqui! *@${participant}* achava que eu não ia te ver de novo bobinho(a)? 💅🏻`, `*@${participant}* achou que ia passar despercebido? Achou errado! Bye bye... 😵‍💫`, `😨 Oh my god! *@${participant}* acaba de ser banido do grupo, por estar na lista negra.`]
-return response[Math.floor(Math.random() * response.length)]
+exports.blackList = (GroupMetadata_, sab2) => {
+    const participant = sab2.participants[0].split("@")[0];
+    const responses = [
+        `*@${participant}* fue removido de *${GroupMetadata_.subject}* por estar en la lista negra...`,
+        `¡Mira quién volvió! *@${participant}* pensó que no te vería de nuevo, tonto(a) 💅🏻`,
+        `*@${participant}* pensó que pasaría desapercibido, ¡error! Bye bye... 😵‍💫`,
+        `😨 ¡Oh Dios! *@${participant}* acaba de ser baneado del grupo por estar en la lista negra.`
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.phrasesLeft = (sab2, encodeURIComponent) => {
-response = ["Devemos brindar pela partida dele(a)?", "Menos um nessa indústria vital...", "Nada pra ver aqui, ele saiu por 'acidente'..."]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        "¿Brindamos por su partida?",
+        "Menos uno en esta industria vital...",
+        "Nada que ver aquí, se fue por 'accidente'..."
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.promoteUser = (usern) => {
-response = [ 
-    `🍻 @${usern.split("@")[0]} foi promovido ao cargo de adminstrador do barzinho.`, 
-    `Atenção participantes! Foi promovido + 1 adminstrador(a) no bar. 🍻🤪 Parabéns @${usern.split("@")[0]}!`, 
-    `Acaba de entrar um novo extraterrestre na administração do grupo! 👽 Parabéns @${usern.split("@")[0]}!`
-];
-  return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        `🍻 @${usern.split("@")[0]} fue promovido a administrador del bar.`,
+        `¡Atención! Un nuevo administrador ha sido agregado. 🍻🤪 Felicidades @${usern.split("@")[0]}!`,
+        `¡Un extraterrestre nuevo en la administración! 👽 Felicidades @${usern.split("@")[0]}!`
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.rebaixarUser = (usern) => {
-response = [
-  `🗣️ Esperei tanto por este dia e chegou!  @${usern.split("@")[0]} acaba de ser rebaixado para membro comum.`,
-  `👋🏼 Bye-bye @${usern.split("@")[0]}! Foi uma péssima escolha dos superiores escolherem você para ser adminstrador desse barzinho falido... Beijos!`,
-  `🥱 Não é o martelo do Thor e sim o martelo do juízo final aqui no bar! O julgamento de @${usern.split("@")[0]} é perder o admin no grupo.`
-];
-  return response[Math.floor(Math.random() * response.length)];
+    const responses = [
+        `🗣️ ¡Esperé tanto por este día! @${usern.split("@")[0]} fue degradado a miembro común.`,
+        `👋🏼 Adiós @${usern.split("@")[0]}! Mala elección para admin en este bar decadente... Besos!`,
+        `🥱 No es el martillo de Thor, es el juicio final para @${usern.split("@")[0]}: pierde el admin.`
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.phrasesWelcome = (mdata_2, sab2, encodeURIComponent) => {
-response = [`ao grupo ${encodeURIComponent(mdata_2.subject)}`, `Um novo integrante acaba de cair de paraquedas aqui no grupo...`, "Leia as regras e divirta-se!", "Mais um nessa indústria vital...", "Gostaria de um chá enquanto lê as regras?", "Saudações membro novo, aqui é a gerente do estabelecimento!"]
-return response[Math.floor(Math.random() * response.length)]
+    const responses = [
+        `al grupo ${encodeURIComponent(mdata_2.subject)}`,
+        "Un nuevo integrante cayó de sorpresa en el grupo...",
+        "Lee las reglas y diviértete!",
+        "Otro más en esta industria vital...",
+        "¿Quieres un té mientras lees las reglas?",
+        "Saludos nuevo miembro, aquí la gerente del lugar!"
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
 exports.wait = () => {
-response = [
-    "Estamos alimentando o motor da criatividade com ideias frescas. Só mais um pouco! 🚂",
-    "Os algoritmos estão dançando um balé sincronizado para encontrar a resposta perfeita. Aguarde um instante! 💃",
-    "Os piratas da informação estão desenterrando o tesouro que você pediu. Estamos quase lá! 🏴‍☠️",
-    "Estamos conectando os pontos no mapa do conhecimento. Sua resposta está a caminho! 📍",
-    "Os supercomputadores estão competindo para ver quem resolve primeiro. Só mais um segundo! 🖥️",
-    "Estamos costurando sua resposta com linhas de dados. Já estamos na reta final! 🪡",
-    "Os unicórnios do aprendizado estão atravessando o arco-íris da sabedoria. Quase lá! 🌈",
-    "Estamos sincronizando o relógio do tempo para trazer a solução exata. Aguarde um pouco mais! 🕰️",
-    "Os foguetes estão carregando sua pergunta para o próximo nível. Quase atingimos a órbita! 🚀",
-    "Estamos explorando cavernas ocultas do conhecimento em busca da solução. Já já voltamos! 🗻",
-    "Os trovões da inovação estão ecoando. A resposta virá como um raio! ⚡",
-    "Os enigmas estão se desdobrando no labirinto da informação. Já já teremos a saída! 🌀",
-    "Os pinguins do raciocínio lógico estão marchando rumo à resposta. Aguarde só mais um pouquinho! 🐧",
-    "Estamos mergulhando no oceano de dados. A resposta já está subindo à superfície! 🌊",
-    "Os engenheiros do processamento estão apertando os últimos parafusos. Só mais um momento! 🔧",
-    "Estamos captando ondas de rádio interestelares para trazer a melhor solução. Sintonizando... 📡",
-    "Os coelhos da eficiência estão pulando para agilizar o processo. Está quase pronto! 🐇",
-    "Os planetas estão se alinhando para dar lugar à sua resposta. Quase lá! 🌍",
-    "Os alquimistas digitais estão refinando o elixir da sabedoria. Um pouquinho mais de paciência! 🧪",
-    "Estamos vasculhando o baú das memórias para encontrar a resposta. Já já voltamos! 🗝️",
-    "Os mecânicos do universo estão reparando as engrenagens do tempo. Só mais um instante! ⚙️",
-    "Os astrônomos estão mapeando as constelações para garantir a precisão da resposta. Quase lá! 🌟",
-    "Estamos programando uma dança sincronizada de bits para trazer a solução. Fique atento! 💻",
-    "Os bardos do conhecimento estão escrevendo uma canção épica para a sua resposta. Aguarde o final! 🎵",
-    "Os ninjas digitais estão atravessando barreiras invisíveis para chegar até você. Só mais um pouco! 🥷",
-    "Os inventores estão testando sua última criação para entregar a resposta ideal. Fique tranquilo! 🛠️",
-    "Os ursos polares estão caminhando pelo Ártico do processamento. A resposta já está chegando! 🐻‍❄️",
-    "Estamos construindo um castelo de ideias para acomodar sua pergunta. Um momento mais! 🏰",
-    "Os super-heróis da lógica estão salvando o dia. Sua resposta já está a caminho! 🦸‍♂️",
-    "Estamos cozinhando ideias no caldeirão da sabedoria. Só mais um tempinho! 🍵",
-    "Os cientistas estão testando hipóteses para trazer a solução exata. Aguarde! 🔬",
-    "Peço que aguarde, os comandos são verificados em vários sistemas, para evitar que sofram erros, por isso é comum que demorem, se puder esperar finalizar antes de usar novamente, serei muito grataa! 🕒",
-    "Entendido amore, até lá, espere enquanto faço isso, pode demorar um pouquinho, por isso, evite usar comandos demorados ou pesados até terminar, obrigadaa por esperar! <3 🌈",
-    "Aguarde um momento enquanto preparo a poção mágica de dados! 🧙‍♂️",
-    "Estamos viajando pela velocidade da luz para buscar as informações solicitadas. Aguarde só um pouco! 🚀",
-    "Estamos reorganizando a biblioteca de Alexandria para encontrar a resposta. Aguarde, por favor! 📚",
-    "Enquanto isso, Darth Vader está tentando encontrar o caminho certo para sua pergunta no lado negro da Força. Aguarde! ⚔️",
-    "Estamos cultivando as respostas com cuidado e carinho em nosso jardim do conhecimento. A paciência é uma virtude! 🌱",
-    "Estamos contando os grãos de areia em todas as praias do mundo para encontrar a resposta. Aguarde pacientemente! 🏖️",
-    "Enquanto isso, estamos ensinando pombos-correios a carregar mensagens para trazer sua resposta. Aguarde, eles estão em treinamento! 🕊️",
-    "Aguarde um momento enquanto damos um trato no nosso hamster de processamento. Ele está quase terminando de correr na roda! 🐹",
-    "Estamos esperando que os minions terminem de trabalhar nas respostas. Eles são um pouco atrapalhados, mas são dedicados! 👷‍♂️",
-    "Calma aí, estou indo o mais rápido que posso! Apenas mais alguns segundos e estaremos prontos para a ação! 🏎️",
-    "Estou colocando meus bits para trabalhar! Isso pode levar um pouquinho, então aproveite para relaxar e tomar uma xícara de café! ☕",
-    "Aguarde enquanto invoco meus poderes mágicos de processamento! É como esperar a varinha mágica fazer sua magia - só mais um pouquinho! 🪄",
-    "Segure suas emoções! Estamos quase lá, prometo. Enquanto isso, que tal contar ovelhinhas? 🐑",
-     "Não desista de mim agora! Estou trabalhando duro nos bastidores para preparar algo incrível. Só mais um pouco e estaremos prontos! 💪",
-    "Estou pedindo reforços aos meus colegas códigos para acelerar o processo! Aguarde um momento enquanto eles se organizam. Obrigado pela paciência! 😊",
-    "Respira fundo! A maratona de bits está chegando ao fim. Continue esperando só um pouquinho mais. Estamos quase lá... 🏁",
-    "Estou fazendo o meu melhor para não deixar você esperando muito! Enquanto isso, pense em quantos bytes há no universo. É uma distração interessante, não acha? 🤔",
-    "Aguarde enquanto os hamsters nos meus servidores correm mais rápido nas suas rodinhas. Eles estão dando o melhor de si para acelerar as coisas! 🐹",
-    "Os bytes estão dançando a valsa enquanto processamos sua solicitação. Só mais um instante! 🎻",
-    "Estamos calibrando o telescópio para encontrar a resposta certa nas estrelas. Aguarde um pouquinho! ✨",
-    "A resposta está passando pelo detector de qualidade. Quase pronta para você! 🛠️",
-    "Estamos desenhando sua resposta à mão, com todo o cuidado do mundo. Só mais um pouquinho! 🎨",
-    "Estamos organizando um desfile de ideias para encontrar a mais brilhante. Só um instante! 🎭",
-    "Os astronautas do conhecimento estão flutuando no espaço em busca da solução. Quase lá! 🧑‍🚀",
-    "Estamos construindo a ponte perfeita para atravessar até a resposta. Segure firme! 🌉",
-    "Os arqueiros da informação estão mirando no alvo certo. Só mais um pouco! 🎯",
-    "Estamos puxando a resposta direto do chapéu do mágico. Prepare-se! 🎩",
-    "Os robôs estão recarregando suas baterias para continuar o trabalho. Já já voltamos! 🔋",
-    "Estamos subindo uma montanha de dados para trazer a resposta do topo. Um instante mais! 🏔️",
-    "Os detetives da lógica estão analisando pistas. Eles estão quase lá! 🔍",
-    "Estamos atravessando um labirinto digital para encontrar a saída certa. Espere um pouco! 🏛️",
-    "Os dançarinos dos algoritmos estão em ritmo acelerado. A resposta está prestes a surgir! 💃",
-    "Os engenheiros estão reforçando as bases do conhecimento. Só mais um segundo! 🏗️",
-    "Estamos decifrando mensagens criptografadas para encontrar a solução. Quase lá! 🔐",
-    "Os artistas do raciocínio estão esculpindo sua resposta com precisão. Um momento mais! 🗿",
-    "Estamos explorando a selva do saber para trazer algo especial. Aguarde um instante! 🌴",
-    "Os cavaleiros da lógica estão protegendo a resposta em sua jornada. Já está vindo! 🛡️",
-    "Estamos testando cada combinação de possibilidades para entregar a melhor solução. Espere só mais um pouco! 🔢",
-    "Os foguetes da inteligência artificial estão se preparando para a decolagem. Pronto para o impacto! 🚀",
-    "Estamos afinando os instrumentos para a sinfonia perfeita de respostas. Já vai começar! 🎼",
-    "Os mineradores de dados estão extraindo os melhores insights. Só mais um momento! ⛏️",
-    "Os exploradores submarinos estão mergulhando fundo no oceano digital. A resposta já está subindo! 🐋",
-    "Os guardiões do conhecimento estão liberando o portal. Quase lá! 🛡️",
-    "Os faróis da sabedoria estão iluminando o caminho. Sua resposta está quase visível! 🏮",
-    "Estamos em uma corrida contra o tempo para trazer a resposta. Só mais um instante! ⏳",
-    "Os programadores do destino estão compilando o código da solução. Espere mais um pouco! 👨‍💻",
-    "Os acrobatas da lógica estão equilibrando ideias para encontrar a melhor. Aguarde! 🎪",
-    "Os cientistas malucos estão ajustando suas invenções. Só mais um momento! 🧪",
-    "Os corredores da criatividade estão chegando na reta final. A qualquer momento, sua resposta estará aqui! 🏃",
-    "Os pescadores de dados estão puxando as redes cheias de informações. Já já elas chegam à superfície! 🎣",
-    "Estamos afiando as espadas da análise para cortar direto à solução. Um momento mais! ⚔️",
-    "Os construtores do pensamento estão finalizando o projeto da sua resposta. Espere só mais um pouco! 🛠️",
-    "Os relâmpagos da inteligência estão acendendo as ideias. Sua resposta está quase pronta! 🌩️",
-    "Estamos ativando o modo turbo para finalizar isso o mais rápido possível. Já já entregamos! 🏎️",
-    "Os mágicos das respostas estão realizando truques avançados. Quase lá! 🧙",
-    "Os super-heróis da sabedoria estão correndo para salvar o dia com sua solução. Prepare-se! 🦸",
-    "Os navegadores das estrelas estão ajustando os telescópios para localizar a resposta. Só mais um instante! 🔭",
-    "Os alpinistas de ideias estão escalando as alturas da criatividade. A resposta está quase aqui! 🧗",
-    "Os samurais da precisão estão polindo os detalhes finais. Segure firme! 🗡️",
-    "Estamos sintonizando antenas gigantes para captar as ondas certas. Já já chega! 📻",
-    "Os mestres do tempo estão sincronizando cada segundo para não demorar mais. Um pouco mais de paciência! ⏲️",
-    "Os gnomos da informação estão trabalhando nos bastidores. Eles pedem só mais um minutinho! 🤏",
-    "Estamos ajustando os parafusos da máquina do tempo para encontrar a solução perfeita. Segure firme! ⏳",
-    "A mágica está acontecendo nos bastidores. Apenas um instante e tudo estará pronto! 🪄",
-    "Os robôs estão trocando pilhas para continuar o trabalho. Fique por aqui, já já voltamos! 🤖",
-    "Estamos alinhando os planetas para que tudo saia perfeito. Aguarde só um pouquinho! 🪐",
-    "Os elfos da tecnologia estão revisando os últimos detalhes. Sua paciência será recompensada! 🧝",
-    "O relógio está girando mais rápido para que você espere menos. Só mais um instante! ⏰",
-    "Estamos na fila da criatividade para pegar a melhor ideia. Só mais um segundo! 🎯",
-    "Estamos tecendo sua resposta fio a fio, como uma obra-prima. Aguarde só um pouco mais! 🧵",
-    "A resposta está atravessando o multiverso. Quase chegando! 🌌",
-    "Os bits estão resolvendo um enigma entre eles. Quando terminarem, sua resposta estará pronta! 🧩",
-    "Estamos navegando em águas desconhecidas para encontrar a resposta perfeita. Aguarde enquanto ajustamos as velas! ⛵",
-    "Os dragões da sabedoria estão voando em busca da solução. Só mais um pouquinho! 🐉",
-    "Estamos decifrando runas antigas para descobrir o que você precisa. Quase lá! 🔮",
-    "Os dados estão girando como uma roleta de cassino. A qualquer momento, teremos a resposta! 🎰",
-    "Estamos conferindo cada detalhe como um detetive em busca de pistas. Segure firme! 🕵️‍♂️",
-    "A resposta está atravessando um portal interdimensional. Quase chegando! 🌌",
-    "Estamos configurando os cabos da internet intergaláctica para trazer o que você pediu. Aguarde! 🌐",
-    "Os alquimistas estão finalizando a fórmula secreta. Só mais um instante! ⚗️",
-    "Estamos empilhando blocos de informações como em um jogo de Tetris. Faltam poucas peças! 🧱",
-    "Os ventos da sabedoria estão soprando em nossa direção. Aguarde enquanto ajustamos as velas! 🌬️",
-    "Estamos esquentando as turbinas da criatividade. Preste atenção, o lançamento é iminente! 🚀",
-    "Os trolls do conhecimento estão cruzando uma ponte para trazer sua resposta. Só mais um pouquinho! 🌉",
-    "Estamos organizando as estrelas no céu para entregar a mensagem perfeita. Segure a emoção! ✨",
-    "Os pássaros do entendimento estão trazendo novidades. Só mais um instante! 🐦",
-    "A resposta está escalando o Everest do conhecimento. Em breve, ela estará em suas mãos! 🏔️",
-    "Estamos decifrando códigos misteriosos para trazer a solução. Só mais alguns segundos! 🧑‍💻",
-    "Os robôs estão passando por manutenção enquanto processam sua solicitação. Tenha paciência! 🤖",
-    "Os circuitos estão esquentando de tanto trabalhar. A resposta está quase pronta! 🔥",
-    "Estamos cozinhando a resposta em fogo lento para garantir o sabor perfeito. Só mais um pouquinho! 🍲",
-    "Os mágicos da informação estão ajustando seus truques. Prepare-se para a revelação! 🎩",
-    "Estamos polindo os pixels para que sua resposta seja impecável. Aguarde só mais um momento! 🖌️",
-    "Os exploradores estão mapeando o caminho para a solução. Quase chegando ao destino! 🗺️",
-    "Estamos misturando as cores certas na paleta do conhecimento. Sua obra-prima estará pronta em breve! 🎨",
-    "Os ninjas do saber estão em missão secreta para trazer a resposta. Eles são rápidos, mas cuidadosos! 🥷",
-    "Estamos escrevendo a resposta com penas de ouro. Só mais um instante! ✍️",
-    "Os tempos antigos nos enviaram um pergaminho. Estamos decifrando a mensagem para você! 📜",
-    "Estamos alinhando satélites para captar a melhor solução. Segure firme! 🛰️",
-    "Os leões do raciocínio estão rugindo no caminho certo. Só mais alguns segundos! 🦁"
-]
+    const responses = [
+        "Estamos alimentando el motor de la creatividad con ideas frescas. ¡Un momento más! 🚂",
+        "Los algoritmos bailan sincronizados para hallar la respuesta perfecta. Aguarda un instante. 💃",
+        "Los piratas de la información desentierran el tesoro que pediste. ¡Casi listo! 🏴‍☠️",
+        "Conectamos los puntos en el mapa del conocimiento. Tu respuesta viene en camino. 📍",
+        "Los supercomputadores compiten para resolver primero. Sólo un segundo más. 🖥️",
+        "Cosiendo tu respuesta con hilos de datos. Ya casi terminamos. 🪡",
+        "Los unicornios del aprendizaje cruzan el arcoíris de la sabiduría. ¡Casi llegamos! 🌈",
+        "Sincronizando el reloj del tiempo para traer la solución exacta. Espera un poco más. 🕰️",
+        "Los cohetes cargan tu pregunta para el próximo nivel. Casi en órbita. 🚀",
+        "Exploramos cavernas ocultas del conocimiento. ¡Volvemos pronto! 🗻",
+        "Los truenos de la innovación retumban. La respuesta vendrá como un rayo. ⚡",
+        "Los enigmas se desdoblan en el laberinto de información. ¡Ya casi salimos! 🌀",
+        "Los pingüinos del raciocinio lógico marchan hacia la respuesta. Sólo un poquito más. 🐧",
+        "Nos sumergimos en el océano de datos. La respuesta sube a la superficie. 🌊",
+        "Los ingenieros del procesamiento ajustan los últimos tornillos. Un momento más. 🔧",
+        "Captamos ondas radiointerstelar para traer la mejor solución. Sintonizando... 📡",
+        "Los conejos de la eficiencia saltan para acelerar el proceso. Casi listo. 🐇",
+        "Los planetas se alinean para tu respuesta. Casi ahí. 🌍",
+        "Los alquimistas digitales refinan el elixir de la sabiduría. Un poco más de paciencia. 🧪",
+        "Buscamos en el baúl de los recuerdos para encontrar la respuesta. Volvemos pronto. 🗝️",
+        "Los mecánicos del universo reparan las ruedas del tiempo. Sólo un instante más. ⚙️",
+        "Los astrónomos mapean constelaciones para la precisión de la respuesta. Casi listo. 🌟",
+        "Programamos una danza sincronizada de bits para la solución. Presta atención. 💻",
+        "Los bardos del conocimiento escriben una canción épica para tu respuesta. Aguarda el final. 🎵",
+        "Los ninjas digitales atraviesan barreras invisibles para llegar a ti. Sólo un poco más. 🥷",
+        "Los inventores prueban su última creación para la respuesta ideal. Tranquilo. 🛠️",
+        "Los osos polares caminan por el Ártico del procesamiento. La respuesta llega. 🐻‍❄️",
+        "Construimos un castillo de ideas para tu pregunta. Un momento más. 🏰",
+        "Los superhéroes de la lógica salvan el día. Tu respuesta viene. 🦸‍♂️",
+        "Cocinamos ideas en el caldero de la sabiduría. Sólo un poco más. 🍵",
+        "Los científicos testean hipótesis para la solución exacta. Aguarda. 🔬",
+        "Por favor espera, los comandos son verificados en varios sistemas para evitar errores, es común que demoren, gracias por esperar! 🕒",
+        "Entendido, amor, espera mientras hago esto, puede tardar un poco, evita usar comandos pesados hasta que termine, gracias! <3 🌈",
+        "Espera un momento mientras preparo la poción mágica de datos! 🧙‍♂️",
+        "Viajamos a la velocidad de la luz para buscar la información solicitada. Aguarda un poco! 🚀",
+        "Reorganizamos la biblioteca de Alejandría para encontrar la respuesta. Aguarda, por favor! 📚",
+        "Mientras tanto, Darth Vader intenta encontrar el camino en el lado oscuro de la Fuerza. Aguarda! ⚔️",
+        "Cultivamos las respuestas con cuidado en nuestro jardín del conocimiento. La paciencia es virtud! 🌱",
+        "Contamos los granos de arena en todas las playas del mundo para hallar la respuesta. Aguarda pacientemente! 🏖️",
+        "Enseñamos a las palomas mensajeras para traer tu respuesta. Aguarda, están en entrenamiento! 🕊️",
+        "Damos un trato al hámster del procesamiento. Está por terminar de correr en la rueda! 🐹",
+        "Esperamos que los minions terminen de trabajar. Son algo torpes pero dedicados! 👷‍♂️",
+        "Calma, voy lo más rápido posible! Unos segundos más y estaremos listos! 🏎️",
+        "Pongo mis bits a trabajar! Puede tardar un poco, aprovecha para tomar un café! ☕",
+        "Invoco mis poderes mágicos de procesamiento! Como esperar la varita mágica, sólo un poco más! 🪄",
+        "Sujeta tus emociones! Casi listo, mientras tanto, cuenta ovejitas? 🐑",
+        "No me abandones ahora! Trabajo duro para algo increíble. Sólo un poco más! 💪",
+        "Pido refuerzos a mis colegas códigos para acelerar! Gracias por la paciencia! 😊",
+        "Respira! La maratón de bits casi termina. Espera un poco más... 🏁",
+        "Hago lo mejor para no hacerte esperar mucho! Mientras, piensa en cuantos bytes hay en el universo. 🤔",
+        "Los hámsters en mis servidores corren más rápido para acelerar! 🐹",
+        "Los bytes bailan vals mientras procesamos tu solicitud. Un momento! 🎻",
+        "Calibramos el telescopio para encontrar la respuesta en las estrellas. Un poco más! ✨",
+        "La respuesta pasa por el detector de calidad. Casi lista! 🛠️",
+        "Dibujamos tu respuesta a mano, con todo el cuidado. Un poco más! 🎨",
+        "Organizamos un desfile de ideas para hallar la más brillante. Un instante! 🎭",
+        "Los astronautas del conocimiento flotan en el espacio buscando solución. Casi! 🧑‍🚀",
+        "Construimos el puente perfecto para llegar a la respuesta. ¡Aguanta! 🌉",
+        "Los arqueros de la información apuntan al blanco correcto. Un poco más! 🎯",
+        "Sacamos la respuesta del sombrero del mago. Prepárate! 🎩",
+        "Los robots recargan baterías para seguir trabajando. Volvemos pronto! 🔋",
+        "Subimos una montaña de datos para traer la respuesta de la cima. Un momento! 🏔️",
+        "Los detectives de lógica analizan pistas. Casi allí! 🔍",
+        "Atravesamos un laberinto digital para hallar la salida correcta. Espera! 🏛️",
+        "Los bailarines de algoritmos aceleran el ritmo. La respuesta viene! 💃",
+        "Los ingenieros refuerzan las bases del conocimiento. Un segundo! 🏗️",
+        "Desciframos mensajes encriptados para la solución. Casi listo! 🔐",
+        "Los artistas del raciocinio esculpen la respuesta con precisión. Un momento! 🗿",
+        "Exploramos la selva del saber para algo especial. Aguarda! 🌴",
+        "Los caballeros de la lógica protegen la respuesta en su camino. Ya viene! 🛡️",
+        "Probamos cada combinación para entregar la mejor solución. Espera un poco! 🔢",
+        "Los cohetes de inteligencia artificial se preparan para despegar. Listo para el impacto! 🚀",
+        "Afinamos instrumentos para la sinfonía perfecta de respuestas. Ya empieza! 🎼",
+        "Los mineros de datos extraen los mejores insights. Un momento! ⛏️",
+        "Exploradores submarinos bucean en el océano digital. La respuesta sube! 🐋",
+        "Los guardianes del conocimiento liberan el portal. Casi! 🛡️",
+        "Los faros de sabiduría iluminan el camino. La respuesta casi se ve! 🏮",
+        "Corremos contra el tiempo para traer la respuesta. Un instante! ⏳",
+        "Los programadores del destino compilan el código solución. Espera! 👨‍💻",
+        "Los acróbatas de la lógica equilibran ideas para hallar la mejor. Aguarda! 🎪",
+        "Los científicos locos ajustan sus inventos. Un momento! 🧪",
+        "Los corredores de la creatividad llegan a la meta. Tu respuesta ya viene! 🏃",
+        "Los pescadores de datos tiran redes llenas de información. Ya llegan! 🎣",
+        "Afilamos las espadas del análisis para cortar directo a la solución. Un momento! ⚔️",
+        "Los constructores del pensamiento finalizan tu respuesta. Espera! 🛠️",
+        "Los relámpagos de inteligencia encienden ideas. La respuesta casi está! 🌩️",
+        "Activamos modo turbo para terminar rápido. Ya la entregamos! 🏎️",
+        "Los magos de respuestas hacen trucos avanzados. Casi listo! 🧙",
+        "Los superhéroes de la sabiduría corren a salvar el día. Prepárate! 🦸",
+        "Los navegantes de estrellas ajustan telescopios para la respuesta. Un instante! 🔭",
+        "Los alpinistas de ideas escalan la creatividad. La respuesta casi está! 🧗",
+        "Los samuráis de la precisión pulen detalles finales. Aguanta! 🗡️",
+        "Sintonizamos antenas gigantes para captar ondas correctas. Ya llega! 📻",
+        "Los maestros del tiempo sincronizan cada segundo para no tardar más. Paciencia! ⏲️",
+        "Los gnomos de la información trabajan tras bambalinas. Piden un minuto más! 🤏",
+        "Ajustamos tornillos de la máquina del tiempo para la solución perfecta. Aguanta! ⏳",
+        "La magia ocurre tras bastidores. Un instante y listo! 🪄",
+        "Los robots cambian pilas para seguir trabajando. Volvemos! 🤖",
+        "Alineamos planetas para que todo salga perfecto. Aguarda! 🪐",
+        "Los elfos tecnológicos revisan últimos detalles. Tu paciencia será premiada! 🧝",
+        "El reloj gira más rápido para que esperes menos. Un instante! ⏰",
+        "Estamos en la fila de creatividad para la mejor idea. Un segundo! 🎯",
+        "Tejemos tu respuesta hilo a hilo, como una obra maestra. Un poco más! 🧵",
+        "La respuesta cruza el multiverso. Casi llega! 🌌",
+        "Los bits resuelven un enigma. Cuando terminen, tu respuesta estará! 🧩",
+        "Navegamos aguas desconocidas para hallar la solución perfecta. Ajustando velas! ⛵",
+        "Los dragones de sabiduría vuelan en busca de solución. Un poco más! 🐉",
+        "Desciframos runas antiguas para descubrir lo que necesitas. Casi listo! 🔮",
+        "Los datos giran como ruleta de casino. En cualquier momento, respuesta! 🎰",
+        "Revisamos cada detalle como detectives buscando pistas. Aguanta! 🕵️‍♂️",
+        "La respuesta atraviesa portal interdimensional. Casi llega! 🌌",
+        "Configuramos cables de internet intergaláctica para traer lo pedido. Aguarda! 🌐",
+        "Los alquimistas terminan la fórmula secreta. Un instante! ⚗️",
+        "Apilamos bloques de información como Tetris. Quedan pocas piezas! 🧱",
+        "Los vientos de sabiduría soplan a nuestro favor. Ajustamos velas! 🌬️",
+        "Calentamos turbinas de creatividad. Presta atención, lanzamiento inminente! 🚀",
+        "Los trolls del conocimiento cruzan un puente para traer respuesta. Un poco más! 🌉",
+        "Organizamos estrellas para entregar mensaje perfecto. Controla la emoción! ✨",
+        "Los pájaros del entendimiento traen novedades. Un instante! 🐦",
+        "La respuesta escala el Everest del conocimiento. Pronto estará en tus manos! 🏔️",
+        "Desciframos códigos misteriosos para la solución. Sólo segundos! 🧑‍💻",
+        "Los robots hacen mantenimiento mientras procesan tu pedido. Ten paciencia! 🤖",
+        "Los circuitos se calientan de tanto trabajar. La respuesta casi lista! 🔥",
+        "Cocinamos la respuesta a fuego lento para sabor perfecto. Un poco más! 🍲",
+        "Los magos de la información ajustan trucos. Prepárate para la revelación! 🎩",
+        "Pulimos pixeles para que tu respuesta sea impecable. Un momento! 🖌️",
+        "Los exploradores trazan camino para la solución. Casi en destino! 🗺️",
+        "Mezclamos colores en la paleta del conocimiento. Obra maestra casi lista! 🎨",
+        "Los ninjas del saber en misión secreta para la respuesta. Rápidos y cuidadosos! 🥷",
+        "Escribimos la respuesta con plumas de oro. Un instante! ✍️",
+        "Los antiguos nos enviaron un pergamino. Desciframos el mensaje! 📜",
+        "Alineamos satélites para captar mejor solución. Aguanta! 🛰️",
+        "Los leones del raciocinio rugen por el camino correcto. Unos segundos! 🦁"
+    ]
 return response[Math.floor(Math.random() * response.length)]
 }
 
 exports.onlyAdmins = () => {
 response = [
-    'Você não é um adminstrador do grupo, atualmente você é um mero integrante da baderna, então não tem a virtude de usar comandos administrativos! 🧙🏼‍♀️🌟',
-    'Como ousa usar um comando que não lhe pertence o dom de usar! *Somente adminstradores do grupo tem acesso...*',
-    '*Quem é você na fila do pão?* Ponha-se no seu lugar! Este comando é só para seres superiores(adms) do grupo...',
-    'Você não é um dos ademiros, será que você se tornará digno de usar isso?',
-    'Ih ala, um camponês querendo usar comandos da alta patente do grupo. Este comando é só para seres superiores, são os administradores do bar! 🍻🥴',
-    'Quem dera eu autorizar você à usar comandos administrativos sem fazer parte da organização do barzinho. ️🍻',
-    'Esse comando é restrito para somente administradores, dono de grupo, meu chefe ou moderadores, quem sabe um dia você entre em uma dessas listas.'
+    'No eres administrador del grupo, actualmente solo eres un miembro más del desorden, ¡así que no tienes el privilegio de usar comandos administrativos! 🧙🏼‍♀️🌟',
+    '¡Cómo te atreves a usar un comando que no tienes el don de usar! *Solo los administradores del grupo tienen acceso...*',
+    '*¿Quién eres tú en la fila del pan?* ¡Ponte en tu lugar! Este comando es solo para seres superiores (admins) del grupo...',
+    'No eres uno de los adimiradores, ¿serás digno algún día de usar esto?',
+    'Uy, un campesino queriendo usar comandos de alta patente del grupo. Este comando es solo para seres superiores, ¡los administradores del bar! 🍻🥴',
+    'Ojalá te autorizara a usar comandos administrativos sin formar parte de la organización del barcito. 🍻',
+    'Este comando es restringido solo para administradores, dueño del grupo, mi jefe o moderadores. Quizás algún día estés en alguna de estas listas.'
 ]
 return response[Math.floor(Math.random() * response.length)]
 }
 
 exports.onlyOwner = () => {
 response = [
-    '💫👮🏻‍♀ Você não tem nenhum direito de usar este comando, somente meu proprietário tem o poder total de usar!',
-    'Olá intruso, esta é uma área restrita! Somente pessoas autorizadas tem o poder de usar – como eu e meus chefes, ninguém é permitido por aqui! 👮🏻‍♀💫',
-    'Você não faz parte da organização do bot, como quer usar uma funcionalidade além do seu poder senhor(a)? 🧐🍻'
+    '💫👮🏻‍♀ No tienes ningún derecho a usar este comando, ¡solo mi propietario tiene el poder total de usarlo!',
+    'Hola intruso, ¡esta es un área restringida! Solo personas autorizadas tienen el poder de usarlo – como yo y mis jefes, ¡nadie más está permitido aquí! 👮🏻‍♀💫',
+    'No formas parte de la organización del bot, ¿cómo quieres usar una función más allá de tu poder señor(a)? 🧐🍻'
 ];
 return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.onlyGroup = () => {
 response = [
-    'Foi mal amiguinho, mas somente um grupo tem direito de usar de usar este comando...',
-    'Como você quer usar um comando de grupo no privado? 🧐 Se este comando é liberado o uso somente em grupos...',
-   'Fui configurada para este comando ser somente executado em grupos! Por favor, não insista em usar novamente, foi avisado...',
-   'Olá, tudo bem? Esta função está reservada para grupos! Se quiser usar, basta me adicionar (com a permissão do meu querido proprietário), entrar em contato com ele para descobrir sobre grupos oficiais (se houver).️'   
+    'Lo siento amiguito, pero solo un grupo tiene derecho a usar este comando...',
+    '¿Cómo quieres usar un comando de grupo en privado? 🧐 Este comando solo se puede usar en grupos...',
+    'Fui configurada para que este comando solo se ejecute en grupos. Por favor, no insistas en usarlo de nuevo, ya fuiste avisado...',
+    'Hola, ¿todo bien? Esta función está reservada para grupos. Si quieres usarla, solo agrégame (con permiso de mi querido propietario) y contacta con él para saber sobre grupos oficiales (si los hay).️'   
 ];
 return response[Math.floor(Math.random() * response.length)];
 }
-    
+
 exports.onlyPremiumUser = () => {
 response = [
-    'Quem é você? 😵‍💫💫 Você não é um usuário premium, para usar esse comando você deve ser um user vip da bot! Obtenha o premium, entrando em contato com o meu dono senhor(a).',
-    '🌟 *Você não tem poderes o bastante, para usar comandos da lista vip!* Então para usar este comandos, deve-se entrar em contato com o meu proprietário e negociar seu acesso premium...',
-     'Este comando é exclusivo para usuários na lista premium! Você ainda não tem poder suficiente de usar funções vip.'
+    '¿Quién eres? 😵‍💫💫 No eres un usuario premium, para usar este comando debes ser un usuario VIP del bot. Obtén el premium contactando a mi dueño señor(a).',
+    '🌟 *No tienes suficientes poderes para usar comandos de la lista VIP.* Para usar estos comandos debes contactar con mi propietario y negociar tu acceso premium...',
+    'Este comando es exclusivo para usuarios en la lista premium. Aún no tienes poder suficiente para usar funciones VIP.'
 ]
 return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.onlyBotAdmin = () => {
 response = [
-    'Em que hora te falaram que eu posso executar comandos administrativas sem ser adminstradora do grupo? Coloque-me no posto de fiscal do grupo, pois algumas funções dependem do cargo de adm...',
-    '🍻👮🏼‍♀️ Eu não trabalho na segurança do bar ainda! Para me contratar, me coloque como adminstradora do grupo e estarei fazendo meu trabalho sem interrupções.',
-    'Vai com calma! Eu não sou adminstradora para executar certas funções no grupo...'
+    '¿Cuándo te dijeron que puedo ejecutar comandos administrativos sin ser administradora del grupo? Ponme en el puesto de fiscal del grupo, porque algunas funciones dependen del cargo de admin...',
+    '🍻👮🏼‍♀️ ¡Todavía no trabajo en la seguridad del bar! Para contratarme, ponme como administradora del grupo y haré mi trabajo sin interrupciones.',
+    '¡Ve despacio! No soy administradora para ejecutar ciertas funciones en el grupo...'
 ];
 return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.onlyGroupFun = (prefixo) => {
 response = [
-    `🤹🏻‍♀️ - Deseja usar os comandos de diversão em seu grupo? É nescessário a ativação do ${prefixo}modobrincadeira para ser liberado o uso de todos os comandos de interação e diversão dos participantes. (Obs: Somente seres superiores aos camponêses tem autorização de liberar).`, 
-    `O modo brincadeira não está atualmente ativo no grupo, solicite a um adminstrador do grupo para realizar a ativação... 🫤 Para liberar, solicite que execute o comando: *${prefixo}modobrincadeiras 1*.`
+    `🤹🏻‍♀️ - ¿Quieres usar comandos de diversión en tu grupo? Es necesario activar ${prefixo}modobrincadeira para habilitar todos los comandos de interacción y diversión para los participantes. (Nota: Solo seres superiores a los campesinos tienen autorización para activar).`, 
+    `El modo diversión no está activo actualmente en el grupo, solicita a un administrador que lo active... 🫤 Para habilitarlo, ejecuta el comando: *${prefixo}modobrincadeiras 1*.`
   ];
 return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.onlyPrivate = () => {
 response = [
-    '🔐 Hello, o comando só está disponível para o uso em conversas privadas...',
-    '😵‍💫🌟 Hello, o comando é somente liberado em conversas privadas! Mas tome cuidado ao me chamar no privado, meu dono(a) deve ter ativado o anti-pv.'
+    '🔐 Hola, el comando solo está disponible para uso en conversaciones privadas...',
+    '😵‍💫🌟 Hola, el comando solo está habilitado en conversaciones privadas. Pero ten cuidado al llamarme en privado, mi dueño(a) puede haber activado el anti-pv.'
 ]
 return response[Math.floor(Math.random() * response.length)];
 }
 
+
 exports.bannedUser = () => {
 response = [
-    'Você infligiu uma cláusulas do meus termos e condições de uso, por isso, você está banido de usar meus comandos por tempo indeterminado...️',
-    'Você está impossibilitado de usar meus comandos, ou seja, está bloqueado por tempo indeterminado até meus superiores mudar de ideia... 😭👋🏼',
-    '*Meu deus!* 😱 Você deve ter deixado meu dono com muita raiva, para ele te banir mesmo de usar meus comandos...'
+    'Has infringido una cláusula de mis términos y condiciones de uso, por eso estás baneado de usar mis comandos por tiempo indefinido...️',
+    'Estás impedido de usar mis comandos, es decir, estás bloqueado por tiempo indefinido hasta que mis superiores cambien de opinión... 😭👋🏼',
+    '*¡Dios mío!* 😱 Debes haber dejado muy enfadado a mi dueño para que te banee de usar mis comandos...'
 ]
 return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.forbiddenStateFromDDD = (mentionUser, whichState, extractDDD) => {
   response = [
-    `⚠️ Olá @${mentionUser.split('@')[0]}, você está sendo banido(a) do grupo. Por motivo que você está com ddd proibido aqui!`, 
-   `🪦 Olá @${mentionUser.split('@')[0]}, venho informar que você está sendo banido(a), por motivo que você possuí um número com o DDD de um estado proibido neste grupo.`,
-   `👺 Suma daqui! Números com o DDD ${extractDDD(mentionUser.split('@')[0])} não são bem-vindos neste grupo.`,
-   `😾 Ei, você e nem possuidores do DDD ${extractDDD(mentionUser.split('@')[0])} não são bem-vindos neste barzinho aqui!`
+    `⚠️ Hola @${mentionUser.split('@')[0]}, estás siendo baneado(a) del grupo. Porque tienes un DDD prohibido aquí!`, 
+   `🪦 Hola @${mentionUser.split('@')[0]}, te informo que estás siendo baneado(a) porque posees un número con un DDD de un estado prohibido en este grupo.`,
+   `👺 ¡Fuera de aquí! Números con el DDD ${extractDDD(mentionUser.split('@')[0])} no son bienvenidos en este grupo.`,
+   `😾 Oye, tú ni los que tienen el DDD ${extractDDD(mentionUser.split('@')[0])} son bienvenidos en este barcito aquí!`
     ];
   return response[Math.floor(Math.random() * response.length)];
 }
 
 exports.errorConvertSticker = () => {
-return 'Falha ao converter a mídia encaminhada para Sticker. Por favor, tente novamente mais tarde... 👍🏽😉';
+return 'Error al convertir el medio enviado en sticker. Por favor, intenta de nuevo más tarde... 👍🏽😉';
 }
 
 exports.errorCommandLink = () => {
-return 'Certifique-se ️se esse é o link correto a ser utilizado no comando.';
+return 'Asegúrate de que este es el enlace correcto para usar en el comando.';
 }
 
 exports.playResult = (data, dataAudio) => {
-  return `• Título: *${data.resultado[0].title || dataAudio.resultado.title}*\n• Descrição: *${data.resultado[0].description || "Não encontrado."}*\n• Duração: *${dataAudio.resultado.duration || data.resultado[0].timestamp || "Não encontrado."}*\n• Vídeo URL: *${data.resultado[0].url || dataAudio.resultado.videoUrl}*\n—\n• Visualizações: *${dataAudio.resultado.views.replaceAll("visualizações", "").trim() || data.resultado[0].views || "Não encontrado."}*\n• Canal: *${data.resultado[0].author.name}*\n• Publicação: *${dataAudio.resultado.uploadDate || "Não encontrado."}*`
+  return `• Título: *${data.resultado[0].title || dataAudio.resultado.title}*\n• Descripción: *${data.resultado[0].description || "No encontrado."}*\n• Duración: *${dataAudio.resultado.duration || data.resultado[0].timestamp || "No encontrado."}*\n• URL del video: *${data.resultado[0].url || dataAudio.resultado.videoUrl}*\n—\n• Visualizaciones: *${dataAudio.resultado.views.replaceAll("visualizações", "").trim() || data.resultado[0].views || "No encontrado."}*\n• Canal: *${data.resultado[0].author.name}*\n• Publicación: *${dataAudio.resultado.uploadDate || "No encontrado."}*`
 }
 
 exports.playResult2 = (data) => {
-  return `• Título: *${data.resultado[0].title}*\n• Descrição: *${data.resultado[0].description || "Sem descrição."}*\n• Canal: *${data.resultado[0].author.name}*\n• Duração: *${data.resultado[0].timestamp}*\n• Vídeo URL: *${data.resultado[0].url}*`
+  return `• Título: *${data.resultado[0].title}*\n• Descripción: *${data.resultado[0].description || "Sin descripción."}*\n• Canal: *${data.resultado[0].author.name}*\n• Duración: *${data.resultado[0].timestamp}*\n• URL del video: *${data.resultado[0].url}*`
 }
 
 exports.syntaxDownloadMusic = () => {
-return `Por favor, insira o título de uma música ou vídeo.`
+return `Por favor, ingresa el título de una canción o video.`
 }
 
 exports.smartphoneInfo = (listPhones, detailsPhone) => {
-return `• Nome: *${listPhones[0].title}*\n• Disponibilidade: *${detailsPhone["Disponibilidade"]}*\n• Dimensões: *${detailsPhone["Dimensoes"]}*\n• Peso: *${detailsPhone["Peso"]}*\n–\n⚙️ *Especificações Técnicas:*\n• Sistema Operacional: *${detailsPhone["Sistema_Operacional"]}*\n• Chipset & Processador: *${detailsPhone["Chipset"]} - ${detailsPhone["Processador"]}*\n• Contém resistência a água? *${detailsPhone["Resistencia_a_agua"] === false ? "Não" : detailsPhone["Resistencia_a_agua"] === true ? "Sim" : "Não"}*\n• Possuí Dual SIM? *${detailsPhone["Dual_Sim"] === false ? "Não" : detailsPhone["Dual_Sim"] === true ? "Sim" : "Não"} (${detailsPhone["Sim_Card"]})*\n• Velocidade 5G (Dados Móveis): *${detailsPhone["5G"] === false ? "Não" : detailsPhone["5G"] === true ? "Sim" : "Não"}*\n• GPU: *${detailsPhone["GPU"]}*\n• Armazenamento máximo: *${detailsPhone["Memoria_Max"]}*\n• Memória RAM: *${detailsPhone["RAM"]}*\n• Armazenamento expansível: *${detailsPhone["Memoria_Expansivel"] === false ? "Não" : detailsPhone["Memoria_Expansivel"] === true ? "Sim" : "Não"}*\n–\n📱 *Especificações da Tela:*\n• Polegadas (Tamanho): *${detailsPhone["Polegadas"]}*\n• Resolução: *${detailsPhone["Resolucao"]}*\n• Densidade de Pixels: *${detailsPhone["Densidade_de_pixels"]}*\n• Proteção na tela? *${detailsPhone["Protecao"] === false ? "Não" : detailsPhone["Protecao"] === true ? "Sim" : "Não"}*\n• Total FPS (Frame per Second - "Quadros por Segundo"): *${detailsPhone["FPS"]}*\n–\n🔋 *Especificações da Bateria:*\n• Tipo: *${detailsPhone["Tipo"]}*\n• Capacidade (mAh): *${detailsPhone["Ampere"]}*`
+return `• Nombre: *${listPhones[0].title}*\n• Disponibilidad: *${detailsPhone["Disponibilidade"]}*\n• Dimensiones: *${detailsPhone["Dimensoes"]}*\n• Peso: *${detailsPhone["Peso"]}*\n–\n⚙️ *Especificaciones Técnicas:*\n• Sistema Operativo: *${detailsPhone["Sistema_Operacional"]}*\n• Chipset & Procesador: *${detailsPhone["Chipset"]} - ${detailsPhone["Processador"]}*\n• Resistente al agua? *${detailsPhone["Resistencia_a_agua"] === false ? "No" : detailsPhone["Resistencia_a_agua"] === true ? "Sí" : "No"}*\n• Dual SIM? *${detailsPhone["Dual_Sim"] === false ? "No" : detailsPhone["Dual_Sim"] === true ? "Sí" : "No"} (${detailsPhone["Sim_Card"]})*\n• Velocidad 5G (Datos móviles): *${detailsPhone["5G"] === false ? "No" : detailsPhone["5G"] === true ? "Sí" : "No"}*\n• GPU: *${detailsPhone["GPU"]}*\n• Almacenamiento máximo: *${detailsPhone["Memoria_Max"]}*\n• Memoria RAM: *${detailsPhone["RAM"]}*\n• Almacenamiento expandible: *${detailsPhone["Memoria_Expansivel"] === false ? "No" : detailsPhone["Memoria_Expansivel"] === true ? "Sí" : "No"}*\n–\n📱 *Especificaciones de la pantalla:*\n• Pulgadas (Tamaño): *${detailsPhone["Polegadas"]}*\n• Resolución: *${detailsPhone["Resolucao"]}*\n• Densidad de píxeles: *${detailsPhone["Densidade_de_pixels"]}*\n• Protección en la pantalla? *${detailsPhone["Protecao"] === false ? "No" : detailsPhone["Protecao"] === true ? "Sí" : "No"}*\n• FPS total (Frames por segundo): *${detailsPhone["FPS"]}*\n–\n🔋 *Especificaciones de la batería:*\n• Tipo: *${detailsPhone["Tipo"]}*\n• Capacidad (mAh): *${detailsPhone["Ampere"]}*`
 }
 
 exports.InstaStalker = (data, formatNumberDecimal) => {
-return `> 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 - 𝐒𝐭𝐚𝐥𝐤𝐞𝐫\n—\n• Nome: ${data.resultado.profileName|| "Usuário do Instagram"} *(@${data.resultado.username})*\n• Conta Privada? *${data.resultado.accountPrivate === true ? "Sim" : data.resultado.accountPrivate === false ? "Não" : "Não"}*\n• Conta Verificada? *${data.resultado.accountVerified === true ? "Sim" : data.resultado.accountVerified === false ? "Não" : "Não"}*\n• URL Externo: *${data.resultado.externalUrl}*\n• Postagens (Fotos & Vídeos): *${formatNumberDecimal(data.resultado.mediaCount)}*\n• Total de Seguidores: *${formatNumberDecimal(data.resultado.followersAmount)}*\n• Total de Seguidos: *${formatNumberDecimal(data.resultado.followingAmount)}*\n–\n• Biografia:\n\`\`\`${data.resultado.biography || "❌️ Sem biografia!"}\`\`\``;
+return `> 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 - 𝐒𝐭𝐚𝐥𝐤𝐞𝐫\n—\n• Nombre: ${data.resultado.profileName || "Usuario de Instagram"} *(@${data.resultado.username})*\n• Cuenta privada? *${data.resultado.accountPrivate === true ? "Sí" : "No"}*\n• Cuenta verificada? *${data.resultado.accountVerified === true ? "Sí" : "No"}*\n• URL externa: *${data.resultado.externalUrl}*\n• Publicaciones (Fotos & Videos): *${formatNumberDecimal(data.resultado.mediaCount)}*\n• Total seguidores: *${formatNumberDecimal(data.resultado.followersAmount)}*\n• Total siguiendo: *${formatNumberDecimal(data.resultado.followingAmount)}*\n–\n• Biografía:\n\`\`\`${data.resultado.biography || "❌️ Sin biografía!"}\`\`\``;
 }
 
 exports.TiktokStalker = (data, formatNumberDecimal) => { 
-return `> 𝐓𝐢𝐤𝐭𝐨𝐤 - 𝐒𝐭𝐚𝐥𝐤𝐞𝐫\n—\n• Nome: *${data.resultado.users.nickname}* | @${data.resultado.users.username}\n• URL: *https://tiktok.com/@${data.resultado.users.username}*\n• Conta Verificada: *${data.resultado.users.verified === true ? "Sim" : data.resultado.users.verified === false ? "Não" : "Não"}*\n• Conta Privada: *${data.resultado.users.privateAccount === true ? "Sim" : data.resultado.users.privateAccount === false ? "Não" : "Não️"}*\n• Conta Comercial: *${data.resultado.users.commerceUser === true ? "Sim" : data.resultado.users.commerceUser === false ? "Não️" : "Não️"}*\n• Região: *${data.resultado.users.region}*\n—\n• Estatísticas:\n\t• Seguidores: *${formatNumberDecimal(data.resultado.stats.followerCount)}*\n\t• Seguindo: *${data.resultado.stats.followingCount}*\n\t• Curtidas: *${formatNumberDecimal(data.resultado.stats.heartCount)}*\n\t• Vídeos Publicados: *${formatNumberDecimal(data.resultado.stats.videoCount)}*\n\t• Vídeos Curtidos: *${formatNumberDecimal(data.resultado.stats.likeCount)}*\n—\n• Biografia: \n\`\`\`${data.resultado.users.signature.replaceAll(`\n\n`, `\n`)}\`\`\``
+return `> 𝐓𝐢𝐤𝐭𝐨𝐤 - 𝐒𝐭𝐚𝐥𝐤𝐞𝐫\n—\n• Nombre: *${data.resultado.users.nickname}* | @${data.resultado.users.username}\n• URL: *https://tiktok.com/@${data.resultado.users.username}*\n• Cuenta verificada: *${data.resultado.users.verified === true ? "Sí" : "No"}*\n• Cuenta privada: *${data.resultado.users.privateAccount === true ? "Sí" : "No"}*\n• Cuenta comercial: *${data.resultado.users.commerceUser === true ? "Sí" : "No"}*\n• Región: *${data.resultado.users.region}*\n—\n• Estadísticas:\n\t• Seguidores: *${formatNumberDecimal(data.resultado.stats.followerCount)}*\n\t• Siguiendo: *${data.resultado.stats.followingCount}*\n\t• Likes: *${formatNumberDecimal(data.resultado.stats.heartCount)}*\n\t• Videos publicados: *${formatNumberDecimal(data.resultado.stats.videoCount)}*\n\t• Videos gustados: *${formatNumberDecimal(data.resultado.stats.likeCount)}*\n—\n• Biografía: \n\`\`\`${data.resultado.users.signature.replaceAll(`\n\n`, `\n`)}\`\`\``
 }
 
-
 exports.MediaFire = (response) => {
-return `→ Sucesso ao baixar o arquivo: *'${response.resultado.fileName}'*! Obrigado por esperar.\n• Extensão: *${response.resultado.mimetype}*\n• Peso (Tamanho): *${response.resultado.info.size}*\n• Upload: *${response.resultado.info.uploadDate}*`
+return `→ Archivo descargado con éxito: *'${response.resultado.fileName}'*! Gracias por esperar.\n• Extensión: *${response.resultado.mimetype}*\n• Peso (Tamaño): *${response.resultado.info.size}*\n• Subida: *${response.resultado.info.uploadDate}*`
 }
 
 exports.tiktok = (data) => {
 const tags = data.resultado?.hashtag.map((v, index) => `#${v}`).join(' ');
-  return  `> *# Informações - Vídeo:*\n• Usuário: *@${data.resultado?.author.nickname}* (@${data.resultado?.author.username})\n• Descrição: *${data.resultado?.description.trim() || "Sem descrição."}*\n• Hashtag's: *${data.resultado?.hashtag.length} | [${tags}]*\n–\n> *# Estatísticas do Vídeo:*\n• Contagem de Comentários: *${data.resultado?.statistics.commentCount}*\n• Contagem de Curtidas: *${data.resultado?.statistics.diggCount}*\n• Compartilhamentos: *${data.resultado?.statistics.shareCount}*\n• Visualizações: *${data.resultado?.statistics.playCount}*\n–\n> *# Informações - Áudio:*\n• Título: *${data.resultado?.music.title}*\n• Criador(a): *${data.resultado?.music.author}*\n• Album: *${data.resultado?.music.album || "Sem informação."}*`
+  return  `> *# Información - Video:*\n• Usuario: *@${data.resultado?.author.nickname}* (@${data.resultado?.author.username})\n• Descripción: *${data.resultado?.description.trim() || "Sin descripción."}*\n• Hashtags: *${data.resultado?.hashtag.length} | [${tags}]*\n–\n> *# Estadísticas del video:*\n• Comentarios: *${data.resultado?.statistics.commentCount}*\n• Likes: *${data.resultado?.statistics.diggCount}*\n• Compartidos: *${data.resultado?.statistics.shareCount}*\n• Visualizaciones: *${data.resultado?.statistics.playCount}*\n–\n> *# Información - Audio:*\n• Título: *${data.resultado?.music.title}*\n• Creador(a): *${data.resultado?.music.author}*\n• Álbum: *${data.resultado?.music.album || "Sin información."}*`
 }
 
 exports.tiktokMusic = (data) => {
-return `> *# Informações - Áudio:*\n• ID: *${data.resultado?.music.id}*\n• Título: *${data.resultado?.music.title}*\n• Criador(a): *${data.resultado?.music.author}*\n• Album: *${data.resultado?.music.album || "Sem informação."}*`
+return `> *# Información - Audio:*\n• ID: *${data.resultado?.music.id}*\n• Título: *${data.resultado?.music.title}*\n• Creador(a): *${data.resultado?.music.author}*\n• Álbum: *${data.resultado?.music.album || "Sin información."}*`
 }
 
 exports.soundcloud = (data, tinyUrl) => {
-return `• Música: *${data.resultado.titulo}*\n• *Total de Downloads: *${data.resultado.total_downloads}*\n–\n\t• Caso o *áudio* não seja enviado, baixe através do link: ${tinyUrl.data}`
+return `• Canción: *${data.resultado.titulo}*\n• *Total de descargas: *${data.resultado.total_downloads}*\n–\n\t• Si el *audio* no se envía, descárgalo con el link: ${tinyUrl.data}`
 }
 
 exports.icmsResult = (data) => {
-return `📊 Estado ICMS: *${data.resultado.icms}%*\n–\n• Valor ICMS _(valor líquido/taxa)_: *R$ ${data.resultado.icmsTotal}*\n• Total BRL _(valor apresentado + valor icms, em real.)_: *R$ ${data.resultado.total}*\n• Total USD _(valor apresentado + valor icms, convertido p/dolar)_: *$ ${data.resultado.dolar}*\n–\n📌 *Observação:* O valor na remessa pode ser outro, esse cálculo é uma probabilidade de que pode ser aplicada essa taxa. Também pode variar a *alíquota* de cada estado, que é a tal coisa que está sendo encomendada.\n–\n⚠️ *Como é realizado o cálculo de um valor abaixo de R$50?*\n\tProduto × icms(seu estado) = valor_icms\n\tProduto + valor_icms = total\n–\n⚠️ *Como é realizado o cálculo de um valor acima de R$50?*\n 	 Produto + (60 + icms(seu estado)) = valor_icms\n	 Produto + valor_icms = total`
+return `📊 Estado ICMS: *${data.resultado.icms}%*\n–\n• Valor ICMS _(valor neto/tasa)_: *R$ ${data.resultado.icmsTotal}*\n• Total BRL _(valor presentado + icms, en reales)_: *R$ ${data.resultado.total}*\n• Total USD _(valor presentado + icms, convertido a dólares)_: *$ ${data.resultado.dolar}*\n–\n📌 *Observación:* El valor del envío puede ser diferente, este cálculo es una probabilidad de la tasa aplicada. También puede variar la *alícuota* de cada estado, que es la cosa que se está enviando.\n–\n⚠️ *¿Cómo se calcula un valor menor a R$50?*\n\tProducto × icms(estado) = valor_icms\n\tProducto + valor_icms = total\n–\n⚠️ *¿Cómo se calcula un valor mayor a R$50?*\n\t Producto + (60 + icms(estado)) = valor_icms\n\t Producto + valor_icms = total`
 }
 
 exports.syntaxIcms = (prefix) => {
-return `*Ops!* O comando está sendo utilizado de forma errada, _por favor confira abaixo a forma correta de uso, para obter sucesso._\n–\nPara usar este comando é nescessario, usar da seguinte forma: *${prefix}icms 704|82*, _explicando sobre os valores apresentados:_\n\t• *704* ‐ O valor que você deseja saber a probabilidade da possível taxa a ser aplicada sobre o valor.\n\t• *82* - O ddd do estado onde você mora, ou o que você deseja consultar.`
+return `*¡Ups!* El comando está siendo usado incorrectamente, _por favor revisa la forma correcta de uso para tener éxito._\n–\nPara usar este comando es necesario usar la siguiente forma: *${prefix}icms 704|82*, _explicando sobre los valores presentados:_\n\t• *704* ‐ El valor que deseas saber la probabilidad de la posible tasa aplicada.\n\t• *82* - El DDD del estado donde vives o deseas consultar.`
 }
 
 exports.syntaxTrackParcels = (prefix) => {
-return `• Coloque o código da encomenda fornecido pelo Correios, abaixo tem a *explicação e o exemplo de uso*:\n–\n⚠️ *Exemplo:* ${prefix}Rastrear [Código]\n\t• O *código de rastreamento dos Correios* serve para registrar que uma encomenda foi postada e permite localizá-la durante o processo de envio.\n\t• Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
+return `• Introduce el código de envío proporcionado por Correios, abajo tienes la *explicación y ejemplo de uso*:\n–\n⚠️ *Ejemplo:* ${prefix}Rastrear [Código]\n\t• El *código de rastreo de Correios* sirve para registrar que un paquete fue enviado y permite localizarlo durante el proceso.\n\t• Está compuesto por 9 números y 4 letras, dos al inicio y dos al final, como en el ejemplo: *PC123456789BR*.`
 }
 
 exports.invalidCodeRastrear = () => {
-return `• *Código inválido ou nenhum resultado foi retornado.* Por favor informe um código válido, _verifique se você seguiu a instrução abaixo:_\n\t• Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
+return `• *Código inválido o no se encontró resultado.* Por favor proporciona un código válido, _verifica que seguiste la instrucción:_\n\t• Está compuesto por 9 números y 4 letras, dos al inicio y dos al final, como el ejemplo: *PC123456789BR*.`
 }
 
 exports.rastrearEncomenda = (dataResult, q) => {
-return `📦 Rastreio de Encomendas:\n• N° de Rastreio: *${q}*\n• Última atualização: *${dataResult.resultado[0].datePost} (${dataResult.resultado[0].timeCount})*\n——\n📍 Histórico de Localização:\n` + dataResult.resultado.map((info, index) => `*[ ${index+1} ]* Status: ${info.description}\n• Postagem: *${info.timeCount} (${info.datePost})*`).join('\n–\n');
+return `📦 Rastreo de Envíos:\n• Nº de rastreo: *${q}*\n• Última actualización: *${dataResult.resultado[0].datePost} (${dataResult.resultado[0].timeCount})*\n——\n📍 Historial de ubicación:\n` + dataResult.resultado.map((info, index) => `*[ ${index+1} ]* Estado: ${info.description}\n• Publicación: *${info.timeCount} (${info.datePost})*`).join('\n–\n');
 }
 
 exports.lyrics = (data, II) => {
- return `• Título: *${data.resultado.name}*\n• Artista: *${data.resultado.byArtist.name}*\n• Descrição: *${data.resultado.description}*\n• URL: *${data.resultado.url}*\n• Letra (Original):\n${II}${data.resultado.lyricOriginal}${II}`
+ return `• Título: *${data.resultado.name}*\n• Artista: *${data.resultado.byArtist.name}*\n• Descripción: *${data.resultado.description}*\n• URL: *${data.resultado.url}*\n• Letra (Original):\n${II}${data.resultado.lyricOriginal}${II}`
 }
 
 exports.result_APOD = (dataSab, resultExp) => {
-return `🔭 Título - ${dataSab.nasa.title}\n\n🌐📝 Explicação - ${resultExp.result}`
+return `🔭 Título - ${dataSab.nasa.title}\n\n🌐📝 Explicación - ${resultExp.result}`
 }
 
 exports.mediafireDownload = (ABC, encurt) => {
-  return `*[ MediaFire ]* - Informações Arquivo:\n–\n• *Nome do Arquivo:* ${ABC.resultado[0].nama}\n• *Tamanho:* ${ABC.resultado[0].size}\n• *Tipo de arquivo a ser enviado:* ${ABC.resultado[0].mime}\n–\n*Por favor, aguarde um pouco estou realizando o envio do arquivo.*\n\t• Caso haver um atraso de *2min* pode ser o tamanho do arquivo a ser enviado.\n\t• *Não enviou?* Realize o download pelo link: ${encurt.data}`
+  return `*[ MediaFire ]* - Información del archivo:\n–\n• *Nombre del archivo:* ${ABC.resultado[0].nama}\n• *Tamaño:* ${ABC.resultado[0].size}\n• *Tipo de archivo enviado:* ${ABC.resultado[0].mime}\n–\n*Por favor, espera un momento, estoy enviando el archivo.*\n\t• Si hay un retraso de *2 minutos* puede ser por el tamaño del archivo.\n\t• *¿No llegó?* Descárgalo por el link: ${encurt.data}`
 }
 
 exports.speed = (speedConverted, os, TimeCount) => {
-return `🏓 *Ping:*\n▢ *Latência:* ${String(speedConverted.toFixed(3))} milisegundos.\n▢ *Uptime:* ${TimeCount(process.uptime())}\n—\n⚙️ *Sistema:*\n▢ Sistema Operacional: *${os.type()}*\n▢ Versão: *${os.release()}*\n▢ Memória RAM Usada: *${(os.freemem()/Math.pow(1024, 3)).toFixed(2)} GB*\n▢ Total de Memória RAM: *${(os.totalmem()/Math.pow(1024, 3)).toFixed(2)} GB*\n▢ Uso da CPU: *${os.loadavg()[0].toFixed(2)}%*\n▢ Uso da Memória RAM: *${((os.totalmem() - os.freemem()) / os.totalmem() * 100).toFixed(2)}%*\n▢ Versão do NodeJS: *${process.version}*`
+return `🏓 *Ping:*\n▢ *Latencia:* ${String(speedConverted.toFixed(3))} milisegundos.\n▢ *Uptime:* ${TimeCount(process.uptime())}\n—\n⚙️ *Sistema:*\n▢ Sistema Operativo: *${os.type()}*\n▢ Versión: *${os.release()}*\n▢ Memoria RAM usada: *${(os.freemem()/Math.pow(1024, 3)).toFixed(2)} GB*\n▢ Memoria RAM total: *${(os.totalmem()/Math.pow(1024, 3)).toFixed(2)} GB*\n▢ Uso de CPU: *${os.loadavg()[0].toFixed(2)}%*\n▢ Uso de memoria RAM: *${((os.totalmem() - os.freemem()) / os.totalmem() * 100).toFixed(2)}%*\n▢ Versión de NodeJS: *${process.version}*`
 }
 
 exports.horoscopo = (data) =>  {
@@ -397,226 +452,233 @@ return `🔮 *${data.resultado.date}:*\n• ${data.resultado.forecast}\n—\n➕
 }
 
 exports.dicionario = (data, dataDicio, capitalizeFirstLetter, III) => {
-  return `• Termo(Palavra): *${capitalizeFirstLetter(dataDicio.resultado.term)}*\n• Significado: *${data.resultado[0].description}*\n• Etimologia (Origem da palavra):\n> ${dataDicio.resultado.etymology}\n• Gramatical: *${capitalizeFirstLetter(dataDicio.resultado.grammaticalClass)}*\n• Vogais: *${dataDicio.resultado.otherInfo.vowels.split(" ").map((v, index) => `${v}`).join(', ')}*\n• Consoantes: *${dataDicio.resultado.otherInfo.consonants.split(" ").map((v, index) => `${v}`).join(', ')}*\n*—*\n• Palavra no plural: ${III}${dataDicio.resultado.plurals.map((v) => v).join(', ')}${III}\n• Sinônimos: ${III}${dataDicio.resultado.synonyms.map((v) => v).join(', ')}${III}\n• Palavras relacionadas: ${III}${dataDicio.resultado.relatedWords.map((v) => v).join(', ')}${III}\n*—*\n🔍 Frases e exemplos com a palavra “${data.resultado[0].term}”:\n${dataDicio.resultado.exampleSentences.map((v, index) => `\t*${index + 1}.* _${v.frase}_ — *${v.fonte}*`).join('\n')}\n*—*\n📚 Definições:\n${dataDicio.resultado.definitions.map((v, index) => `\t*${index + 1}*. ${v}`).join('\n')}\n*—*\n✒️ Lexicógrafo(a):\n\t• Nome: *${dataDicio.resultado.authorInfo.name}*\n\t• Biografia: *${dataDicio.resultado.authorInfo.biography}*`
+  return `• Término (Palabra): *${capitalizeFirstLetter(dataDicio.resultado.term)}*\n• Significado: *${data.resultado[0].description}*\n• Etimología (Origen de la palabra):\n> ${dataDicio.resultado.etymology}\n• Gramatical: *${capitalizeFirstLetter(dataDicio.resultado.grammaticalClass)}*\n• Vocales: *${dataDicio.resultado.otherInfo.vowels.split(" ").map((v) => `${v}`).join(', ')}*\n• Consonantes: *${dataDicio.resultado.otherInfo.consonants.split(" ").map((v) => `${v}`).join(', ')}*\n*—*\n• Palabra en plural: ${III}${dataDicio.resultado.plurals.map((v) => v).join(', ')}${III}\n• Sinónimos: ${III}${dataDicio.resultado.synonyms.map((v) => v).join(', ')}${III}\n• Palabras relacionadas: ${III}${dataDicio.resultado.relatedWords.map((v) => v).join(', ')}${III}\n*—*\n🔍 Frases y ejemplos con la palabra “${data.resultado[0].term}”:\n${dataDicio.resultado.exampleSentences.map((v, index) => `\t*${index + 1}.* _${v.frase}_ — *${v.fonte}*`).join('\n')}\n*—*\n📚 Definiciones:\n${dataDicio.resultado.definitions.map((v, index) => `\t*${index + 1}*. ${v}`).join('\n')}\n*—*\n✒️ Lexicógrafo(a):\n\t• Nombre: *${dataDicio.resultado.authorInfo.name}*\n\t• Biografía: *${dataDicio.resultado.authorInfo.biography}*`
 }
 
-exports.respostaChatGPT = (dataResulted) => {
-return `${dataResulted.result}`
-}
 
-exports.respostaResumida = (dataResulted) => {
-return `${dataResulted.result}`
-}
+exports.respuestaChatGPT = (dataResulted) => {
+  return `${dataResulted.result}`;
+};
 
-exports.respostaRedacao = (dataResulted) => {
-return `${dataResulted.result}`
-}
+exports.respuestaResumida = (dataResulted) => {
+  return `${dataResulted.result}`;
+};
 
-exports.wikiResposta = (wikis) => {
-return `${wikis.data.query.pages[Object.keys(wikis.data.query.pages)].extract}`
-}
+exports.respuestaRedaccion = (dataResulted) => {
+  return `${dataResulted.result}`;
+};
 
-exports.stickerMetadata = (stickerMetadata) => {
-return `• Emojis: *${stickerMetadata?.emojis?.join(' ') || '❌'}*\n• ID do Pacote: *${stickerMetadata['sticker-pack-id'] || '❌'}*\n• Nome do Pacote: *${stickerMetadata['sticker-pack-name'] || '❌'}*\n• Autor do Pacote:  *${stickerMetadata['sticker-pack-publisher'] || stickerMetadata['sticker-author-name'] || '❌'}*\n• Sticker Maker _(Android)_: *${stickerMetadata['android-app-store-link'] || '❌'}*\n• Sticker Maker _(iOS)_: *${stickerMetadata['ios-app-store-link']|| '❌'}*`;
-}
+exports.respuestaWiki = (wikis) => {
+  return `${wikis.data.query.pages[Object.keys(wikis.data.query.pages)].extract}`;
+};
 
-exports.googleImage = (data) => {
-return `• Título: *${data.origin.title || "Não existe título na imagem."}*\n• URL: *${data.origin.website.url || "Sem URL."}* \n• Fonte: *${data.origin.website.name || "Sem informação."} _(${data.origin.website.domain || "Sem informação."})_*\n• Resolução: *${data.height || "0"} × ${data.width || "0"}*`
-}
+exports.metadatosSticker = (stickerMetadata) => {
+  return `• Emojis: *${stickerMetadata?.emojis?.join(' ') || '❌'}*\n• ID del Paquete: *${stickerMetadata['sticker-pack-id'] || '❌'}*\n• Nombre del Paquete: *${stickerMetadata['sticker-pack-name'] || '❌'}*\n• Autor del Paquete: *${stickerMetadata['sticker-pack-publisher'] || stickerMetadata['sticker-author-name'] || '❌'}*\n• Sticker Maker _(Android)_: *${stickerMetadata['android-app-store-link'] || '❌'}*\n• Sticker Maker _(iOS)_: *${stickerMetadata['ios-app-store-link'] || '❌'}*`;
+};
+
+exports.imagenGoogle = (data) => {
+  return `• Título: *${data.origin.title || "No existe título en la imagen."}*\n• URL: *${data.origin.website.url || "Sin URL."}* \n• Fuente: *${data.origin.website.name || "Sin información."} _(${data.origin.website.domain || "Sin información."})_*\n• Resolución: *${data.height || "0"} × ${data.width || "0"}*`;
+};
 
 exports.aptoide = (getApk, sizeApk, lnDown) => {
-return `• Nome: *${getApk.name}*\n• Pacote do aplicativo à ser enviado: *${getApk.package}*\n• Tamanho do arquivo à ser enviado por mim: *${sizeApk} MB*\n• Versão do aplicativo à ser enviada por mim: *${getApk.file.vername}*\n——\n• [📁] *Não baixou?* Clique no link abaixo e realize o processo:\n↳ ${lnDown.data}`
-}
+  return `• Nombre: *${getApk.name}*\n• Paquete de la aplicación a enviar: *${getApk.package}*\n• Tamaño del archivo a enviar por mí: *${sizeApk} MB*\n• Versión de la aplicación a enviar por mí: *${getApk.file.vername}*\n——\n• [📁] *¿No descargaste?* Haz clic en el enlace abajo y realiza el proceso:\n↳ ${lnDown.data}`;
+};
 
-exports.translator = (bla) => {
-return `Seu texto foi traduzido com sucesso: ${bla.result}`
-}
+exports.traductor = (bla) => {
+  return `Tu texto fue traducido con éxito: ${bla.result}`;
+};
 
 exports.clima = (wttrin) => {
-return `️📡 → Informações Meteorológicas do clima no local: *${wttrin.nearest_area.map((j, i) => j.areaName[i].value+', '+ j.region[i].value +', ' + j.country[i].value).flat().join(' | ')}*\n• Temperatura atual: *${wttrin.current_condition.map(j => j.temp_C).flat().join(' | ')} C° - [${wttrin.current_condition.map(j => j.temp_F).flat().join(' | ')} F°]*\n• Sensação térmica: *${wttrin.current_condition.map(j => j.FeelsLikeC).flat().join(' | ')} C° = [${wttrin.current_condition.map(j => j.FeelsLikeF).flat().join(' | ')} F°]*\n• Umidade do Ar: *${wttrin.current_condition.map(j => j.humidity).flat().join(' | ')}%*\n• Condição atual de Chuvas em Polegadas: *${wttrin.current_condition.map(j => j.precipInches).flat().join(' | ')} Pol - [${wttrin.current_condition.map(j => j.precipMM).flat().join(' | ')} MM]*\n• Cobertura de Nuvens: *${wttrin.current_condition.map(j => j.cloudcover).flat().join(' | ')}%*\n• Índice de UV _(UltraVioleta)_: *${wttrin.current_condition.map(j => j.uvIndex).flat().join(' | ')}*\n• Nível de visibilidade: *${wttrin.current_condition.map(j => j.visibility).flat().join(' | ')} KM - [${wttrin.current_condition.map(j => j.visibilityMiles).flat().join(' | ')} M.]*\n• Descrição: *${wttrin.current_condition.map(j => j.weatherDesc).flat().map(j => j.value).flat().join(', ')} - [ID #${wttrin.current_condition.map(j => j.weatherCode).flat().join(' | ')}]*\n• Direção do vento: *${wttrin.current_condition.map(j => j.winddir16Point).flat().join(', ')} - [${wttrin.current_condition.map(j => j.winddirDegree).flat().join(', ')}°]*\n• Velocidade dos ventos em KM (Kilometros): *${wttrin.current_condition.map(j => j.windspeedKmph).flat().join(', ')} KM - [${wttrin.current_condition.map(j => j.windspeedMiles).flat().join(', ')} M.]*\n• Pressão do Ar: *${wttrin.current_condition.map(j => j.pressure).flat().join(' | ')} hPa - [${wttrin.current_condition.map(j => j.pressureInches).flat().join(' | ')} mmHg]*\n—\n️🏘 → Algumas informações do local:\n• Total de Habitantes: *${wttrin.nearest_area.map(j => j.population).flat().join(' | ')}*\n• Data & Hora: *${wttrin.current_condition.map(j => j.localObsDateTime).flat().join(', ')}*\n• Horário de Observação: *${wttrin.current_condition.map(j => j.observation_time).flat().join(', ')}*`
-}
+  return `📡 → Información Meteorológica del lugar: *${wttrin.nearest_area.map((j, i) => j.areaName[i].value+', '+ j.region[i].value +', ' + j.country[i].value).flat().join(' | ')}*\n• Temperatura actual: *${wttrin.current_condition.map(j => j.temp_C).flat().join(' | ')} C° - [${wttrin.current_condition.map(j => j.temp_F).flat().join(' | ')} F°]*\n• Sensación térmica: *${wttrin.current_condition.map(j => j.FeelsLikeC).flat().join(' | ')} C° = [${wttrin.current_condition.map(j => j.FeelsLikeF).flat().join(' | ')} F°]*\n• Humedad del aire: *${wttrin.current_condition.map(j => j.humidity).flat().join(' | ')}%*\n• Condición actual de lluvias en pulgadas: *${wttrin.current_condition.map(j => j.precipInches).flat().join(' | ')} Pol - [${wttrin.current_condition.map(j => j.precipMM).flat().join(' | ')} MM]*\n• Cobertura de nubes: *${wttrin.current_condition.map(j => j.cloudcover).flat().join(' | ')}%*\n• Índice de UV _(Ultravioleta)_: *${wttrin.current_condition.map(j => j.uvIndex).flat().join(' | ')}*\n• Nivel de visibilidad: *${wttrin.current_condition.map(j => j.visibility).flat().join(' | ')} KM - [${wttrin.current_condition.map(j => j.visibilityMiles).flat().join(' | ')} M.]*\n• Descripción: *${wttrin.current_condition.map(j => j.weatherDesc).flat().map(j => j.value).flat().join(', ')} - [ID #${wttrin.current_condition.map(j => j.weatherCode).flat().join(' | ')}]*\n• Dirección del viento: *${wttrin.current_condition.map(j => j.winddir16Point).flat().join(', ')} - [${wttrin.current_condition.map(j => j.winddirDegree).flat().join(', ')}°]*\n• Velocidad de los vientos en KM: *${wttrin.current_condition.map(j => j.windspeedKmph).flat().join(', ')} KM - [${wttrin.current_condition.map(j => j.windspeedMiles).flat().join(', ')} M.]*\n• Presión del aire: *${wttrin.current_condition.map(j => j.pressure).flat().join(' | ')} hPa - [${wttrin.current_condition.map(j => j.pressureInches).flat().join(' | ')} mmHg]*\n—\n🏘 → Algunas informaciones del lugar:\n• Total de habitantes: *${wttrin.nearest_area.map(j => j.population).flat().join(' | ')}*\n• Fecha y hora: *${wttrin.current_condition.map(j => j.localObsDateTime).flat().join(', ')}*\n• Horario de observación: *${wttrin.current_condition.map(j => j.observation_time).flat().join(', ')}*`;
+};
 
 exports.shazam = (dados) => {
-return `✅️🤖 - Com uma similaridade de *${dados.similarity}* com o áudio, segue as informações da música semelhante:\n—\n• Música: *${dados.music}*\n• Artista(s): *${dados.artists_name}*\n• Álbum: *${dados.album_name}*\n• Produtor(a): *${dados.producer || 'Não especificado.'}*\n• Duração: *${dados.duration}*\n• Data de Lançamento: *${dados.launch}*\n• Gênero(s): *${dados.genres.map((v, index) => v).join(', ')}*`
-}
+  return `✅️🤖 - Con una similitud de *${dados.similarity}* con el audio, sigue la información de la música similar:\n—\n• Música: *${dados.music}*\n• Artista(s): *${dados.artists_name}*\n• Álbum: *${dados.album_name}*\n• Productor(a): *${dados.producer || 'No especificado.'}*\n• Duración: *${dados.duration}*\n• Fecha de lanzamiento: *${dados.launch}*\n• Género(s): *${dados.genres.map((v, index) => v).join(', ')}*`;
+};
 
-exports.movies = (movieInfo) => {
-return `• Título: *${movieInfo.data.results[0].title}* (${movieInfo.data.results[0].original_title})\n• Lançamento: _${movieInfo.data.results[0].release_date}_\n• Avaliações: _${movieInfo.data.results[0].vote_average} - (${movieInfo.data.results[0].vote_count} Votos)_\n• Popularidade do Filme (%): *${movieInfo.data.results[0].popularity.toFixed(1)}%*\n• Classificação adulta? *${movieInfo.data.results[0].adult ? 'Sim.' : 'Não.'}*\n• Linguagem Oficial do Filme: *${movieInfo.data.results[0].original_language}*\n–\n• [🎬] *Sinopse do Filme:*\n↳ ${movieInfo.data.results[0].overview}`
-}
+exports.peliculas = (movieInfo) => {
+  return `• Título: *${movieInfo.data.results[0].title}* (${movieInfo.data.results[0].original_title})\n• Lanzamiento: _${movieInfo.data.results[0].release_date}_\n• Evaluaciones: _${movieInfo.data.results[0].vote_average} - (${movieInfo.data.results[0].vote_count} Votos)_\n• Popularidad de la película (%): *${movieInfo.data.results[0].popularity.toFixed(1)}%*\n• ¿Clasificación adulta? *${movieInfo.data.results[0].adult ? 'Sí.' : 'No.'}*\n• Idioma oficial de la película: *${movieInfo.data.results[0].original_language}*\n–\n• [🎬] *Sinopsis de la película:*\n↳ ${movieInfo.data.results[0].overview}`;
+};
 
 exports.series = (serieInfo) => {
-return `• Título: *${serieInfo.data.results[0].name}* (${serieInfo.data.results[0].original_name})\n• Lançamento: *${serieInfo.data.results[0].first_air_date}*\n• Avaliações: *${serieInfo.data.results[0].vote_average} - (${serieInfo.data.results[0].vote_count} Votos)*\n• Popularidade da Série (%): *${serieInfo.data.results[0].popularity.toFixed(1)}%*\n• Classificação adulta? *${serieInfo.data.results[0].adult ? 'Sim.' : 'Não.'}*\n• Linguagem Oficial da Série: *${serieInfo.data.results[0].original_language}*\n–\n• [🌟] *Sinopse da Série:*\n↳ ${serieInfo.data.results[0].overview}`
-}
+  return `• Título: *${serieInfo.data.results[0].name}* (${serieInfo.data.results[0].original_name})\n• Lanzamiento: *${serieInfo.data.results[0].first_air_date}*\n• Evaluaciones: *${serieInfo.data.results[0].vote_average} - (${serieInfo.data.results[0].vote_count} Votos)*\n• Popularidad de la serie (%): *${serieInfo.data.results[0].popularity.toFixed(1)}%*\n• ¿Clasificación adulta? *${serieInfo.data.results[0].adult ? 'Sí.' : 'No.'}*\n• Idioma oficial de la serie: *${serieInfo.data.results[0].original_language}*\n–\n• [🌟] *Sinopsis de la serie:*\n↳ ${serieInfo.data.results[0].overview}`;
+};
 
-exports.searchIpAdress = (ip) => {
-return `*📡 Localizar + Informações ${ip.data.type}*\n–\n• *Código IP:* ${ip.data.ip}\n• *Tipo de Endereço IP:* ${ip.data.type}\n• *Província:* ${ip.data.region} / ${ip.data.city}\n• *Latitude:* ${ip.data.latitude}\n• *Longitude:* ${ip.data.longitude}\n• *Provedor Wi-Fi:* ${ip.data.isp}\n*Continente:* ${ip.data.continent} - ${ip.data.continent_code}\n• *País:* ${ip.data.country} - *DDI:* ${ip.data.country_phone}\n• *Sigla:* ${ip.data.country_code} - *Capital:* ${ip.data.country_capital}\n• *Fuso Horário:* ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n• *Moeda do País:* ${ip.data.currency} - ${ip.data.currency_code}`
-}
+exports.buscarDireccionIP = (ip) => {
+  return `*📡 Localizar + Información ${ip.data.type}*\n–\n• *Código IP:* ${ip.data.ip}\n• *Tipo de dirección IP:* ${ip.data.type}\n• *Provincia:* ${ip.data.region} / ${ip.data.city}\n• *Latitud:* ${ip.data.latitude}\n• *Longitud:* ${ip.data.longitude}\n• *Proveedor Wi-Fi:* ${ip.data.isp}\n*Continente:* ${ip.data.continent} - ${ip.data.continent_code}\n• *País:* ${ip.data.country} - *DDI:* ${ip.data.country_phone}\n• *Sigla:* ${ip.data.country_code} - *Capital:* ${ip.data.country_capital}\n• *Zona horaria:* ${ip.data.timezone} ${ip.data.timezone_name} ${ip.data.timezone_gmt}\n• *Moneda del país:* ${ip.data.currency} - ${ip.data.currency_code}`;
+};
 
-exports.searchCep = (res) => {
-return `🏠 *Consulta CEP:*\n–\n*Número informado:* ${res.cep}\n• *Logradouro:* ${res.street}\n• *Complemento:* Não encontrado.\n• *Código do DDD:* ${res.ddd}\n• *Bairro:* ${res.neighborhood}\n• *Cidade/Estado:* ${res.city} - ${res.state}\n• *Código do IBGE:* ${res.ibge}\n• *Código do Siafi:* ${res.siafi}`
-}
+exports.buscarCep = (res) => {
+  return `🏠 *Consulta CEP:*\n–\n*Número informado:* ${res.cep}\n• *Calle:* ${res.street}\n• *Complemento:* No encontrado.\n• *Código del DDD:* ${res.ddd}\n• *Barrio:* ${res.neighborhood}\n• *Ciudad/Estado:* ${res.city} - ${res.state}\n• *Código del IBGE:* ${res.ibge}\n• *Código del Siafi:* ${res.siafi}`;
+};
 
-exports.noresult = () => {
-return `Desculpe, não consegui encontrar o que você procurava utilizando essa forma, pode tentar de outra maneira?`;
-}
+exports.sinResultados = () => {
+  return `Lo siento, no pude encontrar lo que buscabas de esta forma, ¿puedes intentar de otra manera?`;
+};
 
-exports.profileInformation = (pushname, sender, info, putar, putar2, gostosurar, gostosurar2, nivelgador, nivelgado2r, programa, status) => {
-return `👤 「 *INFORMAÇÕES - PERFIL* 」\n–\n• Nome: *${pushname} (@${sender.split("@")[0]})*\n• Você atualmente está conectado em um dispositivo: ${info.key.id.length > 21 ? '*Android*' : info.key.id.substring(0, 2) == '3A' ? '*iOS*' : '*Windows/Linux*'}\n• Biografia: *${status}*\n–\n• Seu nível de prostituição: *${putar}${putar2}%*\n• Seu nível de gostosura: *${gostosurar}${gostosurar2}%*\n• Seu nível do gadometro: *${nivelgador}${nivelgado2r}%*\n• Valor do seu programa: *R$${programa}*`
-}
+exports.informacionPerfil = (pushname, sender, info, putar, putar2, gostosurar, gostosurar2, nivelgador, nivelgado2r, programa, status) => {
+  return `👤 「 *INFORMACIÓN - PERFIL* 」\n–\n• Nombre: *${pushname} (@${sender.split("@")[0]})*\n• Actualmente estás conectado en un dispositivo: ${info.key.id.length > 21 ? '*Android*' : info.key.id.substring(0, 2) == '3A' ? '*iOS*' : '*Windows/Linux*'}\n• Biografía: *${status}*\n–\n• Tu nivel de prostitución: *${putar}${putar2}%*\n• Tu nivel de atractivo: *${gostosurar}${gostosurar2}%*\n• Tu nivel de gadómetro: *${nivelgador}${nivelgado2r}%*\n• Valor de tu programa: *R$${programa}*`;
+};
 
-exports.warningAdvertencia = (menc_os2, dfqn) => {
-return `Olá @${menc_os2.split("@")[0]} - Você foi advertido ${dfqn}/3, tome cuidado com 3 advertências, você será removido...`
-}
+exports.advertencia = (menc_os2, dfqn) => {
+  return `Hola @${menc_os2.split("@")[0]} - Has sido advertido ${dfqn}/3, ten cuidado, con 3 advertencias serás expulsado...`;
+};
 
-exports.finishAdvertencia = (menc_os2) => {
-return `Adeus usuário: @${menc_os2.split("@")[0]} - Você completou 3 advertências, fale com a administração do grupo para ter noção do que foi ocorrido.`
-}
+exports.finalizarAdvertencia = (menc_os2) => {
+  return `Adiós usuario: @${menc_os2.split("@")[0]} - Has completado 3 advertencias, contacta con la administración del grupo para entender lo ocurrido.`;
+};
 
-exports.syntaxAnonymousMail = (prefix) => {
-return `*Para usar o correio elegante ou não*, pode ser uma indireta também.. 😬\n–\nVocê deve primeiramente copiar o número do seu crush ou inimigo(a), após isso, pense em uma mensagem.\n   • Exemplo: *${prefix}correio [número/msg]*\n   • Exemplo sendo usado em prática: *${prefix}correio +5582.../eu te amo*`
-}
+exports.sintaxisCorreoAnonimo = (prefix) => {
+  return `*Para usar el correo elegante o no*, también puede ser una indirecta... 😬\n–\nPrimero debes copiar el número de tu crush o enemigo(a), luego piensa en un mensaje.\n   • Ejemplo: *${prefix}correo [número/mensaje]*\n   • Ejemplo en práctica: *${prefix}correo +5582.../te amo*`;
+};
 
-exports.anonymousMail = (txt2) => {
-return `📪 Você recebeu uma mensagem do maior correio anônimo do Brasil.\n–\n▶️ Quem te enviou? *Desconhecido*\n–\n`+"```"+txt2+"```"
-}
+exports.correoAnonimo = (txt2) => {
+  return `📪 Has recibido un mensaje del mayor correo anónimo de Brasil.\n–\n▶️ ¿Quién lo envió? *Desconocido*\n–\n`+"```"+txt2+"```";
+};
 
-exports.sucessAnonymousMail = () => {
-return `✅ O correio foi enviado para o remetente com sucesso.\n–\n• *Obs:* Ele(a) pode descobrir quem enviou. _Não me responsabilizo se você enviou mensagens desencorajadas._`
-}
+exports.exitoCorreoAnonimo = () => {
+  return `✅ El correo fue enviado al destinatario con éxito.\n–\n• *Nota:* Él/ella puede descubrir quién lo envió. _No me responsabilizo si enviaste mensajes desalentadores._`;
+};
 
-exports.unbannedMessage = (blcp) => {
-return `@${blcp.split('@')[0]} foi desbanido e poderá novamente usar os comandos do bot.`
-}
+exports.mensajeDesbaneado = (blcp) => {
+  return `@${blcp.split('@')[0]} ha sido desbaneado y podrá volver a usar los comandos del bot.`;
+};
 
-exports.bannedMessage = (blcp) => {
-return `@${blcp.split('@')[0]} foi banido e não poderá mais usar os comandos do bot.`
-}
+exports.mensajeBaneado = (blcp) => {
+  return `@${blcp.split('@')[0]} ha sido baneado y no podrá usar más los comandos del bot.`;
+};
 
-exports.ownersList = (NomeDoBot, numerodono_ofc, numero_dono1, numero_dono2, numero_dono3, numero_dono4, numero_dono5, numero_dono6) => {
-return `Olá, aqui está a lista de proprietários do bot: ${NomeDoBot}\n–\n*Dono Oficial:* wa.me/${numerodono_ofc}\n–\nDono [ 1 ] - wa.me/${numero_dono1}\nDono [ 2 ] - wa.me/${numero_dono2}\nDono [ 3 ] - wa.me/${numero_dono3}\nDono [ 4 ] - wa.me/${numero_dono4}\nDono [ 5 ] - wa.me/${numero_dono5}\nDono [ 6 ] - wa.me/${numero_dono6}`
-}
+exports.listaPropietarios = (NombreDelBot, numerodono_ofc, numero_dono1, numero_dono2, numero_dono3, numero_dono4, numero_dono5, numero_dono6) => {
+  return `Hola, aquí está la lista de propietarios del bot: ${NombreDelBot}\n–\n*Dueño Oficial:* wa.me/${numerodono_ofc}\n–\nDueño [1] - wa.me/${numero_dono1}\nDueño [2] - wa.me/${numero_dono2}\nDueño [3] - wa.me/${numero_dono3}\nDueño [4] - wa.me/${numero_dono4}\nDueño [5] - wa.me/${numero_dono5}\nDueño [6] - wa.me/${numero_dono6}`;
+};
 
-exports.statusBot = (isAnticall, isAntiPv, isAntiPv2, isAntiPv3, isAntiImg, isAntiVid, isAntiAudio, isAntiSticker, isAntiDDD, Antidoc, isAntiCtt, Antiloc, isAntilinkgp, isAntiLinkHard, isAntifake, isAntiNotas, isAnticatalogo, isPalavrao, isAntiFlood, isWelkom, isWelkom2, isSimi, isSimi2, isAutofigu, isAutorepo, isModobn, isModoAluguel, isLevelingOn) => {
-return `Status de funcionalidades ativaveis para proteger o grupo / se divertir com seus participantes.\nAs funcionalidades como *Anti Privado - Anti Ligação - Modo Aluguel*, são ativações que somente o dono, pode executar, _então caso esteja ativa você não poderá executar comandos no privado ou fazer ligações ao número do bot._\n–\n➱ Anti Ligação: ${isAnticall ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV Block: ${isAntiPv ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV (2) - Sem bloqueio de usuário(s): ${isAntiPv2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV (3) - Não responde ninguém no privado: ${isAntiPv3 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Imagem: ${isAntiImg ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Vídeo: ${isAntiVid ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Áudio: ${isAntiAudio? '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Sticker: ${isAntiSticker ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Documento: ${Antidoc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Contato ${isAntiCtt ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Localização: ${Antiloc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Grupo: ${isAntilinkgp ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Hard: ${isAntiLinkHard ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Fake: ${isAntifake ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Notas: ${isAntiNotas ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Catalogo: ${isAnticatalogo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Palavrão: ${isPalavrao ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Limite Caracteres: ${isAntiFlood ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 1: ${isWelkom ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 2: ${isWelkom2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 1: ${isSimi ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 2: ${isSimi2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Sticker: ${isAutofigu ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Resposta: ${isAutorepo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Brincadeira: ${isModobn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Aluguel: ${isModoAluguel ?  '✓ - Função ativa.' : '✕ - Não ativado.'}\n➱ Level: ${isLevelingOn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti DDD: ${isAntiDDD ?  '✓ - Função ativa.' : '✕ - Desativado.'}`
-}
+exports.estadoBot = (isAnticall, isAntiPv, isAntiPv2, isAntiPv3, isAntiImg, isAntiVid, isAntiAudio, isAntiSticker, isAntiDDD, Antidoc, isAntiCtt, Antiloc, isAntilinkgp, isAntiLinkHard, isAntifake, isAntiNotas, isAnticatalogo, isPalavrao, isAntiFlood, isWelkom, isWelkom2, isSimi, isSimi2, isAutofigu, isAutorepo, isModobn, isModoAluguel, isLevelingOn) => {
+  return `Estado de funcionalidades activables para proteger el grupo / divertirse con sus participantes.\nFuncionalidades como *Anti Privado - Anti Llamada - Modo Alquiler*, son activaciones que solo el dueño puede ejecutar, _por lo que si están activas no podrás usar comandos en privado ni hacer llamadas al número del bot._\n–\n➱ Anti Llamada: ${isAnticall ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti PV Bloqueo: ${isAntiPv ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti PV (2) - Sin bloqueo de usuario(s): ${isAntiPv2 ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti PV (3) - No responde a nadie en privado: ${isAntiPv3 ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Imagen: ${isAntiImg ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Vídeo: ${isAntiVid ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Audio: ${isAntiAudio ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Sticker: ${isAntiSticker ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Documento: ${Antidoc ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Contacto: ${isAntiCtt ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Localización: ${Antiloc ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Link Grupo: ${isAntilinkgp ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Link Hard: ${isAntiLinkHard ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Fake: ${isAntifake ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Notas: ${isAntiNotas ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Catálogo: ${isAnticatalogo ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti Palabrota: ${isPalavrao ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Límite de Caracteres: ${isAntiFlood ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Bienvenida 1: ${isWelkom ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Bienvenida 2: ${isWelkom2 ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Simi 1: ${isSimi ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Simi 2: ${isSimi2 ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Auto Sticker: ${isAutofigu ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Auto Respuesta: ${isAutorepo ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Modo Broma: ${isModobn ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Modo Alquiler: ${isModoAluguel ? '✓ - Función activa.' : '✕ - No activada.'}\n➱ Nivel: ${isLevelingOn ? '✓ - Función activa.' : '✕ - Desactivada.'}\n➱ Anti DDD: ${isAntiDDD ? '✓ - Función activa.' : '✕ - Desactivada.'}`;
+};
 
-exports.errorUploadImage = () => {
-return `❌️ Ocorreu um erro na conversão ou pode ser que a duração do vídeo foi ultrapassada, só converto vídeos de até 30s.`
-}
+exports.errorSubidaImagen = () => {
+  return `❌️ Ocurrió un error en la conversión o puede que la duración del video haya sido excedida, solo convierto videos de hasta 30s.`;
+};
 
-exports.noArgsSearch = () => {
-return `Como deseja realizar uma pesquisa sem conter nenhum argumento? `
-}
+exports.sinArgumentosBusqueda = () => {
+  return `¿Cómo deseas realizar una búsqueda sin incluir ningún argumento?`;
+};
 
-exports.syntaxLogos = () => {
-return `Cadê o texto? Para eu criar uma logo preciso que você coloque um texto atribuído ao comando..`
-}
+exports.sintaxisLogos = () => {
+  return `¿Dónde está el texto? Para crear un logo necesito que incluyas un texto asociado al comando.`;
+};
 
-exports.quoteCurrencies = (response) => {
-return `*[COTAÇÃO]* - Os dados informados são atualizados 24h por dia: 🗣💰\n–\n• Moeda: *${response.name}*\n• Valor da moeda mais alto em 24 horas: *R$ ${Number(reponse.high).toFixed(2)}*\n• Valor da moeda mais baixo em 24 horas: *R$ ${Number(repose.low).toFixed(2)}*\n• Valor da moeda atualizado agora no momento: *R$ ${Number(resposta.bid).toFixed(2)}*`
-}
+exports.cotizacionMonedas = (response) => {
+  return `*[COTIZACIÓN]* - Los datos informados se actualizan 24 horas al día: 🗣💰\n–\n• Moneda: *${response.name}*\n• Valor más alto de la moneda en 24 horas: *R$ ${Number(response.high).toFixed(2)}*\n• Valor más bajo de la moneda en 24 horas: *R$ ${Number(response.low).toFixed(2)}*\n• Valor de la moneda actualizado ahora: *R$ ${Number(response.bid).toFixed(2)}*`;
+};
 
-exports.syntaxWebSticker = (prefix) => {
-    return `🤖 *Como usar o comando 'figuweb'?*\n• *Função:* Criar uma figurinha com texto personalizado e fundo colorido.\n——\n• *Sintaxe do Comando:*\n\t- ${prefix}figuweb [texto]/[número da cor]\n• *Escolhendo a Cor de Fundo:*\n\t- Você pode escolher entre 4 cores diferentes para o fundo da sua figurinha. Basta adicionar o número correspondente à cor desejada após o texto, separado por uma barra (/).\n—\n• *Numerações das cores dos fundos da figurinha de texto:*\n\t- 1. Preto (Padrão), 2. Branco, 3. Vermelho, 4. Azul\n—\n• *Exemplos de usos:*\n \t- ${prefix}figuweb Olá, como vai?/1 (Fundo na cor Preto)\n\t- ${prefix}figuweb Bom dia!/2 (Fundo na cor Branco)\n\t- ${prefix}figuweb Boa tarde!/3 (Fundo na cor Vermelho)\n\t- ${prefix}figuweb Boa noite!/4 (Fundo na cor Azul)\n—\n• Se você não especificar uma cor, o fundo padrão (Preto) será usado.`
-}
+exports.sintaxisStickerWeb = (prefix) => {
+  return `🤖 *¿Cómo usar el comando 'figuweb'?*\n• *Función:* Crear una figurita con texto personalizado y fondo coloreado.\n——\n• *Sintaxis del Comando:*\n\t- ${prefix}figuweb [texto]/[número de color]\n• *Escogiendo el Color de Fondo:*\n\t- Puedes elegir entre 4 colores diferentes para el fondo de tu figurita. Solo añade el número correspondiente al color deseado después del texto, separado por una barra (/).\n—\n• *Numeración de los colores de fondo de la figurita de texto:*\n\t- 1. Negro (Predeterminado), 2. Blanco, 3. Rojo, 4. Azul\n—\n• *Ejemplos de uso:*\n \t- ${prefix}figuweb Hola, ¿cómo estás?/1 (Fondo en color Negro)\n\t- ${prefix}figuweb ¡Buenos días!/2 (Fondo en color Blanco)\n\t- ${prefix}figuweb ¡Buenas tardes!/3 (Fondo en color Rojo)\n\t- ${prefix}figuweb ¡Buenas noches!/4 (Fondo en color Azul)\n—\n• Si no especificas un color, se usará el fondo predeterminado (Negro).`;
+};
 
-exports.groupInvitation = (sender, cnvt, prefix) => {
-return `*[SOLICITAÇÃO]* - Foi enviado um convite para o bot entrar em um grupo.\n–\n⚙️ *Informações:*\n      • Número: *wa.me/${sender.split("@")[0]}*\n      • Link: *${cnvt}*\n–\n📑 *Como aceitar ou recusar o pedido?*\n      • Para aceitar o pedido é nescessario você usar o comando: ${prefix}entrar e o link do grupo do(a) solicitante.\n          Ex: *${prefix}entrar ${cnvt}*\n      • *Recusar o pedido é fácil!* Mas lembrando ele só serve para notificar o usuário que o pedido foi recusado.\n          Ex: *${prefix}recusar ${sender.split("@")[0]}*`
-}
+exports.invitacionGrupo = (sender, cnvt, prefix) => {
+  return `*[SOLICITUD]* - Se envió una invitación para que el bot ingrese a un grupo.\n–\n⚙️ *Información:*\n      • Número: *wa.me/${sender.split("@")[0]}*\n      • Enlace: *${cnvt}*\n–\n📑 *¿Cómo aceptar o rechazar la solicitud?*\n      • Para aceptar la solicitud es necesario usar el comando: ${prefix}entrar y el enlace del grupo del solicitante.\n          Ej: *${prefix}entrar ${cnvt}*\n      • *¡Rechazar la solicitud es fácil!* Pero recuerda que solo sirve para notificar al usuario que la solicitud fue rechazada.\n          Ej: *${prefix}rechazar ${sender.split("@")[0]}*`;
+};
 
-exports.removeUserAntiPlvr = () => {
-return `*「 REMOVIDO(A) POR UTILIZAR UMA PALAVRA PROIBIDA 」*\nVocê será banido do grupo, na proxima veja as regras ao digitar qualquer palavra!`
-}
+exports.removerUsuarioAntiPalabra = () => {
+  return `*「 EXPULSADO(A) POR USAR UNA PALABRA PROHIBIDA 」*\nSerás expulsado del grupo, la próxima vez revisa las reglas antes de escribir cualquier palabra.`;
+};
 
-exports.permissionDenied_rUser = () => {
-return `Infelizmente, não sou um administrador, entt não posso te banir!`
-}
+exports.permisoDenegadoUsuario = () => {
+  return `Desafortunadamente, no soy administrador, por lo que no puedo expulsarte.`;
+};
 
-exports.antisRandomMessage = () => {
-return `Uma dessas opções estão ativada, mas por você ser adm, não será removido(a) _(ANTI CONTATO - ANTI CATALOGO - ANTI LOCALIZAÇÃO)_`
-}
+exports.mensajeAntiAleatorio = () => {
+  return `Una de estas opciones está activada, pero por ser administrador, no serás expulsado(a) _(ANTI CONTACTO - ANTI CATÁLOGO - ANTI LOCALIZACIÓN)_`;
+};
 
-exports.charactersAnti = () => {
-return `🚨 Muitos caracteres foram enviados em uma só mensagem, isto vai contra as regras do grupo! Por ordem dos adminstradores, irei remover o membro.`;
-}
+exports.caracteresAnti = () => {
+  return `🚨 Se enviaron demasiados caracteres en un solo mensaje, esto va contra las reglas del grupo. Por orden de los administradores, expulsaré al miembro.`;
+};
 
-exports.markingAllMember = () => {
-return `⚠️ Foi detectado uma mensagem marcando todos os participantes do grupo de forma invisível, possivelmente pode ser um tipo de WhatsApp Modificado. Então, por este motivo o membro acaba de ser removido e por segurança ao grupo! Caso tenha algo à se explicar, entre em contato com um dos adminstradores do grupo.`;
-}
+exports.marcarTodosMiembros = () => {
+  return `⚠️ Se detectó un mensaje marcando a todos los participantes del grupo de forma invisible, posiblemente sea un tipo de WhatsApp modificado. Por este motivo, el miembro acaba de ser expulsado por seguridad del grupo. Si tienes algo que explicar, contacta con uno de los administradores del grupo.`;
+};
 
-exports.absenceRecordOwner = (NickDono, tabelin) => {
-return `Olá, o meu proprietário "${NickDono}" se encontra ausente no momento.\n↺Desde do Horário: ${tabelin.Ausente_Desde}\n–\n☇ Mensagem de Ausência: ${tabelin.Motivo_Da_Ausência}`
-}
+exports.registroAusenciaPropietario = (NickDono, tabelin) => {
+  return `Hola, mi propietario "${NickDono}" se encuentra ausente en este momento.\n↺ Desde la hora: ${tabelin.Ausente_Desde}\n–\n☇ Mensaje de ausencia: ${tabelin.Motivo_Da_Ausência}`;
+};
 
-exports.absenceRecordAdmin = (blak) => {
-return `*Registro de Ausência* - O adminstrador "@${blak.id.split("@")[0]}" se encontra *ausente* nesse momento.\n–\n☇ Mensagem: ${blak.msg}`
-}
+exports.registroAusenciaAdmin = (blak) => {
+  return `*Registro de Ausencia* - El administrador "@${blak.id.split("@")[0]}" se encuentra *ausente* en este momento.\n–\n☇ Mensaje: ${blak.msg}`;
+};
 
-exports.floodCommands = () => {
-return `Espere *5s* para usar outro comando ou executar o mesmo...`
-}
+exports.comandosFlood = () => {
+  return `Espera *5s* para usar otro comando o ejecutar el mismo...`;
+};
 
-exports.timeRequired = () => {
-return `Não é possível realizar download de áudios ou vídeos acima de *20 minutos*.`
-}
+exports.tiempoRequerido = () => {
+  return `No es posible realizar descargas de audios o videos de más de *20 minutos*.`;
+};
 
 exports.error = () => {
-return `Desculpe, ocorreu um erro. Por favor, tente novamente mais tarde.`
-}
+  return `Lo siento, ocurrió un error. Por favor, intenta de nuevo más tarde.`;
+};
 
-exports.messageProhibitedDetAdmin = () => {
-return `> ⚠️ Mensagem proibida detectada:\n• Olá adminstrador(a), sua punição foi anulada pois você pertence à equipe de organização do grupo! Fique tranquilo(a) senhor(a)!`;
-}
+exports.mensajeProhibidoDetectadoAdmin = () => {
+  return `> ⚠️ Mensaje prohibido detectado:\n• Hola administrador(a), tu sanción fue anulada porque formas parte del equipo de organización del grupo. ¡Tranquilo(a), señor(a)!`;
+};
 
-exports.linkProhibitedDetAdmin = () => {
-return `> ⚠️ Link detectado! Um dos tipos de AntiLink está ativo neste grupo.\n• Olá adminstrador(a), sua punição foi anulada pois você pertence à equipe de organização do grupo! Fique tranquilo(a) senhor(a)!`
-}
+exports.linkProhibidoDetectadoAdmin = () => {
+  return `> ⚠️ ¡Link detectado! Uno de los tipos de AntiLink está activo en este grupo.\n• Hola administrador(a), tu sanción fue anulada porque formas parte del equipo de organización del grupo. ¡Tranquilo(a), señor(a)!`;
+};
 
-exports.pollMessageDetect = (senderUser) => {
-  return `⚠️ *[@${senderUser.split('@')[0]}]* - Um dos adminstradores habilitou uma das configurações de segurança que impede que membros inferiores ao administrador(a) não pode criar enquetes neste grupo. Então, a enquete criada será apagada para todos!`;
-}
+exports.mensajeEncuestaDetectada = (senderUser) => {
+  return `⚠️ *[@${senderUser.split('@')[0]}]* - Uno de los administradores habilitó una configuración de seguridad que impide que los miembros inferiores a administrador(a) creen encuestas en este grupo. Por lo tanto, la encuesta creada será eliminada para todos.`;
+};
 
-exports.messageProhibitedDetUser = () => {
-return `🚨- Uma mensagem proibida detectada de acordo com as regras do grupo e antis ativados estou realizando o banimento do infrator das regras do grupo! Para mais informações sobre seu banimento entre em contato com adminstrador(a) do grupo!`;
-}
+exports.mensajeProhibidoDetectadoUsuario = () => {
+  return `🚨- Se detectó un mensaje prohibido según las reglas del grupo y los antis activados. Estoy realizando la expulsión del infractor de las reglas del grupo. Para más información sobre tu expulsión, contacta con un administrador(a) del grupo.`;
+};
 
-exports.antiCalls = () => {
-return `📵 - Olá, tudo bem? Você não pode realizar ligações para o bot. Lembrando, o anti ligações está ativado então você será bloqueado no privado, fale com meu/minha chefe para realizar o desbloqueio.`;
-}
+exports.antiLlamadas = () => {
+  return `📵 - Hola, ¿todo bien? No puedes realizar llamadas al bot. Recuerda, el anti llamadas está activado, por lo que serás bloqueado en privado. Habla con mi jefe/jefa para realizar el desbloqueo.`;
+};
 
-exports.helpGroupSettings = (prefix, sender) => {
-return `🤠 Olá administrador(a) *@${sender.split("@")[0]}*! Tudo bem?\n> Seja bem vindo(a), ao menu de ajuda do comando *'grupo'*:\n–\n1. _${prefix}grupo_ *-open* _→_ Permite o envio das mensagens por todos os participantes do grupo.\n\n2. _${prefix}grupo_ *-close* _→_ Permite o envio de mensagens apenas somente para administradores do grupo.\n\n3. _${prefix}grupo_ *-livre* _→_ Permite a todos os integrantes que editem os dados.\n\n4. _${prefix}grupo_ *-private* _→_ Só irá permitir que as alterações nos dados do grupo, sejam alteradas somente por administradores do mesmo.`
-}
+exports.ayudaConfiguracionesGrupo = (prefix, sender) => {
+  return `🤠 Hola administrador(a) *@${sender.split("@")[0]}*! ¿Todo bien?\n> Bienvenido(a) al menú de ayuda del comando *'grupo'*:\n–\n1. _${prefix}grupo_ *-open* _→_ Permite el envío de mensajes por todos los participantes del grupo.\n\n2. _${prefix}grupo_ *-close* _→_ Permite el envío de mensajes solo a los administradores del grupo.\n\n3. _${prefix}grupo_ *-libre* _→_ Permite a todos los integrantes editar los datos.\n\n4. _${prefix}grupo_ *-private* _→_ Solo permitirá que los administradores realicen cambios en los datos del grupo.`;
+};
 
-exports.helpPhotoPrivacy = (prefix, sender) => {
-return `🤪 Olá proprietário(a) *@${sender.split("@")[0]}*! Tudo bem?\n> Seja bem vindo(a), ao menu de ajuda do comando *'wprivacyph'*:\n–\n1. _${prefix}wprivacyph_ *-cntt* _→_ Permite somente que os contatos salvos no dispositivo, vejam a foto de perfil.\n\n2. _${prefix}wprivacyph_ *-all* _→_ Permite que todos vejam a foto de perfil do bot.\n\n3. _${prefix}wprivacyph_ *-noall* _→_ Ninguém irá ver a foto de perfil colocada no bot, ou seja, até o proprietário está restrito(oculto) de ver.\n–\n📍 *Função:* O comando tem a função de alterar a privacidade da foto de perfil, ou seja, você tem como alterar diretamente do bot, sem a precisão abrir o numero do bot e mexer nas configurações.`
-}
+exports.ayudaPrivacidadFoto = (prefix, sender) => {
+  return `🤪 Hola propietario(a) *@${sender.split("@")[0]}*! ¿Todo bien?\n> Bienvenido(a) al menú de ayuda del comando *'wprivacyph'*:\n–\n1. _${prefix}wprivacyph_ *-cntt* _→_ Permite que solo los contactos guardados en el dispositivo vean la foto de perfil.\n\n2. _${prefix}wprivacyph_ *-all* _→_ Permite que todos vean la foto de perfil del bot.\n\n3. _${prefix}wprivacyph_ *-noall* _→_ Nadie verá la foto de perfil del bot, incluso el propietario estará restringido (oculta).\n–\n📍 *Función:* El comando permite cambiar la privacidad de la foto de perfil, es decir, puedes modificarla directamente desde el bot sin necesidad de abrir el número del bot y ajustar las configuraciones.`;
+};
 
-exports.helpGroupPrivacy = (prefix, sender) => {
-return `🤪 Olá proprietário(a) *@${sender.split("@")[0]}*! Tudo bem?\n> Seja bem vindo(a), ao menu de ajuda do comando *'wprivacygp'*:\n–\n1. _${prefix}wprivacygp_ *-cntt* _→_ Permite somente que os contatos salvos no dispositivo, adicionem em grupo.\n\n2. _${prefix}wprivacygp_ *-all* _→_ Permite que todos os contatos adicionem no grupo, sem nenhuma interferência.\n\n3. _${prefix}wprivacygp_ *-noall* _→_ Ninguém conseguirá adicionar o bot em grupos, até o(a) dono(a) está restrito.\n–\n📍 *Função:* O comando tem a função de alterar a privacidade de todos os usuários adicionar o contato da bot em grupos, ou seja, você tem como alterar diretamente do bot, sem a precisão abrir o numero do bot e mexer nas configurações do número.`
-}
+exports.ayudaPrivacidadGrupo = (prefix, sender) => {
+  return `🤪 Hola propietario(a) *@${sender.split("@")[0]}*! ¿Todo bien?\n> Bienvenido(a) al menú de ayuda del comando *'wprivacygp'*:\n–\n1. _${prefix}wprivacygp_ *-cntt* _→_ Permite que solo los contactos guardados en el dispositivo añadan al bot a grupos.\n\n2. _${prefix}wprivacygp_ *-all* _→_ Permite que todos los contactos añadan al bot a grupos sin ninguna interferencia.\n\n3. _${prefix}wprivacygp_ *-noall* _→_ Nadie podrá añadir al bot a grupos, incluso el dueño(a) estará restringido.\n–\n📍 *Función:* El comando permite cambiar la privacidad para que los usuarios añadan el contacto del bot a grupos, es decir, puedes modificarlo directamente desde el bot sin necesidad de abrir el número del bot y ajustar las configuraciones.`;
+};
 
-exports.errorResponseSimi = () => {
-response = ["Eu não entendo tudo senhor(a), sou uma simples simi! Me explique...", "Eu sei, eu sei! 👀 Não querendo abusar, o que é isso? Me ensina...", "Não me xinga amor! 😭 Eu ainda tenho muito à aprender...", "*An, oxe?* 🤷🏻‍♀ O que é isso? Poderia me explicar por favor humano(a)?", "Eu sou um(a) bot! 🤖 Mas eu não sei de tudo não! Me explica por favor?"];
-return response[Math.floor(Math.random() * response.length)]
-}
+exports.respuestaErrorSimi = () => {
+  const response = [
+    "No entiendo todo, señor(a), ¡soy una simple simi! Explícamelo...",
+    "¡Lo sé, lo sé! 👀 Sin querer abusar, ¿qué es esto? Enséñame...",
+    "¡No me insultes, amor! 😭 Todavía tengo mucho que aprender...",
+    "*¿Eh, qué?* 🤷🏻‍♀ ¿Qué es esto? ¿Podrías explicármelo, por favor, humano(a)?",
+    "¡Soy un(a) bot! 🤖 Pero no lo sé todo. ¿Me lo explicas, por favor?"
+  ];
+  return response[Math.floor(Math.random() * response.length)];
+};
 
 exports.GshowGE = (dataResult) => {
-return dataResult.resultado.map((info, index) => `${index+1}. *${info.titulo || 'Manchete sem título.'}* - (${info.horarioPostagem || 'Há X horas.'})\n• ${info.trechoManchete || 'Manchete sem descrição.'}`).join('\n–\n');
-}
+  return dataResult.resultado.map((info, index) => `${index+1}. *${info.titulo || 'Titular sin título.'}* - (${info.horarioPostagem || 'Hace X horas.'})\n• ${info.trechoManchete || 'Titular sin descripción.'}`).join('\n–\n');
+};
 
-exports.helpNoticesG = (sender, prefix) => {
-return `😸 Olá @${sender.split('@')[0]}, seja bem-vindo ao menu de ajuda e tutoriais do comando: *'gamenews'* | *'gamesnews'*\n–\n> O comando possuí 11 argumentações de uso, cada uma tem um filtro de notícia. Lembrando, este comando é somente para notícias de jogos online! Para ver notícias de Time, use: _${prefix}esportenews_.\n–\n*01.* Call of Duty: ${prefix}gamenews -cod\n*02.* Counter-Strike: ${prefix}gamenews -csgo\n*03.* FIFA 2024: ${prefix}gamenews -fifa\n*04.* Fortnite: ${prefix}gamenews -fortnite\n*05.* GameXP: ${prefix}gamenews -gamexp\n*06.* PES 2024: ${prefix}gamenews -pes\n*07.* League of Legends: ${prefix}gamenews -lol\n*08.* Pokemon: ${prefix}gamenews -pokemon\n*09.* Rainbow 6: ${prefix}gamenews -r6\n*10.* Valorant: ${prefix}gamenews -valorant\n*11.* Pokemon TCG: ${prefix}gamenews -tcg`
-}
+exports.ayudaNoticiasJuegos = (sender, prefix) => {
+  return `😸 Hola @${sender.split('@')[0]}, bienvenido al menú de ayuda y tutoriales del comando: *'gamenews'* | *'gamesnews'*\n–\n> El comando tiene 11 argumentos de uso, cada uno con un filtro de noticias. Recuerda, este comando es solo para noticias de juegos online. Para ver noticias de deportes, usa: _${prefix}esportenews_.\n–\n*01.* Call of Duty: ${prefix}gamenews -cod\n*02.* Counter-Strike: ${prefix}gamenews -csgo\n*03.* FIFA 2024: ${prefix}gamenews -fifa\n*04.* Fortnite: ${prefix}gamenews -fortnite\n*05.* GameXP: ${prefix}gamenews -gamexp\n*06.* PES 2024: ${prefix}gamenews -pes\n*07.* League of Legends: ${prefix}gamenews -lol\n*08.* Pokemon: ${prefix}gamenews -pokemon\n*09.* Rainbow 6: ${prefix}gamenews -r6\n*10.* Valorant: ${prefix}gamenews -valorant\n*11.* Pokemon TCG: ${prefix}gamenews -tcg`;
+};
 
-exports.helpNoticesEsporte = (sender, prefix) => {
-return `🌟 Olá @${sender.split('@')[0]}, seja bem-vindo ao menu de ajuda e tutoriais do comando: *'esporte_noticias'* | *'esportenews'*\n–\n> O comando possuí 18 argumentações de uso, cada uma tem um filtro de notícia. Lembrando, este comando é somente para notícias de esportes! Para ver notícias de jogos online, use: _${prefix}gamenews_.\n–\n*01.* Todas as categorias agrupadas à um só parâmetro: ${prefix}esportenews -all\n*02.* Futebol: ${prefix}esportenews -futebol\n*03.* Futsal: ${prefix}esportenews -futsal\n*04.* Skate: ${prefix}esportenews -skate\n*05.* Surfe: ${prefix}esportenews -surf\n*06.* Basquete: ${prefix}esportenews -basquete\n*07.* Vôlei: ${prefix}esportenews -volei\n*08.* Tênis: ${prefix}esportenews -tenis\n*09.* Atletismo: ${prefix}esportenews -atletismo\n*10.* Natação: ${prefix}esportenews -natacao\n*11.* Ciclismo: ${prefix}esportenews -ciclismo\n*12.* Boxe: ${prefix}esportenews -boxe\n*13.* Beisebol: ${prefix}esportenews -beisebol\n*14.* Futebol EUA: ${prefix}esportenews -futebol-eua\n*15.* Judô: ${prefix}esportenews -judo\n*16.* Ginástica: ${prefix}esportenews -ginastica\n*17.* Golfe: ${prefix}esportenews -golfe\n*18.* Fórmula 1: ${prefix}esportenews -f1`
-}
+exports.ayudaNoticiasDeportes = (sender, prefix) => {
+  return `🌟 Hola @${sender.split('@')[0]}, bienvenido al menú de ayuda y tutoriales del comando: *'esporte_noticias'* | *'esportenews'*\n–\n> El comando tiene 18 argumentos de uso, cada uno con un filtro de noticias. Recuerda, este comando es solo para noticias de deportes. Para ver noticias de juegos online, usa: _${prefix}gamenews_.\n–\n*01.* Todas las categorías agrupadas en un solo parámetro: ${prefix}esportenews -all\n*02.* Fútbol: ${prefix}esportenews -futebol\n*03.* Futsal: ${prefix}esportenews -futsal\n*04.* Skate: ${prefix}esportenews -skate\n*05.* Surf: ${prefix}esportenews -surf\n*06.* Baloncesto: ${prefix}esportenews -basquete\n*07.* Voleibol: ${prefix}esportenews -volei\n*08.* Tenis: ${prefix}esportenews -tenis\n*09.* Atletismo: ${prefix}esportenews -atletismo\n*10.* Natación: ${prefix}esportenews -natacao\n*11.* Ciclismo: ${prefix}esportenews -ciclismo\n*12.* Boxeo: ${prefix}esportenews -boxe\n*13.* Béisbol: ${prefix}esportenews -beisebol\n*14.* Fútbol Americano: ${prefix}esportenews -futebol-eua\n*15.* Judo: ${prefix}esportenews -judo\n*16.* Gimnasia: ${prefix}esportenews -ginastica\n*17.* Golf: ${prefix}esportenews -golfe\n*18.* Fórmula 1: ${prefix}esportenews -f1`;
+};
 
-exports.cmdBlockGroup = () => {
-return `*A função está bloqueada neste grupo!* O adm restringiu o uso deste comando, então os participantes deste grupo estão impossibilitados de usar.`;
-}
+exports.comandoBloqueadoGrupo = () => {
+  return `*¡La función está bloqueada en este grupo!* El administrador restringió el uso de este comando, por lo que los participantes de este grupo no pueden usarlo.`;
+};
 
-exports.cmdBlockGlobal = () => {
-return `Este comando foi bloqueado por meu dono(a) para todos os usuários.`;
-}
+exports.comandoBloqueadoGlobal = () => {
+  return `Este comando fue bloqueado por mi dueño(a) para todos los usuarios.`;
+};
