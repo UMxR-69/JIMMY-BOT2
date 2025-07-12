@@ -1,115 +1,115 @@
 const moment = require('moment-timezone');
 const imageConfig = require('./Ima/Imagens.json');
 
-let ultimaImagem = null;
+let ultimaImagen = null;
 
-function pegarImagemAleatoria(imagens) {
-    let novaImagem;
+function obtenerImagenAleatoria(imagenes) {
+    let nuevaImagen;
     do {
-        novaImagem = imagens[Math.floor(Math.random() * imagens.length)];
-    } while (novaImagem === ultimaImagem && imagens.length > 1);
-    ultimaImagem = novaImagem;
-    return novaImagem;
+        nuevaImagen = imagenes[Math.floor(Math.random() * imagenes.length)];
+    } while (nuevaImagen === ultimaImagen && imagenes.length > 1);
+    ultimaImagen = nuevaImagen;
+    return nuevaImagen;
 }
 
-module.exports = (prefix, NomeDoBot, sender) => {
+module.exports = (prefix, nombreBot, sender) => {
     if (!imageConfig || !imageConfig.brincadeira || !Array.isArray(imageConfig.brincadeira.mainImage)) {
-        throw new Error("mainImage não disponível no arquivo de configuração.");
+        throw new Error("No hay imágenes disponibles en la configuración.");
     }
 
-    const imagens = imageConfig.brincadeira.mainImage;
-    if (imagens.length === 0) {
-        throw new Error("Nenhuma imagem disponível para o menu RPG.");
+    const imagenes = imageConfig.brincadeira.mainImage;
+    if (imagenes.length === 0) {
+        throw new Error("No hay imágenes disponibles para el menú RPG.");
     }
 
-    const imagemAleatoria = pegarImagemAleatoria(imagens);
+    const imagenAleatoria = obtenerImagenAleatoria(imagenes);
     const thumbnailAdUrl = 'https://xatimg.com/image/47FHqq0plr88.jpg';
     const linkOficial = 'https://tedzinho.online';
-    const horarioAtual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
-    const dataAtual = moment().format('DD/MM/YYYY');
+    const horaActual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
+    const fechaActual = moment().format('DD/MM/YYYY');
 
     const textoMenuRPG = `
-╭── 🎮 MENU RPG ──╮
-│ 📅 Data: ${dataAtual}
-│ ⏰ Hora: ${horarioAtual}
-│ 👤 Usuário: @${sender.split("@")[0]}
-╰────────────────────╯
+╭── 🎮 MENÚ RPG ──╮
+│ 📅 Fecha: ${fechaActual}
+│ ⏰ Hora: ${horaActual}
+│ 👤 Usuario: @${sender.split("@")[0]}
+╰────────────────╯
 
 ━━━━━━━━━━━━━━━
-📋 INICIAIS
+📋 INICIALES
 ━━━━━━━━━━━━━━━
-📌 Registrar → ${prefix}registrorpg  
-🛍️ Comprar Escova → ${prefix}comprarescova  
-🪥 Escovar os Dentes → ${prefix}escovar  
+📌 Registrar → ${prefix}registrar
+🛍️ Comprar Escova → ${prefix}comprar_escova
+🪥 Escovar Dientes → ${prefix}escovar
 
 ━━━━━━━━━━━━━━━
-💼 TRABALHO & PROGRESSO
+💼 TRABAJO & PROGRESO
 ━━━━━━━━━━━━━━━
-💼 Trabalhar → ${prefix}trabalhar  
-📊 Status Geral → ${prefix}statusrpg  
+💼 Trabajar → ${prefix}trabajar
+📊 Estado General → ${prefix}estado_rpg
 
 ━━━━━━━━━━━━━━━
-🏦 BANCO & FINANÇAS
+🏦 BANCO & FINANZAS
 ━━━━━━━━━━━━━━━
-🏦 Abrir Banco → ${prefix}abrirbanco  
-💳 Minha Conta → ${prefix}minhaconta  
-💸 Operações Bancárias:  
-💰 Sacar → ${prefix}sacarrpg  
-💼 Depositar → ${prefix}depositarrpg  
-📊 Saldo → ${prefix}saldorpg  
-📈 Rendimentos → ${prefix}rendimentorpg  
-🔁 Transferência → ${prefix}transferirrpg  
-🏅 Ranking de Bancos → ${prefix}rankbancos  
-🏛️ Banco Central → ${prefix}bancorpg  
+🏦 Abrir Banco → ${prefix}abrir_banco
+💳 Mi Cuenta → ${prefix}mi_cuenta
+💸 Operaciones Bancarias:
+💰 Retirar → ${prefix}retirar
+💼 Depositar → ${prefix}depositar
+📊 Saldo → ${prefix}saldo
+📈 Rendimientos → ${prefix}rendimientos
+🔁 Transferir → ${prefix}transferir
+🏅 Ranking Bancos → ${prefix}ranking_bancos
+🏛️ Banco Central → ${prefix}banco_central
 
 ━━━━━━━━━━━━━━━
-🛍️ LOJAS & LUXO
+🛍️ TIENDAS & LUJO
 ━━━━━━━━━━━━━━━
-🏬 Loja de Luxo → ${prefix}lojadeluxorpg  
-💎 Comprar de Luxo → ${prefix}comprarrpgdeluxo  
+🏬 Tienda de Lujo → ${prefix}tienda_lujo
+💎 Comprar Lujo → ${prefix}comprar_lujo
 
 ━━━━━━━━━━━━━━━
-🚗 CARROS & GARAGEM
+🚗 COCHES & GARAJE
 ━━━━━━━━━━━━━━━
-🚗 Meus Carros → ${prefix}meuscarros  
-🅿️ Garagem → ${prefix}garagemrpg  
-💳 Pagar IPVA → ${prefix}pagarpva  
+🚗 Mis Coches → ${prefix}mis_coches
+🅿️ Garaje → ${prefix}garaje
+💳 Pagar Impuestos → ${prefix}pagar_impuestos
 
 ━━━━━━━━━━━━━━━
-🏠 CASAS & IMÓVEIS
+🏠 CASAS & PROPIEDADES
 ━━━━━━━━━━━━━━━
-🏠 Loja de Casas → ${prefix}lojacasasrpg  
-🏡 Comprar Casa → ${prefix}comprarrpgcasa  
-🏘️ Minhas Casas → ${prefix}minhascasasrpg  
+🏠 Tienda de Casas → ${prefix}tienda_casas
+🏡 Comprar Casa → ${prefix}comprar_casa
+🏘️ Mis Casas → ${prefix}mis_casas
 
 ━━━━━━━━━━━━━━━
 🌱 MODOS DE VIDA
 ━━━━━━━━━━━━━━━
-🌍 Ver Modos de Vida → ${prefix}modosvida  
-🎯 Escolher Vida → ${prefix}escolhervida  
+🌍 Ver Modos de Vida → ${prefix}modos_vida
+🎯 Elegir Vida → ${prefix}elegir_vida
 
 ━━━━━━━━━━━━━━━
-🎲 AÇÃO & RISCO
+🎲 ACCIÓN & RIESGO
 ━━━━━━━━━━━━━━━
-🎰 Casa de Apostas → ${prefix}apostarrpg  
-🕵️ Assaltar Jogador → ${prefix}assaltarrpg  
-🪪 Pagar Fiança → ${prefix}pagarfianca  
+🎰 Casa de Apuestas → ${prefix}apostar
+🕵️ Robar Jugador → ${prefix}robar
+🪪 Pagar Fianza → ${prefix}pagar_fianza
 
 ━━━━━━━━━━━━━━━
-💸 PIX & INVESTIMENTOS
+💸 PIX & INVERSIÓN
 ━━━━━━━━━━━━━━━
-💠 Meu Pix → ${prefix}Meupix  
-📤 Fazer Pix → ${prefix}fazerpix  
+💠 Mi Pix → ${prefix}mi_pix
+📤 Hacer Pix → ${prefix}hacer_pix
 
 ━━━━━━━━━━━━━━━
-🚪 SAIR DO RPG
+🚪 SALIR DEL RPG
 ━━━━━━━━━━━━━━━
-❌ Sair do RPG → ${prefix}sairrpg  
-    `;
+❌ Salir del RPG → ${prefix}salir_rpg
+`;
 
     return {
-        imagem: {
-            image: { url: imagemAleatoria },
+        imagen: {
+            image: { url: imagenAleatoria },
             caption: textoMenuRPG,
             contextInfo: {
                 mentionedJid: [sender],
@@ -117,8 +117,8 @@ module.exports = (prefix, NomeDoBot, sender) => {
                     showAdAttribution: true,
                     mediaType: 1,
                     mediaUrl: null,
-                    title: `⚡️ ${NomeDoBot} ⚡️`,
-                    body: `ミ★ 》 𝘴𝘪𝘵𝘦 𝘰𝘧𝘤《★彡`,
+                    title: `⚡️ ${nombreBot} ⚡️`,
+                    body: `ミ★ 》  sitio oficial 《★彡`,
                     sourceUrl: linkOficial,
                     thumbnailUrl: thumbnailAdUrl,
                 },
