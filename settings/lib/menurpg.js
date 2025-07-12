@@ -1,115 +1,120 @@
 const moment = require('moment-timezone');
 const imageConfig = require('./Ima/Imagens.json');
 
-let ultimaImagen = null;
+let ultimaImagem = null;
 
-function obtenerImagenAleatoria(imagenes) {
-    let nuevaImagen;
+function pegarImagemAleatoria(imagens) {
+    let novaImagem;
     do {
-        nuevaImagen = imagenes[Math.floor(Math.random() * imagenes.length)];
-    } while (nuevaImagen === ultimaImagen && imagenes.length > 1);
-    ultimaImagen = nuevaImagen;
-    return nuevaImagen;
+        novaImagem = imagens[Math.floor(Math.random() * imagens.length)];
+    } while (novaImagem === ultimaImagem && imagens.length > 1);
+    ultimaImagem = novaImagem;
+    return novaImagem;
 }
 
-module.exports = (prefix, nombreBot, sender) => {
-    if (!imageConfig || !imageConfig.brincadeira || !Array.isArray(imageConfig.brincadeira.mainImage)) {
-        throw new Error("No hay imágenes disponibles en la configuración.");
+module.exports = (prefix, NomeDoBot, sender) => {
+    if (
+        !imageConfig ||
+        !imageConfig.brincadeira ||
+        !Array.isArray(imageConfig.brincadeira.mainImage)
+    ) {
+        throw new Error("mainImage não disponível no arquivo de configuração.");
     }
 
-    const imagenes = imageConfig.brincadeira.mainImage;
-    if (imagenes.length === 0) {
-        throw new Error("No hay imágenes disponibles para el menú RPG.");
+    const imagens = imageConfig.brincadeira.mainImage;
+
+    if (imagens.length === 0) {
+        throw new Error("Nenhuma imagem disponível para o menu RPG.");
     }
 
-    const imagenAleatoria = obtenerImagenAleatoria(imagenes);
+    const imagemAleatoria = pegarImagemAleatoria(imagens);
     const thumbnailAdUrl = 'https://xatimg.com/image/47FHqq0plr88.jpg';
     const linkOficial = 'https://tedzinho.online';
-    const horaActual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
-    const fechaActual = moment().format('DD/MM/YYYY');
+    const horarioAtual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
+    const dataAtual = moment().format('DD/MM/YYYY');
 
     const textoMenuRPG = `
-╭── 🎮 MENÚ RPG ──╮
-│ 📅 Fecha: ${fechaActual}
-│ ⏰ Hora: ${horaActual}
-│ 👤 Usuario: @${sender.split("@")[0]}
-╰────────────────╯
+╭── 🎮 MENU RPG ──╮
+│ 📅 Data: ${dataAtual}
+│ ⏰ Hora: ${horarioAtual}
+│ 👤 Usuário: @${sender.split("@")[0]}
+╰────────────────────╯
 
 ━━━━━━━━━━━━━━━
-📋 INICIALES
+📋 INICIAIS
 ━━━━━━━━━━━━━━━
-📌 Registrar → ${prefix}registrar
-🛍️ Comprar Escova → ${prefix}comprar_escova
-🪥 Escovar Dientes → ${prefix}escovar
+📌 Registrar → ${prefix}registrorpg  
+🛍️ Comprar Escova → ${prefix}comprarescova  
+🪥 Escovar os Dentes → ${prefix}escovar  
 
 ━━━━━━━━━━━━━━━
-💼 TRABAJO & PROGRESO
+💼 TRABALHO & PROGRESSO
 ━━━━━━━━━━━━━━━
-💼 Trabajar → ${prefix}trabajar
-📊 Estado General → ${prefix}estado_rpg
+💼 Trabalhar → ${prefix}trabalhar  
+📊 Status Geral → ${prefix}statusrpg  
 
 ━━━━━━━━━━━━━━━
-🏦 BANCO & FINANZAS
+🏦 BANCO & FINANÇAS
 ━━━━━━━━━━━━━━━
-🏦 Abrir Banco → ${prefix}abrir_banco
-💳 Mi Cuenta → ${prefix}mi_cuenta
-💸 Operaciones Bancarias:
-💰 Retirar → ${prefix}retirar
-💼 Depositar → ${prefix}depositar
-📊 Saldo → ${prefix}saldo
-📈 Rendimientos → ${prefix}rendimientos
-🔁 Transferir → ${prefix}transferir
-🏅 Ranking Bancos → ${prefix}ranking_bancos
-🏛️ Banco Central → ${prefix}banco_central
+🏦 Abrir Banco → ${prefix}abrirbanco  
+💳 Minha Conta → ${prefix}minhaconta  
+💸 Operações Bancárias:  
+💰 Sacar → ${prefix}sacarrpg  
+💼 Depositar → ${prefix}depositarrpg  
+📊 Saldo → ${prefix}saldorpg  
+📈 Rendimentos → ${prefix}rendimentorpg  
+🔁 Transferência → ${prefix}transferirrpg  
+🏅 Ranking de Bancos → ${prefix}rankbancos  
+🏛️ Banco Central → ${prefix}bancorpg  
 
 ━━━━━━━━━━━━━━━
-🛍️ TIENDAS & LUJO
+🛍️ LOJAS & LUXO
 ━━━━━━━━━━━━━━━
-🏬 Tienda de Lujo → ${prefix}tienda_lujo
-💎 Comprar Lujo → ${prefix}comprar_lujo
+🏬 Loja de Luxo → ${prefix}lojadeluxorpg  
+💎 Comprar de Luxo → ${prefix}comprarrpgdeluxo  
 
 ━━━━━━━━━━━━━━━
-🚗 COCHES & GARAJE
+🚗 CARROS & GARAGEM
 ━━━━━━━━━━━━━━━
-🚗 Mis Coches → ${prefix}mis_coches
-🅿️ Garaje → ${prefix}garaje
-💳 Pagar Impuestos → ${prefix}pagar_impuestos
+🚗 Meus Carros → ${prefix}meuscarros  
+🅿️ Garagem → ${prefix}garagemrpg  
+💳 Pagar IPVA → ${prefix}pagarpva  
 
 ━━━━━━━━━━━━━━━
-🏠 CASAS & PROPIEDADES
+🏠 CASAS & IMÓVEIS
 ━━━━━━━━━━━━━━━
-🏠 Tienda de Casas → ${prefix}tienda_casas
-🏡 Comprar Casa → ${prefix}comprar_casa
-🏘️ Mis Casas → ${prefix}mis_casas
+🏠 Loja de Casas → ${prefix}lojacasasrpg  
+🏡 Comprar Casa → ${prefix}comprarrpgcasa  
+🏘️ Minhas Casas → ${prefix}minhascasasrpg  
 
 ━━━━━━━━━━━━━━━
 🌱 MODOS DE VIDA
 ━━━━━━━━━━━━━━━
-🌍 Ver Modos de Vida → ${prefix}modos_vida
-🎯 Elegir Vida → ${prefix}elegir_vida
+🌍 Ver Modos de Vida → ${prefix}modosvida  
+🎯 Escolher Vida → ${prefix}escolhervida  
 
 ━━━━━━━━━━━━━━━
-🎲 ACCIÓN & RIESGO
+🎲 AÇÃO & RISCO
 ━━━━━━━━━━━━━━━
-🎰 Casa de Apuestas → ${prefix}apostar
-🕵️ Robar Jugador → ${prefix}robar
-🪪 Pagar Fianza → ${prefix}pagar_fianza
+🎰 Casa de Apostas → ${prefix}apostarrpg  
+🕵️ Assaltar Jogador → ${prefix}assaltarrpg  
+🪪 Pagar Fiança → ${prefix}pagarfianca  
 
 ━━━━━━━━━━━━━━━
-💸 PIX & INVERSIÓN
+💸 PIX & INVESTIMENTOS
 ━━━━━━━━━━━━━━━
-💠 Mi Pix → ${prefix}mi_pix
-📤 Hacer Pix → ${prefix}hacer_pix
+💠 Meu Pix → ${prefix}Meupix  
+📤 Fazer Pix → ${prefix}fazerpix  
 
 ━━━━━━━━━━━━━━━
-🚪 SALIR DEL RPG
+🚪 SAIR DO RPG
 ━━━━━━━━━━━━━━━
-❌ Salir del RPG → ${prefix}salir_rpg
+❌ Sair do RPG → ${prefix}sairrpg  
 `;
 
     return {
-        imagen: {
-            image: { url: imagenAleatoria },
+        imagem: {
+            image: { url: imagemAleatoria },
             caption: textoMenuRPG,
             contextInfo: {
                 mentionedJid: [sender],
@@ -117,8 +122,8 @@ module.exports = (prefix, nombreBot, sender) => {
                     showAdAttribution: true,
                     mediaType: 1,
                     mediaUrl: null,
-                    title: `⚡️ ${nombreBot} ⚡️`,
-                    body: `ミ★ 》  sitio oficial 《★彡`,
+                    title: `⚡️ ${NomeDoBot} ⚡️`,
+                    body: `ミ★ 》 𝘴𝘪𝘵𝘦 𝘰𝘧𝘤《★彡`,
                     sourceUrl: linkOficial,
                     thumbnailUrl: thumbnailAdUrl,
                 },
