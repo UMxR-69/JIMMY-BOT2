@@ -33,7 +33,7 @@ termux-setup-storage
 ```
 **3° Comando**
 ```
-cd /storage/emulated/0/Download && git clone https://github.com/Tedzinho40/FENRYS-V4
+cd /storage/emulated/0/Download && git clone https://github.com/UMxR-69/JIMMY-BOT2
 ```
 **4° Comando**
 ```
