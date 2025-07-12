@@ -37,7 +37,7 @@ cd /storage/emulated/0/Download && git clone https://github.com/UMxR-69/JIMMY-BO
 ```
 **4° Comando**
 ```
-cd /storage/emulated/0/Download/FENRYS-V4 && npm start
+cd /storage/emulated/0/Download/JIMMY-BOT2 && npm start
 ```
 
 ## 💾 START DO BOT 💾 <img src="https://user-images.githubusercontent.com/108157095/182053901-78e4a217-51ba-42a3-8ec5-38ed978ad752.png" height="25px">
