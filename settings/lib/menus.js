@@ -1,457 +1,462 @@
-exports.menu = (prefix, NomeDoBot, sender, NickDono, packname) => {
+exports.menu = (prefijo, nombreDelBot, remitente, nombreDelCreador, nombreDelPaquete) => {
 return `
 ╭═══════════════════ ⪩  
-╰╮✨⃟✰𝐈𝐍𝐅𝐎-𝐁𝐎𝐓/𝐔𝐒𝐄𝐑❈⃟✨  
-╭┤⭐ Bot:  *${NickDono}*
-┃│👤 Usuário: *${NomeDoBot}*   
-┃│⚙️ Minha Versão: *4.0.0*  
-┃│👑 Dono:*@${sender.split("@")[0]}*
+╰╮✨⃟✰𝐈𝐍𝐅𝐎-𝐁𝐎𝐓/𝐔𝐒𝐔𝐀𝐑𝐈𝐎❈⃟✨  
+╭┤⭐ Bot:  *${nombreDelCreador}*
+┃│👤 Usuario: *${nombreDelBot}*   
+┃│⚙️ Versión: *4.0.0*  
+┃│👑 Dueño: *@${remitente.split("@")[0]}*
 ┃╰══ ⪨  
 ╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐃𝐈𝐕𝐄𝐑𝐒𝐎𝐒-𝐌𝐄𝐍𝐔𝐒✰⃟🖤  
-┃│🎯 ${prefix}Menudono  
-┃│🎯 ${prefix}Menuadm  
-┃│🎯 ${prefix}Menupremium  
-┃│🎯 ${prefix}Efeitosimg  
-┃│🎯 ${prefix}Logos  
-┃│🎯 ${prefix}Brincadeiras  
-┃│🎯 ${prefix}Menucoins  
+
+╭┤🖤⃟✰𝐌𝐄𝐍Ú𝐒 𝐃𝐈𝐕𝐄𝐑𝐒𝐎𝐒✰⃟🖤  
+┃│🎯 ${prefijo}menudueño  
+┃│🎯 ${prefijo}menuadmin  
+┃│🎯 ${prefijo}menupremium  
+┃│🎯 ${prefijo}efectosimg  
+┃│🎯 ${prefijo}logos  
+┃│🎯 ${prefijo}juegos  
+┃│🎯 ${prefijo}menucoins  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐂𝐌𝐃𝐒-𝐃𝐄-𝐌𝐄𝐌𝐁𝐑𝐎✰⃟🖤  
-┃│🛠️ ${prefix}Bug (Questione/Erros)  
-┃│💡 ${prefix}Sugestao (Dica/Sugestão)  
-┃│⭐ ${prefix}Avalie (O quanto é bom)  
+
+╭┤🖤⃟✰𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐃𝐄 𝐌𝐈𝐄𝐌𝐁𝐑𝐎✰⃟🖤  
+┃│🛠️ ${prefijo}bug (Reportar error)  
+┃│💡 ${prefijo}sugerencia (Idea nueva)  
+┃│⭐ ${prefijo}evaluar (Qué tal te parezco)  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐂𝐌𝐃𝐒-𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐕𝐎𝐒✰⃟🖤  
-┃│📊 ${prefix}Ping (Velocidade/Up)  
-┃│📈 ${prefix}Atividade (do Grupo)  
-┃│🏆 ${prefix}Rankativo  
-┃│🔍 ${prefix}Checkativo (@Marcar)  
-┃│🏅 ${prefix}Ranklevel (do Grupo)  
-┃│📜 ${prefix}Consultar_premium  
-┃│📋 ${prefix}Dados  
-┃│📂 ${prefix}Infobemvindo  
-┃│🌐 ${prefix}Idiomas (Gtts)  
-┃│💼 ${prefix}Infodono  
-┃│🏠 ${prefix}Infoaluguel  
-┃│✨ ${prefix}Infocmdprem  
-┃│🔑 ${prefix}Infopremium  
-┃│📢 ${prefix}Infoanuncios  
-┃│🔖 ${prefix}Ptvmsg (Mencione-V)  
+
+╭┤🖤⃟✰𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐕𝐎𝐒✰⃟🖤  
+┃│📊 ${prefijo}ping (Velocidad)  
+┃│📈 ${prefijo}actividad  
+┃│🏆 ${prefijo}rankingactivo  
+┃│🔍 ${prefijo}checkactivo (@)  
+┃│🏅 ${prefijo}nivelranking  
+┃│📜 ${prefijo}verpremium  
+┃│📋 ${prefijo}misdatos  
+┃│📂 ${prefijo}infobienvenida  
+┃│🌐 ${prefijo}idiomas  
+┃│💼 ${prefijo}infodueño  
+┃│🏠 ${prefijo}infoalquiler  
+┃│✨ ${prefijo}infocmdprem  
+┃│🔑 ${prefijo}infopremium  
+┃│📢 ${prefijo}infoanuncios  
+┃│🔖 ${prefijo}ptvmsg (Menciónalo)  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐒✰⃟🖤  
-┃│🎵 ${prefix}Play (Nome) 
-┃│🎥 ${prefix}Play2 (Nome)
-┃│▶️ ${prefix}play3  (Nome)
-┃│📹 ${prefix}Playvid (Nome)  
-┃│📄 ${prefix}Playdoc (Nome) 
-┃│🎶 ${prefix}Shazam (@audio)
-┃│🎶 ${prefix}Shazam2 (@audio)  
-┃│🎧 ${prefix}Spotify (Link)  
-┃│🎙️ ${prefix}tiktokaudio (Link)  
-┃│🎞️ ${prefix}ttkmp4 (Link)  
-┃│🔊 ${prefix}ttkmp3 (Link)  
-┃│📸 ${prefix}instavideo (Link)  
-┃│📡 ${prefix}instamp3 (Link)  
-┃│🌐 ${prefix}Soundcloud (Link)
-┃│🌐 ${prefix}sc (nome)
-┃│🔗 ${prefix}Gerarlink (img/vid)  
+
+╭┤🖤⃟✰𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒✰⃟🖤  
+┃│🎵 ${prefijo}play (Nombre) 
+┃│🎥 ${prefijo}play2 (Nombre)
+┃│▶️ ${prefijo}play3 (Nombre)
+┃│📹 ${prefijo}playvid (Nombre)  
+┃│📄 ${prefijo}playdoc (Nombre) 
+┃│🎶 ${prefijo}shazam (@audio)
+┃│🎶 ${prefijo}shazam2 (@audio)  
+┃│🎧 ${prefijo}spotify (Enlace)  
+┃│🎙️ ${prefijo}tiktokaudio (Enlace)  
+┃│🎞️ ${prefijo}ttkmp4 (Enlace)  
+┃│🔊 ${prefijo}ttkmp3 (Enlace)  
+┃│📸 ${prefijo}instavideo (Enlace)  
+┃│📡 ${prefijo}instamp3 (Enlace)  
+┃│🌐 ${prefijo}soundcloud (Enlace)
+┃│🌐 ${prefijo}sc (Nombre)
+┃│🔗 ${prefijo}generarlink (img/video)  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐏𝐄𝐒𝐐𝐔𝐈𝐒𝐀𝐒✰⃟🖤  
-┃│📖 ${prefix}Pensador (Nome)  
-┃│📲 ${prefix}Aptoide (Nome)  
-┃│🛒 ${prefix}Amazon (Nome)   
-┃│📚 ${prefix}Wikipedia (Nome)  
-┃│📌 ${prefix}pinterest (Nome)  
-┃│🎞️ ${prefix}pintemp4 (link)
-┃│🎵 ${prefix}pintemp3 (link)  
+
+╭┤🖤⃟✰𝐁𝐔𝐒𝐐𝐔𝐄𝐃𝐀𝐒✰⃟🖤  
+┃│📖 ${prefijo}pensador (Nombre)  
+┃│📲 ${prefijo}aptoide (Nombre)  
+┃│🛒 ${prefijo}amazon (Nombre)   
+┃│📚 ${prefijo}wikipedia (Nombre)  
+┃│📌 ${prefijo}pinterest (Nombre)  
+┃│🎞️ ${prefijo}pintemp4 (Enlace)
+┃│🎵 ${prefijo}pintemp3 (Enlace)  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨
+
 ╭┤🖤⃟✰𝐈𝐍𝐓𝐄𝐋𝐈𝐆𝐄𝐍𝐂𝐈𝐀 (𝐈𝐀)✰⃟🖤
-┃│🎙️ ${prefix}Transcrever (Áudio)
-┃│🤖 ${prefix}gpt4 (texto)
-┃│🗣️${prefix}tts2
-┃│👩‍💻 ${prefix}fenrys
-┃│🎤 ${prefix}hatsune
-┃│🌿 ${prefix}nahida
-┃│🌊 ${prefix}nami
-┃│💉 ${prefix}ana
-┃│🤖 ${prefix}optimus
-┃│🔥 ${prefix}goku
-┃│🎵 ${prefix}taylorswift
-┃│🚀 ${prefix}elonmusk
-┃│🐭 ${prefix}mickey
-┃│🎤 ${prefix}kendrick
-┃│🎓 ${prefix}angela
-┃│🎙️ ${prefix}eminem
-┃│🎨 ${prefix}art
-┃│🧠 ${prefix}apc5
-┃│🖼️ ${prefix}apced
-┃╰══ ⪨
-╰╦══════════════════ ⪨ 
-╭┤🖤⃟✰𝐍𝐎𝐓𝐈𝐂𝐈𝐀𝐒/𝐉𝐎𝐑𝐍𝐀𝐋✰⃟🖤  
-┃│📰 ${prefix}Getnoticias (Tema)  
+┃│🎙️ ${prefijo}transcribir (Audio)
+┃│🤖 ${prefijo}gpt4 (Texto)
+┃│🗣️ ${prefijo}tts2
+┃│👩‍💻 ${prefijo}fenrys
+┃│🎤 ${prefijo}hatsune
+┃│🌿 ${prefijo}nahida
+┃│🌊 ${prefijo}nami
+┃│💉 ${prefijo}ana
+┃│🤖 ${prefijo}optimus
+┃│🔥 ${prefijo}goku
+┃│🎵 ${prefijo}taylorswift
+┃│🚀 ${prefijo}elonmusk
+┃│🐭 ${prefijo}mickey
+┃│🎤 ${prefijo}kendrick
+┃│🎓 ${prefijo}angela
+┃│🎙️ ${prefijo}eminem
+┃│🎨 ${prefijo}arte
+┃│🧠 ${prefijo}apc5
+┃│🖼️ ${prefijo}apced
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐅𝐈𝐆𝐔𝐑𝐈𝐍𝐇𝐀𝐒✰⃟🖤  
-┃│🎨 ${prefix}Sticker (Marcar-foto)  
-┃│🖼️ ${prefix}figura (Marcar-foto)  
-┃│🖌️ ${prefix}Toimg (Marcar-sticker)  
-┃│💬 ${prefix}Attp (Seu texto)
-┃│💬 ${prefix}qc (Seu texto)    
-┃│🎞️ ${prefix}togif (Marcar-sticker)  
-┃│✂️ ${prefix}Roubar (Texto/Texto)  
+
+╭┤🖤⃟✰𝐍𝐎𝐓𝐈𝐂𝐈𝐀𝐒✰⃟🖤  
+┃│📰 ${prefijo}noticias (Tema)  
 ┃╰══ ⪨  
-╰╦══════════════════ ⪨  
-╭┤🖤⃟✰𝐂𝐌𝐃𝐒-𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒✰⃟🖤  
-┃│🗣️ ${prefix}Gtts (Idioma + Texto)  
-┃│👤 ${prefix}Tagme  
-┃│💡 ${prefix}Emoji (emoji/type)  
-┃│📊 ${prefix}Tabela (Letras/Simbolos)  
-┃│📜 ${prefix}Conselhobiblico  
-┃│💕 ${prefix}Cantadas  
-┃│📖 ${prefix}Conselhos  
-┃│🗨️ ${prefix}Simi (Hable com ela)  
-┃│💾 ${prefix}Perfil  
-┃│🧮 ${prefix}Calcular (10 + 10)  
-┃│✉️ ${prefix}Morechat (msg1/msg2)  
-┃│⚖️ ${prefix}Obesidade (peso/altura)  
-┃│📆 ${prefix}Contardias (DD/MM/YYYY)  
-┃│📞 ${prefix}DDD (Código do Estado)  
-┃│🔓 ${prefix}Destrava  
-┃│🔓 ${prefix}Destrava2  
-┃│🆔 ${prefix}Gerarcpf  
-┃│☎️ ${prefix}Sip (Número)  
+
+╭┤🖤⃟✰𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒✰⃟🖤  
+┃│🎨 ${prefijo}sticker (Marcar foto)  
+┃│🖼️ ${prefijo}figura (Marcar foto)  
+┃│🖌️ ${prefijo}toimg (Sticker → imagen)  
+┃│💬 ${prefijo}attp (Tu texto)
+┃│💬 ${prefijo}qc (Tu texto)    
+┃│🎞️ ${prefijo}togif (Sticker → gif)  
+┃│✂️ ${prefijo}robar (Texto/Textos)  
+┃╰══ ⪨  
+
+╭┤🖤⃟✰𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒✰⃟🖤  
+┃│🗣️ ${prefijo}gtts (Idioma + Texto)  
+┃│👤 ${prefijo}etiquétame  
+┃│💡 ${prefijo}emoji (emoji/tipo)  
+┃│📊 ${prefijo}tabla (Letras/Símbolos)  
+┃│📜 ${prefijo}versiculobiblico  
+┃│💕 ${prefijo}piropos  
+┃│📖 ${prefijo}consejos  
+┃│🗨️ ${prefijo}simi (Habla con ella)  
+┃│💾 ${prefijo}perfil  
+┃│🧮 ${prefijo}calcular (10 + 10)  
+┃│✉️ ${prefijo}morechat (msg1/msg2)  
+┃│⚖️ ${prefijo}imc (peso/altura)  
+┃│📆 ${prefijo}contardias (DD/MM/AAAA)  
+┃│📞 ${prefijo}ddd (Código de región)  
+┃│🔓 ${prefijo}desbloquear  
+┃│🔓 ${prefijo}desbloquear2  
+┃│🆔 ${prefijo}generarcpf  
+┃│☎️ ${prefijo}sip (Número)  
 ┃╰══ ⪨  
 ╰═══════════════════ ⪨
 `;
 };
 
-exports.adms = (prefix, NomeDoBot, sender, NickDono, packname) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════════════════ ⪩  
+exports.adms = (prefijo, nombreDelBot, remitente, nombreDelCreador, nombreDelPaquete) => {
+return `
+╭═══════════════════ ⪩  
 ╰╮✨き⃟✰ 𝐌𝐄𝐍𝐔 - 𝐀𝐃𝐌𝐈𝐍𝐒 ✰⃟き ✨  
-╭┤👾 ⋟ Bot: *${NickDono}* 
-┃│👤 ⋟ Usuário: *${NomeDoBot}*   
-┃│⚙️ ⋟ Minha Versão: *4.0.0*  
-┃│👑 ⋟ Dono:*@${sender.split("@")[0]}*
+╭┤👾 ⋟ Bot: *${nombreDelCreador}* 
+┃│👤 ⋟ Usuario: *${nombreDelBot}*   
+┃│⚙️ ⋟ Versión: *4.0.0*  
+┃│👑 ⋟ Dueño: *@${remitente.split("@")[0]}*
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
-╭┤⚡ ⋟ **Comandos de Configuração:**  
-┃│🖼️ ⋟ ${prefix}Antiimg (1/0)  
-┃│🎥 ⋟ ${prefix}Antivideo (1/0)  
-┃│🎙️ ⋟ ${prefix}Antiaudio (1/0)  
-┃│🎭 ⋟ ${prefix}Antisticker (1/0)  
-┃│📍 ⋟ ${prefix}Antiloc (1/0)  
-┃│📇 ⋟ ${prefix}Anticontato (1/0)  
-┃│📞 ⋟ ${prefix}Antiddd (1/0)  
-┃│📄 ⋟ ${prefix}Antidoc (1/0)  
-┃│🔗 ⋟ ${prefix}Antilinkgp (1/0)  
-┃│🔞 ⋟ ${prefix}Antilinkhard (1/0)  
-┃│📵 ⋟ ${prefix}Antifake (1/0)  
-┃│📝 ⋟ ${prefix}Antinotas (1/0)  
-┃│🔤 ⋟ ${prefix}Antipalavra (1/0)  
-┃│🛒 ⋟ ${prefix}Anticatalogo (1/0)  
-┃│🤬 ⋟ ${prefix}Antipalavrao (1/0)  
-┃│🔢 ⋟ ${prefix}Limitecaracteres (1/0)  
-┃│👋 ⋟ ${prefix}Bemvindo (1/0)  
-┃│🤝 ⋟ ${prefix}Bemvindo2 (1/0)  
-┃│🤖 ⋟ ${prefix}Simih (1/0)  
-┃│🎨 ⋟ ${prefix}Autosticker (1/0)  
-┃│🔁 ⋟ ${prefix}Autorepo (1/0)  
-┃│⭐ ⋟ ${prefix}Leveling (1/0)  
-┃│🗑️ ⋟ ${prefix}Odelete (1/0)  
-┃│👀 ⋟ ${prefix}x9visuunica (1/0)  
-┃│👁️ ⋟ ${prefix}x9 (1/0)  
-┃│👮 ⋟ ${prefix}So_adm  
-┃│⏱️ ⋟ ${prefix}Limitecomandos  
-┃│🌐 ⋟ ${prefix}Multiprefixo (1/0)  
-┃│⏳ ⋟ ${prefix}Tempocmd (segundos)  
-┃│📞 ⋟ ${prefix}Antiddd-list  
-┃│➕ ⋟ ${prefix}Add_ddd  
-┃│➖ ⋟ ${prefix}Del_ddd  
-┃│📸 ⋟ ${prefix}Legenda_imagem (Texto)  
-┃│🎥 ⋟ ${prefix}Legenda_video (Texto)  
-┃│🌎 ⋟ ${prefix}Legenda_estrangeiro (Texto)  
-┃│👋 ⋟ ${prefix}Legendabv (Texto)  
-┃│🚪 ⋟ ${prefix}Legendasaiu (Texto)  
-┃│👋 ⋟ ${prefix}Legendabv2 (Texto)  
-┃│🚪 ⋟ ${prefix}Legendasaiu2 (Texto)  
-┃│✅ ⋟ ${prefix}Autorizar (Solicitações)  
-┃│🚫 ⋟ ${prefix}Listanegra (Número)  
-┃│♻️ ⋟ ${prefix}Tirardalista (Número)  
-┃│⛔ ⋟ ${prefix}ListanegraG (Número)  
-┃│✅ ⋟ ${prefix}TirardalistaG (Número)  
-┃│➕ ⋟ ${prefix}Add_prefixo  
-┃│➖ ⋟ ${prefix}Tirar_prefixo  
-┃│⚠️ ⋟ ${prefix}Banghost  
-┃│🔇 ⋟ ${prefix}Mutelist (Lista-Mutados)  
-┃│🔇 ⋟ ${prefix}Mute (@mencionar)  
-┃│🔊 ⋟ ${prefix}Desmute (@mencionar)  
-┃│👋 ⋟ ${prefix}Add 5511...  
-┃│💀 ⋟ ${prefix}Reviver (mencionar-msg)  
-┃│⚔️ ⋟ ${prefix}Kick [@]  
-┃│🚷 ⋟ ${prefix}Ban (mencionar-msg)  
-┃│🔝 ⋟ ${prefix}Promover [@] (Ser-admin)  
-┃│📉 ⋟ ${prefix}Rebaixar [@] (Rebaixar-adm)  
-┃│🖼️ ⋟ ${prefix}Rmphotogp  
-┃│📌 ⋟ ${prefix}Ephemeral (M. temporárias)  
-┃│✍️ ⋟ ${prefix}Descgp (Texto)  
-┃│📛 ⋟ ${prefix}Nomegp (Nome)  
-┃│🏷️ ⋟ ${prefix}Totag (Mencionar algo)  
-┃│🔒 ⋟ ${prefix}Grupo  
-┃│🔗 ⋟ ${prefix}Linkgp  
-┃│📊 ⋟ ${prefix}Grupoinfo  
-┃│📜 ⋟ ${prefix}Blockcmdgp (cmd)  
-┃│❌ ⋟ ${prefix}Unblockcmdgp (cmd)  
-┃│📋 ⋟ ${prefix}Listbcmdgp  
-┃│🤫 ⋟ ${prefix}Hidetag (txt-marcação)  
-┃│🔗 ⋟ ${prefix}Marcar (@)  
-┃│🔗 ⋟ ${prefix}Marcar2 (wa.me)  
+
+╭┤⚡ ⋟ **Comandos de Configuración:**  
+┃│🖼️ ⋟ ${prefijo}antiimg (1/0) - Imágenes  
+┃│🎥 ⋟ ${prefijo}antivideo (1/0)  
+┃│🎙️ ⋟ ${prefijo}antiaudio (1/0)  
+┃│🎭 ⋟ ${prefijo}antisticker (1/0)  
+┃│📍 ⋟ ${prefijo}antilocalizacion (1/0)  
+┃│📇 ⋟ ${prefijo}anticontacto (1/0)  
+┃│📞 ⋟ ${prefijo}antiddd (1/0)  
+┃│📄 ⋟ ${prefijo}antidoc (1/0)  
+┃│🔗 ⋟ ${prefijo}antilinkgp (1/0)  
+┃│🔞 ⋟ ${prefijo}antilink18 (1/0)  
+┃│📵 ⋟ ${prefijo}antifake (1/0)  
+┃│📝 ⋟ ${prefijo}antinotas (1/0)  
+┃│🔤 ⋟ ${prefijo}antipalabra (1/0)  
+┃│🛒 ⋟ ${prefijo}anticatálogo (1/0)  
+┃│🤬 ⋟ ${prefijo}antipalabrota (1/0)  
+┃│🔢 ⋟ ${prefijo}limitecaracteres (1/0)  
+┃│👋 ⋟ ${prefijo}bienvenida (1/0)  
+┃│🤝 ⋟ ${prefijo}bienvenida2 (1/0)  
+┃│🤖 ⋟ ${prefijo}simi (1/0)  
+┃│🎨 ⋟ ${prefijo}autosticker (1/0)  
+┃│🔁 ⋟ ${prefijo}autorepo (1/0)  
+┃│⭐ ⋟ ${prefijo}niveles (1/0)  
+┃│🗑️ ⋟ ${prefijo}odelete (1/0)  
+┃│👀 ⋟ ${prefijo}x9una (1/0)  
+┃│👁️ ⋟ ${prefijo}x9 (1/0)  
+┃│👮 ⋟ ${prefijo}sóadm  
+┃│⏱️ ⋟ ${prefijo}limitecomandos  
+┃│🌐 ⋟ ${prefijo}multiprefijo (1/0)  
+┃│⏳ ⋟ ${prefijo}tiempocmd (segundos)  
+┃│📞 ⋟ ${prefijo}antiddd-lista  
+┃│➕ ⋟ ${prefijo}agregar_ddd  
+┃│➖ ⋟ ${prefijo}eliminar_ddd  
+┃│📸 ⋟ ${prefijo}leyenda_imagen (Texto)  
+┃│🎥 ⋟ ${prefijo}leyenda_video (Texto)  
+┃│🌎 ⋟ ${prefijo}leyenda_extranjera (Texto)  
+┃│👋 ⋟ ${prefijo}leyendabv (Texto)  
+┃│🚪 ⋟ ${prefijo}leyendasalida (Texto)  
+┃│👋 ⋟ ${prefijo}leyendabv2 (Texto)  
+┃│🚪 ⋟ ${prefijo}leyendasalida2 (Texto)  
+┃│✅ ⋟ ${prefijo}autorizar (Solicitudes)  
+┃│🚫 ⋟ ${prefijo}lista_negra (Número)  
+┃│♻️ ⋟ ${prefijo}quitar_lista (Número)  
+┃│⛔ ⋟ ${prefijo}lista_negraG (Número)  
+┃│✅ ⋟ ${prefijo}quitar_listaG (Número)  
+┃│➕ ⋟ ${prefijo}agregar_prefijo  
+┃│➖ ⋟ ${prefijo}quitar_prefijo  
+┃│⚠️ ⋟ ${prefijo}banghost  
+┃│🔇 ⋟ ${prefijo}mutelist (Lista de silenciados)  
+┃│🔇 ⋟ ${prefijo}mute (@)  
+┃│🔊 ⋟ ${prefijo}desmute (@)  
+┃│👋 ⋟ ${prefijo}add 5511...  
+┃│💀 ⋟ ${prefijo}revivir (mencionar mensaje)  
+┃│⚔️ ⋟ ${prefijo}expulsar [@]  
+┃│🚷 ⋟ ${prefijo}banear (mencionar mensaje)  
+┃│🔝 ⋟ ${prefijo}promover [@]  
+┃│📉 ⋟ ${prefijo}degradar [@]  
+┃│🖼️ ⋟ ${prefijo}removerfoto  
+┃│📌 ⋟ ${prefijo}temporales (mensajes)  
+┃│✍️ ⋟ ${prefijo}descgp (Texto)  
+┃│📛 ⋟ ${prefijo}nombregp (Nombre)  
+┃│🏷️ ⋟ ${prefijo}etiquetartodo (Texto)  
+┃│🔒 ⋟ ${prefijo}grupo (abrir/cerrar)  
+┃│🔗 ⋟ ${prefijo}linkgp  
+┃│📊 ⋟ ${prefijo}infogrupo  
+┃│📜 ⋟ ${prefijo}bloquearcmd (cmd)  
+┃│❌ ⋟ ${prefijo}desbloquearcmd (cmd)  
+┃│📋 ⋟ ${prefijo}listacmd  
+┃│🤫 ⋟ ${prefijo}hidetag (Texto)  
+┃│🔗 ⋟ ${prefijo}mención  
+┃│🔗 ⋟ ${prefijo}mención2 (wa.me)  
 ┃╰═══ ⪨  
 ╰═══════════════════ ⪨`;
 };
 
-exports.menudono = (prefix, NomeDoBot, sender, NickDono, packname) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════════════════ ⪩  
-╰╮💎✨き⃟✰ 𝐌𝐄𝐍𝐔 - 𝐃𝐎𝐍𝐎 ✰⃟き ✨💎  
-╭┤🤖 ⋟ Bot: *${NickDono}* 
-┃│👤 ⋟ Usuário: *${NomeDoBot}*   
-┃│⚙️ ⋟ Minha Versão: *4.0.0*  
-┃│👑 ⋟ Dono:*@${sender.split("@")[0]}*
+exports.menudono = (prefijo, nombreDelBot, remitente, nombreDelCreador, nombreDelPaquete) => {
+return `
+╭═══════════════════ ⪩  
+╰╮💎✨き⃟✰ 𝐌𝐄𝐍𝐔 - 𝐃𝐔𝐄Ñ𝐎 ✰⃟き ✨💎  
+╭┤🤖 ⋟ Bot: *${nombreDelCreador}* 
+┃│👤 ⋟ Usuario: *${nombreDelBot}*   
+┃│⚙️ ⋟ Versión: *4.0.0*  
+┃│👑 ⋟ Dueño: *@${remitente.split("@")[0]}*
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤🎲 ✨き⃟✰ 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒 ✰⃟き ✨  
-┃│🌟 ⋟ ${prefix}Setprefix  
-┃│🖼️ ⋟ ${prefix}Fotomenu  
-┃│🌅 ⋟ ${prefix}Fundobemvindo  
-┃│🏞️ ⋟ ${prefix}Fundosaiu  
-┃│📈 ⋟ ${prefix}Fundolevel  
-┃│🌐 ⋟ ${prefix}Serpremium  
-┃│📋 ⋟ ${prefix}Listagp  
-┃│🚫 ⋟ ${prefix}Antipalavrão (1/0)  
-┃│📵 ⋟ ${prefix}Antiligar (1/0)  
-┃│📝 ⋟ ${prefix}Fazertm (Texto)  
-┃│✅ ⋟ ${prefix}Rgtm  
-┃│❌ ⋟ ${prefix}Tirardatm  
-┃│📜 ⋟ ${prefix}Listatm  
-┃│👀 ⋟ ${prefix}Visualizarmsg  
-┃│✔️ ⋟ ${prefix}Verificado-global (Selos)  
-┃│🎶 ⋟ ${prefix}Audio-menu  
-┃│🛑 ⋟ ${prefix}Addpalavra (palavrão)  
-┃│♻️ ⋟ ${prefix}Delpalavra (palavrão)  
-┃│📴 ⋟ ${prefix}Ausente (fale-oq-faz)  
-┃│✨ ⋟ ${prefix}Ativo  
-┃│❌ ⋟ ${prefix}Delads [Número]  
-┃│📝 ⋟ ${prefix}Setads [Mensagem|Tempo]  
-┃│📋 ⋟ ${prefix}Listads  
-┃│⏹️ ⋟ ${prefix}Stopads  
-┃│▶️ ⋟ ${prefix}Startads  
+╭┤🎲 ✨き⃟✰ COMANDOS VARIOS ✰⃟き ✨  
+┃│🌟 ⋟ ${prefijo}setprefix  
+┃│🖼️ ⋟ ${prefijo}fotomenu  
+┃│🌅 ⋟ ${prefijo}fondobienvenida  
+┃│🏞️ ⋟ ${prefijo}fondoSalida  
+┃│📈 ⋟ ${prefijo}fondolevel  
+┃│🌐 ⋟ ${prefijo}serpremium  
+┃│📋 ⋟ ${prefijo}listagrupos  
+┃│🚫 ⋟ ${prefijo}antipalabrota (1/0)  
+┃│📵 ⋟ ${prefijo}antillamar (1/0)  
+┃│📝 ⋟ ${prefijo}creartm (Texto)  
+┃│✅ ⋟ ${prefijo}registrartm  
+┃│❌ ⋟ ${prefijo}eliminartm  
+┃│📜 ⋟ ${prefijo}listatm  
+┃│👀 ⋟ ${prefijo}visualizarmensajes  
+┃│✔️ ⋟ ${prefijo}verificado-global  
+┃│🎶 ⋟ ${prefijo}menuaudio  
+┃│🛑 ⋟ ${prefijo}agregarpalabra (palabrota)  
+┃│♻️ ⋟ ${prefijo}eliminarpalabra (palabrota)  
+┃│📴 ⋟ ${prefijo}ausente (mensaje)  
+┃│✨ ⋟ ${prefijo}activo  
+┃│❌ ⋟ ${prefijo}eliminarads [número]  
+┃│📝 ⋟ ${prefijo}crearads [mensaje|tiempo]  
+┃│📋 ⋟ ${prefijo}listarads  
+┃│⏹️ ⋟ ${prefijo}detenerads  
+┃│▶️ ⋟ ${prefijo}iniciarads  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤👑 ✨き⃟✰ 𝐒𝐔𝐁-𝐃𝐎𝐍𝐎𝐒 ✰⃟き ✨  
-┃│💼 ⋟ ${prefix}Subdono1 (@/55...)  
-┃│💼 ⋟ ${prefix}Subdono2 (@/55...)  
-┃│💼 ⋟ ${prefix}Subdono3 (@/55...)  
-┃│💼 ⋟ ${prefix}Subdono4 (@/55...)  
-┃│💼 ⋟ ${prefix}Subdono5 (@/55...)  
+╭┤👑 ✨き⃟✰ SUB-DUEÑOS ✰⃟き ✨  
+┃│💼 ⋟ ${prefijo}subdono1 (@/55...)  
+┃│💼 ⋟ ${prefijo}subdono2 (@/55...)  
+┃│💼 ⋟ ${prefijo}subdono3 (@/55...)  
+┃│💼 ⋟ ${prefijo}subdono4 (@/55...)  
+┃│💼 ⋟ ${prefijo}subdono5 (@/55...)  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤🏠 ✨き⃟✰ 𝐀𝐋𝐔𝐆𝐔𝐄𝐋 ✰⃟き ✨  
-┃│🔑 ⋟ ${prefix}Modoaluguel (1/0)  
-┃│📅 ⋟ ${prefix}Addrent (@/dias)  
-┃│🗑️ ⋟ ${prefix}Tirarrent (dias)  
-┃│❌ ⋟ ${prefix}Delrent  
-┃│🎁 ⋟ ${prefix}Cortesia24  
-┃│📋 ⋟ ${prefix}Listrent  
-┃│🕒 ⋟ ${prefix}Lastrent  
-┃│📜 ⋟ ${prefix}Codelistrent  
-┃│🔏 ⋟ ${prefix}Gerarcoderent (@/dias)  
-┃│🗑️ ⋟ ${prefix}Delcoderent (código)  
-┃│🎟️ ⋟ ${prefix}Gerarcodecort  
+╭┤🏠 ✨き⃟✰ ALQUILER ✰⃟き ✨  
+┃│🔑 ⋟ ${prefijo}modoalquiler (1/0)  
+┃│📅 ⋟ ${prefijo}añadiralquiler (@/días)  
+┃│🗑️ ⋟ ${prefijo}eliminaralquiler (días)  
+┃│❌ ⋟ ${prefijo}borrarrenta  
+┃│🎁 ⋟ ${prefijo}cortesia24  
+┃│📋 ⋟ ${prefijo}listaralquiler  
+┃│🕒 ⋟ ${prefijo}últimarenta  
+┃│📜 ⋟ ${prefijo}codelistarenta  
+┃│🔏 ⋟ ${prefijo}generarcoderenta (@/días)  
+┃│🗑️ ⋟ ${prefijo}borrarcoderenta (código)  
+┃│🎟️ ⋟ ${prefijo}generarcortesia  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤🌟 ✨き⃟✰ 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 ✰⃟き ✨  
-┃│🎖️ ⋟ ${prefix}Delpremium [@/dias]  
-┃│🏅 ⋟ ${prefix}Addpremium [@/dias]  
-┃│📋 ⋟ ${prefix}Cmdpremlist  
-┃│🌟 ⋟ ${prefix}Premiumlist  
-┃│➕ ⋟ ${prefix}Addcmdprem (cmd)  
-┃│➖ ⋟ ${prefix}Delcmdprem (cmd)  
+╭┤🌟 ✨き⃟✰ PREMIUM ✰⃟き ✨  
+┃│🎖️ ⋟ ${prefijo}eliminarpremium [@/días]  
+┃│🏅 ⋟ ${prefijo}agregarpremium [@/días]  
+┃│📋 ⋟ ${prefijo}listacmdpremium  
+┃│🌟 ⋟ ${prefijo}listapremium  
+┃│➕ ⋟ ${prefijo}agregarcmdpremium (cmd)  
+┃│➖ ⋟ ${prefijo}eliminarcmdpremium (cmd)  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤🔒 ✨き⃟✰ 𝐏𝐑𝐈𝐕𝐀𝐂𝐈𝐃𝐀𝐃𝐄 ✰⃟き ✨  
-┃│🔐 ⋟ ${prefix}Wprivacyph  
-┃│🔐 ⋟ ${prefix}Wprivacygp  
+╭┤🔒 ✨き⃟✰ PRIVACIDAD ✰⃟き ✨  
+┃│🔐 ⋟ ${prefijo}wprivacidadph  
+┃│🔐 ⋟ ${prefijo}wprivacidadgp  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤⛔ ✨き⃟✰ 𝐁𝐋𝐎𝐂𝐊/𝐔𝐍𝐁𝐋𝐎𝐂𝐊 ✰⃟き ✨  
-┃│🚫 ⋟ ${prefix}Blockcmdg (comando)  
-┃│✅ ⋟ ${prefix}Unblockcmdg (comando)  
-┃│📋 ⋟ ${prefix}Listbcmdglobal  
-┃│🚷 ⋟ ${prefix}Blockuser [@]  
-┃│🔓 ⋟ ${prefix}Unblockuser [@]  
-┃│⛔ ⋟ ${prefix}Bangp  
-┃│✅ ⋟ ${prefix}Unbangp  
+╭┤⛔ ✨き⃟✰ BLOQUEAR / DESBLOQUEAR ✰⃟き ✨  
+┃│🚫 ⋟ ${prefijo}bloquearcmdg (cmd)  
+┃│✅ ⋟ ${prefijo}desbloquearcmdg (cmd)  
+┃│📋 ⋟ ${prefijo}listabcmdglobal  
+┃│🚷 ⋟ ${prefijo}bloquearusuario [@]  
+┃│🔓 ⋟ ${prefijo}desbloquearusuario [@]  
+┃│⛔ ⋟ ${prefijo}bangp  
+┃│✅ ⋟ ${prefijo}desbangp  
 ┃╰═══ ⪨  
 ╰╦══════════════════ ⪨  
 
-╭┤🏆 ✨き⃟✰ 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆 ✰⃟き ✨  
-┃│📈 ⋟ ${prefix}Addlevel (quantidade)  
-┃│📉 ⋟ ${prefix}Tirarlevel (quantidade)  
-┃│⭐ ⋟ ${prefix}Addxp (quantidade)  
-┃│🪙 ⋟ ${prefix}Tirarxp (quantidade)  
-┃│📛 ⋟ ${prefix}Rmlevel (@marcar)  
+╭┤🏆 ✨き⃟✰ NIVELES ✰⃟き ✨  
+┃│📈 ⋟ ${prefijo}agregarnivel (cantidad)  
+┃│📉 ⋟ ${prefijo}quitarnivel (cantidad)  
+┃│⭐ ⋟ ${prefijo}agregarxp (cantidad)  
+┃│🪙 ⋟ ${prefijo}quitarxp (cantidad)  
+┃│📛 ⋟ ${prefijo}removernivel (@)  
 ┃╰═══ ⪨  
 ╰═══════════════════ ⪨`;
 };
 
-exports.menulogos = (prefix, NomeDoBot, sender, NickDono, packname) => {
-return `╭━━━『 ⚙️ INFORMAÇÕES 』━━━✦
-┃✨ Prefixo: 「 ${prefix} 」
-┃🤖 Nome: ${NomeDoBot}
-┃👤 Usuário: @${sender.split("@")[0]}
-┃📦 Versão: ${packname.version}
-┃👑 Dono: ${NickDono}
+
+exports.menulogos = (prefijo, nombreDelBot, remitente, nombreDelCreador, paquete) => {
+  return `╭━━━『 ⚙️ INFORMACIÓN 』━━━✦
+┃✨ Prefijo: 「 ${prefijo} 」
+┃🤖 Nombre: ${nombreDelBot}
+┃👤 Usuario: @${remitente.split("@")[0]}
+┃📦 Versión: ${paquete.version}
+┃👑 Dueño: ${nombreDelCreador}
 ╰━━━━━━━━━━━━━━━━━━━━━━━✦
 
 ╭━━『 🎨 LOGOS DE TEXTO 』━━✦
-┃🔥 ${prefix}Fluffy-logo (text)
-┃🎯 ${prefix}pubgvideo
-┃🎊 ${prefix}newyear
-┃🐯 ${prefix}tiger
-┃🌋 ${prefix}Lava-logo (text)
-┃😎 ${prefix}Cool-logo (text)
-┃🗯️ ${prefix}Comic-logo (text)
-┃🔥 ${prefix}Fire-logo (text)
-┃💧 ${prefix}Water-logo (text)
-┃❄️ ${prefix}Ice-logo (text)
-┃🎩 ${prefix}Elegant-logo (text)
-┃🥇 ${prefix}Gold-logo (text)
-┃🍀 ${prefix}Fortune-logo (text)
-┃🔵 ${prefix}Blue-logo (text)
-┃🥈 ${prefix}Silver-logo (text)
-┃🌟 ${prefix}Neon-logo (text)
-┃🛹 ${prefix}Skate-logo (text)
-┃📼 ${prefix}Retro-logo (text)
-┃🍭 ${prefix}Candy-logo (text)
-┃✨ ${prefix}Glossy-logo (text)
+┃🔥 ${prefijo}fluffy-logo (texto)
+┃🎯 ${prefijo}pubgvideo
+┃🎊 ${prefijo}añonuevo
+┃🐯 ${prefijo}tigre
+┃🌋 ${prefijo}lava-logo (texto)
+┃😎 ${prefijo}cool-logo (texto)
+┃🗯️ ${prefijo}comic-logo (texto)
+┃🔥 ${prefijo}fire-logo (texto)
+┃💧 ${prefijo}water-logo (texto)
+┃❄️ ${prefijo}ice-logo (texto)
+┃🎩 ${prefijo}elegante-logo (texto)
+┃🥇 ${prefijo}oro-logo (texto)
+┃🍀 ${prefijo}fortuna-logo (texto)
+┃🔵 ${prefijo}azul-logo (texto)
+┃🥈 ${prefijo}plata-logo (texto)
+┃🌟 ${prefijo}neon-logo (texto)
+┃🛹 ${prefijo}skate-logo (texto)
+┃📼 ${prefijo}retro-logo (texto)
+┃🍭 ${prefijo}caramelo-logo (texto)
+┃✨ ${prefijo}brillante-logo (texto)
 ╰━━━━━━━━━━━━━━━━━━━━━━━✦
 
 ╭━━『 🖼️ EPHOTO - 3 TEXTOS 』━━✦
-┃🌀 ${prefix}Retro (text1|text2|text3)
+┃🌀 ${prefijo}retro (texto1|texto2|texto3)
 ╰━━━━━━━━━━━━━━━━━━━━━━━✦
 
 ╭━━『 🖼️ EPHOTO - 2 TEXTOS 』━━✦
-┃🦸 ${prefix}Captain (text1|text2)
-┃🎨 ${prefix}GraffitiWall (text1|text2)
-┃🅿️ ${prefix}Phlogo (text1|text2)
-┃🎀 ${prefix}BlackPink (text1|text2)
-┃💀 ${prefix}Deadpool (text1|text2)
-┃✨ ${prefix}Glitter (text1|text2)
-┃🕶️ ${prefix}Vintage3D (text1|text2)
+┃🦸 ${prefijo}capitan (texto1|texto2)
+┃🎨 ${prefijo}paredgraffiti (texto1|texto2)
+┃🅿️ ${prefijo}phlogo (texto1|texto2)
+┃🎀 ${prefijo}blackpink (texto1|texto2)
+┃💀 ${prefijo}deadpool (texto1|texto2)
+┃✨ ${prefijo}brillo (texto1|texto2)
+┃🕶️ ${prefijo}vintage3d (texto1|texto2)
 ╰━━━━━━━━━━━━━━━━━━━━━━━✦
 
 ╭━━『 🖼️ EPHOTO - 1 TEXTO 』━━✦
-┃🌌 ${prefix}Galaxy-Light (text)
-┃🌌 ${prefix}Galaxy (text)
-┃⚡ ${prefix}Glitch (text)
-┃🎨 ${prefix}Graffiti (text)
-┃🔩 ${prefix}Metallic (text)
-┃✨ ${prefix}Glossy (text)
-┃🐾 ${prefix}Mascote (text)
-┃🐉 ${prefix}DragonFire (text)
-┃💖 ${prefix}GoldPink (text)
-┃🎯 ${prefix}PubgAvatar (text)
-┃🎯 ${prefix}FfAvatar (text)
-┃👾 ${prefix}AmongUs (text)
-┃🦸 ${prefix}Comics (text) 
-┃🎮 ${prefix}LolAvatar (text)
-┃⚰️ ${prefix}Cemiterio (text)
-┃🩸 ${prefix}Blood (text)
-┃🦇 ${prefix}Hallobat (text) 
-┃🛡️ ${prefix}Titanium (text)
-┃🧽 ${prefix}Eraser (text)
-┃🎃 ${prefix}Halloween (text)
-┃❄️ ${prefix}Snow (text)
-┃🇺🇸 ${prefix}America (text)
-┃🌟 ${prefix}MascoteNeon (text)
-┃🌫️ ${prefix}DoubleExposure (text)
-┃🛠️ ${prefix}Metal (text)
-┃💥 ${prefix}3dCrack (text)
-┃🌈 ${prefix}Colorful (text)
-┃🎈 ${prefix}Ballon (text)
-┃🌈 ${prefix}Multicolor (text)
-┃🎨 ${prefix}GraffitiPaint (text)
-┃🎨 ${prefix}GraffitiStyle (text)
-┃❄️ ${prefix}Frozen (text)
-┃✍️ ${prefix}Ligatures (text)
-┃🎨 ${prefix}WaterColor (text) 
-┃🏖️ ${prefix}SummerBeach (text)
-┃☁️ ${prefix}CloudSky (text)
-┃🖥️ ${prefix}TechStyle (text)
-┃👑 ${prefix}Royal (text)
-┃🎆 ${prefix}Firework (text)
-┃⚙️ ${prefix}MascoteMetal (text)
+┃🌌 ${prefijo}galaxia-luz (texto)
+┃🌌 ${prefijo}galaxia (texto)
+┃⚡ ${prefijo}glitch (texto)
+┃🎨 ${prefijo}graffiti (texto)
+┃🔩 ${prefijo}metalico (texto)
+┃✨ ${prefijo}brillante (texto)
+┃🐾 ${prefijo}mascota (texto)
+┃🐉 ${prefijo}fuegodragon (texto)
+┃💖 ${prefijo}oro-rosa (texto)
+┃🎯 ${prefijo}pubgavatar (texto)
+┃🎯 ${prefijo}ffavatar (texto)
+┃👾 ${prefijo}amongus (texto)
+┃🦸 ${prefijo}comics (texto)
+┃🎮 ${prefijo}lolavatar (texto)
+┃⚰️ ${prefijo}cementerio (texto)
+┃🩸 ${prefijo}sangre (texto)
+┃🦇 ${prefijo}murcielago (texto)
+┃🛡️ ${prefijo}titanio (texto)
+┃🧽 ${prefijo}borrador (texto)
+┃🎃 ${prefijo}halloween (texto)
+┃❄️ ${prefijo}nieve (texto)
+┃🇺🇸 ${prefijo}america (texto)
+┃🌟 ${prefijo}mascotaneon (texto)
+┃🌫️ ${prefijo}dobleexposicion (texto)
+┃🛠️ ${prefijo}metal (texto)
+┃💥 ${prefijo}3dcrack (texto)
+┃🌈 ${prefijo}colorido (texto)
+┃🎈 ${prefijo}globo (texto)
+┃🌈 ${prefijo}multicolor (texto)
+┃🎨 ${prefijo}pinturagraffiti (texto)
+┃🎨 ${prefijo}estilograffiti (texto)
+┃❄️ ${prefijo}congelado (texto)
+┃✍️ ${prefijo}ligaduras (texto)
+┃🎨 ${prefijo}acuarela (texto)
+┃🏖️ ${prefijo}playa-verano (texto)
+┃☁️ ${prefijo}cielonublado (texto)
+┃🖥️ ${prefijo}estilotecnico (texto)
+┃👑 ${prefijo}real (texto)
+┃🎆 ${prefijo}fuegosartificiales (texto)
+┃⚙️ ${prefijo}mascotametal (texto)
 ╰━━━━━━━━━━━━━━━━━━━━━━━✦​​​​
 `;
 };
 
 exports.alteradores = (prefix, NomeDoBot, sender, NickDono, packname) => {
 return`╭═══════════════🎨═══════════════╮  
-       🌟 **MENU ALTERADORES** 🌟  
+       🌟 **MENÚ ALTERADORES** 🌟  
 ╰═══════════════════════════════╯  
 
 ╭━━━👾📜━━━╮  
 📌 **Bot:** *${NickDono}* 
-👤 **Usuário:** *${NomeDoBot}*   
-🔖 **Versão:** *4.0.0*  
-👑 **Dono:***@${sender.split("@")[0]}*
+👤 **Usuario:** *${NomeDoBot}*   
+🔖 **Versión:** *4.0.0*  
+👑 **Dueño:***@${sender.split("@")[0]}*
 ╰━━━👾📜━━━╯  
 
-🎥 **ALTERAR VÍDEO** 🎥  
+🎥 **ALTERAR VIDEO** 🎥  
 ╭───────────────╮  
-🎬 ${prefix}Videolento (marca)  
-🎥 ${prefix}Videorapido (marca)  
-🔄 ${prefix}Videocontrario (marca)  
+🎬 ${prefix}VideoLento (mencionar)  
+🎥 ${prefix}VideoRapido (mencionar)  
+🔄 ${prefix}VideoContrario (mencionar)  
 ╰───────────────╯  
 
-🎵 **ALTERAR ÁUDIO** 🎵  
+🎵 **ALTERAR AUDIO** 🎵  
 ╭───────────────╮  
-🐌 ${prefix}Audiolento (marca)  
-⚡ ${prefix}Audiorapido (marca)  
-🎚️ ${prefix}Grave (marca)  
-🎛️ ${prefix}Grave2 (marca)  
-🐿️ ${prefix}Esquilo (marca)  
-💥 ${prefix}Estourar (marca)  
-🎶 ${prefix}Bass (marca)  
-🎵 ${prefix}Bass2 (marca)  
-👦 ${prefix}Vozmenino (marca)  
+🐌 ${prefix}AudioLento (mencionar)  
+⚡ ${prefix}AudioRapido (mencionar)  
+🎚️ ${prefix}Grave (mencionar)  
+🎛️ ${prefix}Grave2 (mencionar)  
+🐿️ ${prefix}Ardilla (mencionar)  
+💥 ${prefix}Explotar (mencionar)  
+🎶 ${prefix}Bass (mencionar)  
+🎵 ${prefix}Bass2 (mencionar)  
+👦 ${prefix}VozNiño (mencionar)  
 ╰───────────────╯  
 
-✨ **${NomeDoBot} está pronto para você!** ✨
+✨ **${NomeDoBot} está listo para ti!** ✨
 `;
 };
 
 exports.menuprem = (isCmdPremium, prefix, NomeDoBot, sender, NickDono, packname, capitalizeFirstLetter) => { 
 return `╭═══════════════════ ⪩  
-╰╮✨🤖き⃟✰𝐌𝐄𝐍𝐔-𝐏𝐑𝐄𝐌𝐈𝐔𝐌✰⃟⃟き  
+╰╮✨🤖き⃟✰MENÚ-PREMIUM✰⃟⃟き  
 ╭┤⭐ ⋟ Bot: *${NickDono}* 
-┃│👤 ⋟ Usuário: *${NomeDoBot}*   
-┃│⚙️ ⋟ Minha Versão: *4.0.0*  
-┃│👑 ⋟ Dono:*@${sender.split("@")[0]}*
+┃│👤 ⋟ Usuario: *${NomeDoBot}*   
+┃│⚙️ ⋟ Versión: *4.0.0*  
+┃│👑 ⋟ Dueño:*@${sender.split("@")[0]}*
 ┃╰══ ⪨  
 ╰╦══════════════════ ⪨  
-╭┤🔒き⃟✰𝐂𝐌𝐃𝐒-𝐏𝐑𝐄𝐌𝐈𝐔𝐌✰⃟⃟き  
+╭┤🔒き⃟✰COMANDOS-PREMIUM✰⃟⃟き  
 ${isCmdPremium.map((cmd, index) => `┃│✨ ⋟ ${prefix + capitalizeFirstLetter(cmd)}`).join('\n')}  
 ┃╰══ ⪨  
 ╰═══════════════════ ⪨`;
@@ -460,71 +465,71 @@ ${isCmdPremium.map((cmd, index) => `┃│✨ ⋟ ${prefix + capitalizeFirstLett
 exports.brincadeiras = (prefix, NomeDoBot, sender, NickDono, packname) => {
 return `​​​​​
 ╭━━━━━━━━━━━━━━━━━━━━━
-┃✧✰ 𝐌𝐄𝐍𝐔-𝐁𝐑𝐈𝐍𝐂𝐀𝐃𝐄𝐈𝐑𝐀𝐒 ✰✧
+┃✧✰ MENÚ-JUEGOS ✰✧
 ╰━ ⠀⣿ Bot:${NomeDoBot}
-⠀⠀⠀⣿ Usuário:@${sender.split("@")[0]}
-⠀⠀⠀⣿ Versão:4.0.0
-⠀⠀⠀⣿ Dono:${NickDono}
+⠀⠀⠀⣿ Usuario:@${sender.split("@")[0]}
+⠀⠀⠀⣿ Versión:4.0.0
+⠀⠀⠀⣿ Dueño:${NickDono}
 ╰━━━━━━━━━━━━━━━━━━━━━
 
-╭⣿✧ 𝐉𝐎𝐆𝐎𝐒 ✧
-┃ 🌟 ${prefix}Jogodavelha (@Marcar)
-┃ 🍷 ${prefix}Eununca (Eu nunca, eu já?)
-┃ ✨ ${prefix}Ppt (Pedra/Papel/Tesoura)
+╭⣿✧ JUEGOS ✧
+┃ 🌟 ${prefix}Tresenraya (@mencionar)
+┃ 🍷 ${prefix}Yonjamas (Yo nunca, ¿yo sí?)
+┃ ✨ ${prefix}Ppt (Piedra/Papel/Tijera)
 ╰━━━━━━━━━━━━━━━━━━━━━
 
-╭⣿✧ 𝐈𝐍𝐓𝐄𝐑𝐀𝐓𝐈𝐕𝐎𝐒 ✧
-┃ 💥 ${prefix}Gay (marca (@))
-┃ 👑 ${prefix}Feio (marca (@))
-┃ 💔 ${prefix}Corno (marca (@))
-┃ 👀 ${prefix}Vesgo (marca (@))
-┃ 🍻 ${prefix}Bebado (marca (@))
-┃ 😘 ${prefix}Gostoso (marca (@))
-┃ 💃 ${prefix}Gostosa (marca (@))
-┃ 💋 ${prefix}Beijo (marca (@))
-┃ 🔪 ${prefix}Matar (marca (@))
-┃ 💥 ${prefix}Tapa (marca (@))
-┃ 👢 ${prefix}Chute (marca (@))
-┃ 🍀 ${prefix}Sorte (marca (@))
-┃ 🐕 ${prefix}Dogolpe (marca (@))
-┃ 🪖 ${prefix}Nazista (marca (@))
-┃ ✨ ${prefix}Chance (fale algo)
-┃ 🌹 ${prefix}Surubão (Quantidade)
-┃ 💖 ${prefix}Casal (Casal do grupo)
-┃ 🔮 ${prefix}Quando (Perguntar)
-┃ ☠️ ${prefix}Death (Nome)
+╭⣿✧ INTERACTIVOS ✧
+┃ 💥 ${prefix}Gay (mencionar (@))
+┃ 👑 ${prefix}Feo (mencionar (@))
+┃ 💔 ${prefix}Cornudo (mencionar (@))
+┃ 👀 ${prefix}Bizco (mencionar (@))
+┃ 🍻 ${prefix}Borracho (mencionar (@))
+┃ 😘 ${prefix}Rico (mencionar (@))
+┃ 💃 ${prefix}Rica (mencionar (@))
+┃ 💋 ${prefix}Beso (mencionar (@))
+┃ 🔪 ${prefix}Matar (mencionar (@))
+┃ 💥 ${prefix}Bofetada (mencionar (@))
+┃ 👢 ${prefix}Patada (mencionar (@))
+┃ 🍀 ${prefix}Suerte (mencionar (@))
+┃ 🐕 ${prefix}GolpePerro (mencionar (@))
+┃ 🪖 ${prefix}Nazista (mencionar (@))
+┃ ✨ ${prefix}Chance (di algo)
+┃ 🌹 ${prefix}Fiesta (cantidad)
+┃ 💖 ${prefix}Pareja (pareja del grupo)
+┃ 🔮 ${prefix}Cuando (preguntar)
+┃ ☠️ ${prefix}Muerte (nombre)
 ╰━━━━━━━━━━━━━━━━━━━━━
 
-╭⣿✧ 𝐓𝐎𝐏 𝟓 - 𝐑𝐀𝐍𝐊 ✧
-┃ 🌈 ${prefix}Rankgay (5 gays)
-┃ 🐉 ${prefix}Rankgado (5 gados)
-┃ 💔 ${prefix}Rankcorno (5 cornos)
-┃ 🔥 ${prefix}Rankgostoso (5 gostosos)
-┃ 💎 ${prefix}Rankgostosa (5 gostosas)
-┃ 🕊️ ${prefix}Ranknazista (5 nazistas)
-┃ 🎮 ${prefix}Rankotakus (5 otakus)
-┃ 🏆 ${prefix}Rankpau (5 pauzudos)
+╭⣿✧ TOP 5 - RANKING ✧
+┃ 🌈 ${prefix}Rankgay (top 5 gays)
+┃ 🐉 ${prefix}Rankgado (top 5 gados)
+┃ 💔 ${prefix}Rankcornudo (top 5 cornudos)
+┃ 🔥 ${prefix}Rankrico (top 5 ricos)
+┃ 💎 ${prefix}Rankrica (top 5 ricas)
+┃ 🕊️ ${prefix}Ranknazista (top 5 nazis)
+┃ 🎮 ${prefix}Rankotaku (top 5 otakus)
+┃ 🏆 ${prefix}Rankculo (top 5 culos)
 ╰━━━━━━━━━━━━━━━━━━━━━​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​`;
 };
 
 exports.efeitos = (prefix, NomeDoBot, sender, NickDono, packname) => {
-return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════❖ *ＭＥＮＵ ＤＥ ＥＦＥＩＴＯＳ* ❖═══════╮  
+return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════❖ *MENÚ DE EFECTOS* ❖═══════╮  
 ┃ 🤖 Bot: *${NickDono}* 
-┃ 👤 Usuária: *${NomeDoBot}*   
-┃ 🛠️ Versão: *4.0.0*  
-┃ 👑 Dono:*@${sender.split("@")[0]}*
+┃ 👤 Usuario: *${NomeDoBot}*   
+┃ 🛠️ Versión: *4.0.0*  
+┃ 👑 Dueño:*@${sender.split("@")[0]}*
 ╰═══════════════════════════════╯  
 
-╭───✧ *COMANDOS DISPONÍVEIS* ✧───╮    
-┃ 🎨 *Enhance:*  
-┃    ➤ ${prefix}Enhance (marcar)-(img)  
+╭───✧ *COMANDOS DISPONIBLES* ✧───╮    
+┃ 🎨 *Mejorar:*  
+┃    ➤ ${prefix}Mejorar (mencionar)-(img)  
 ┃  
-┃ 🖌️ *Recolor:*  
-┃    ➤ ${prefix}Recolor (marcar)-(img)  
+┃ 🖌️ *Recolorear:*  
+┃    ➤ ${prefix}Recolorear (mencionar)-(img)  
 ┃  
-┃ 🌫️ *Dehaze:*  
-┃    ➤ ${prefix}Dehaze (marcar)-(img)  
+┃ 🌫️ *Quitar neblina:*  
+┃    ➤ ${prefix}QuitarNeblina (mencionar)-(img)  
 ╰───────────────────────────────╯  
 
-⚡ *Aplique os efeitos e brilhe!* ⚡​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​`;
+⚡ *Aplica los efectos y brilla!* ⚡​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​`;
 };
