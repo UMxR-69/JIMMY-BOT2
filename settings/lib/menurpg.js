@@ -1,131 +1,132 @@
 const moment = require('moment-timezone');
-const imageConfig = require('./Ima/Imagens.json');
+const configuracionImagenes = require('./Ima/Imagens.json');
 
-let ultimaImagem = null;
+let ultimaImagen = null;
 
-function pegarImagemAleatoria(imagens) {
-    let novaImagem;
+// Selecciona una imagen aleatoria que no sea igual a la anterior
+function obtenerImagenAleatoria(imagenes) {
+    let nuevaImagen;
     do {
-        novaImagem = imagens[Math.floor(Math.random() * imagens.length)];
-    } while (novaImagem === ultimaImagem && imagens.length > 1);
-    ultimaImagem = novaImagem;
-    return novaImagem;
+        nuevaImagen = imagenes[Math.floor(Math.random() * imagens.length)];
+    } while (nuevaImagen === ultimaImagen && imagenes.length > 1);
+    ultimaImagen = nuevaImagen;
+    return nuevaImagen;
 }
 
-module.exports = (prefix, NomeDoBot, sender) => {
+module.exports = (prefijo, nombreDelBot, remitente) => {
     if (
-        !imageConfig ||
-        !imageConfig.brincadeira ||
-        !Array.isArray(imageConfig.brincadeira.mainImage)
+        !configuracionImagenes ||
+        !configuracionImagenes.brincadeira ||
+        !Array.isArray(configuracionImagenes.brincadeira.mainImage)
     ) {
-        throw new Error("mainImage não disponível no arquivo de configuração.");
+        throw new Error("mainImage no está disponible en el archivo de configuración.");
     }
 
-    const imagens = imageConfig.brincadeira.mainImage;
+    const imagenes = configuracionImagenes.brincadeira.mainImage;
 
-    if (imagens.length === 0) {
-        throw new Error("Nenhuma imagem disponível para o menu RPG.");
+    if (imagenes.length === 0) {
+        throw new Error("No hay imágenes disponibles para el menú RPG.");
     }
 
-    const imagemAleatoria = pegarImagemAleatoria(imagens);
-    const thumbnailAdUrl = 'https://xatimg.com/image/47FHqq0plr88.jpg';
-    const linkOficial = 'https://tedzinho.online';
-    const horarioAtual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
-    const dataAtual = moment().format('DD/MM/YYYY');
+    const imagenAleatoria = obtenerImagenAleatoria(imagenes);
+    const miniaturaAdUrl = 'https://xatimg.com/image/47FHqq0plr88.jpg';
+    const sitioOficial = 'https://tedzinho.online';
+    const horaActual = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
+    const fechaActual = moment().format('DD/MM/YYYY');
 
     const textoMenuRPG = `
-╭── 🎮 MENU RPG ──╮
-│ 📅 Data: ${dataAtual}
-│ ⏰ Hora: ${horarioAtual}
-│ 👤 Usuário: @${sender.split("@")[0]}
+╭── 🎮 MENÚ RPG ──╮
+│ 📅 Fecha: ${fechaActual}
+│ ⏰ Hora: ${horaActual}
+│ 👤 Usuario: @${remitente.split("@")[0]}
 ╰────────────────────╯
 
 ━━━━━━━━━━━━━━━
-📋 INICIAIS
+📋 INICIO
 ━━━━━━━━━━━━━━━
-📌 Registrar → ${prefix}registrorpg  
-🛍️ Comprar Escova → ${prefix}comprarescova  
-🪥 Escovar os Dentes → ${prefix}escovar  
+📌 Registrar → ${prefijo}registrorpg  
+🛍️ Comprar Cepillo → ${prefijo}comprarescova  
+🪥 Cepillarse los Dientes → ${prefijo}escovar  
 
 ━━━━━━━━━━━━━━━
-💼 TRABALHO & PROGRESSO
+💼 TRABAJO Y PROGRESO
 ━━━━━━━━━━━━━━━
-💼 Trabalhar → ${prefix}trabalhar  
-📊 Status Geral → ${prefix}statusrpg  
+💼 Trabajar → ${prefijo}trabalhar  
+📊 Estado General → ${prefijo}statusrpg  
 
 ━━━━━━━━━━━━━━━
-🏦 BANCO & FINANÇAS
+🏦 BANCO Y FINANZAS
 ━━━━━━━━━━━━━━━
-🏦 Abrir Banco → ${prefix}abrirbanco  
-💳 Minha Conta → ${prefix}minhaconta  
-💸 Operações Bancárias:  
-💰 Sacar → ${prefix}sacarrpg  
-💼 Depositar → ${prefix}depositarrpg  
-📊 Saldo → ${prefix}saldorpg  
-📈 Rendimentos → ${prefix}rendimentorpg  
-🔁 Transferência → ${prefix}transferirrpg  
-🏅 Ranking de Bancos → ${prefix}rankbancos  
-🏛️ Banco Central → ${prefix}bancorpg  
+🏦 Abrir Banco → ${prefijo}abrirbanco  
+💳 Mi Cuenta → ${prefijo}minhaconta  
+💸 Operaciones Bancarias:  
+💰 Retirar → ${prefijo}sacarrpg  
+💼 Depositar → ${prefijo}depositarrpg  
+📊 Saldo → ${prefijo}saldorpg  
+📈 Rendimientos → ${prefijo}rendimentorpg  
+🔁 Transferencia → ${prefijo}transferirrpg  
+🏅 Ranking Bancario → ${prefijo}rankbancos  
+🏛️ Banco Central → ${prefijo}bancorpg  
 
 ━━━━━━━━━━━━━━━
-🛍️ LOJAS & LUXO
+🛍️ TIENDAS Y LUJO
 ━━━━━━━━━━━━━━━
-🏬 Loja de Luxo → ${prefix}lojadeluxorpg  
-💎 Comprar de Luxo → ${prefix}comprarrpgdeluxo  
+🏬 Tienda de Lujo → ${prefijo}lojadeluxorpg  
+💎 Comprar de Lujo → ${prefijo}comprarrpgdeluxo  
 
 ━━━━━━━━━━━━━━━
-🚗 CARROS & GARAGEM
+🚗 COCHES Y GARAJE
 ━━━━━━━━━━━━━━━
-🚗 Meus Carros → ${prefix}meuscarros  
-🅿️ Garagem → ${prefix}garagemrpg  
-💳 Pagar IPVA → ${prefix}pagarpva  
+🚗 Mis Coches → ${prefijo}meuscarros  
+🅿️ Garaje → ${prefijo}garagemrpg  
+💳 Pagar Impuestos → ${prefijo}pagarpva  
 
 ━━━━━━━━━━━━━━━
-🏠 CASAS & IMÓVEIS
+🏠 CASAS E INMUEBLES
 ━━━━━━━━━━━━━━━
-🏠 Loja de Casas → ${prefix}lojacasasrpg  
-🏡 Comprar Casa → ${prefix}comprarrpgcasa  
-🏘️ Minhas Casas → ${prefix}minhascasasrpg  
+🏠 Tienda de Casas → ${prefijo}lojacasasrpg  
+🏡 Comprar Casa → ${prefijo}comprarrpgcasa  
+🏘️ Mis Casas → ${prefijo}minhascasasrpg  
 
 ━━━━━━━━━━━━━━━
-🌱 MODOS DE VIDA
+🌱 ESTILOS DE VIDA
 ━━━━━━━━━━━━━━━
-🌍 Ver Modos de Vida → ${prefix}modosvida  
-🎯 Escolher Vida → ${prefix}escolhervida  
+🌍 Ver Estilos de Vida → ${prefijo}modosvida  
+🎯 Elegir Estilo de Vida → ${prefijo}escolhervida  
 
 ━━━━━━━━━━━━━━━
-🎲 AÇÃO & RISCO
+🎲 ACCIÓN Y RIESGO
 ━━━━━━━━━━━━━━━
-🎰 Casa de Apostas → ${prefix}apostarrpg  
-🕵️ Assaltar Jogador → ${prefix}assaltarrpg  
-🪪 Pagar Fiança → ${prefix}pagarfianca  
+🎰 Casa de Apuestas → ${prefijo}apostarrpg  
+🕵️ Robar Jugador → ${prefijo}assaltarrpg  
+🪪 Pagar Fianza → ${prefijo}pagarfianca  
 
 ━━━━━━━━━━━━━━━
-💸 PIX & INVESTIMENTOS
+💸 PIX E INVERSIÓN
 ━━━━━━━━━━━━━━━
-💠 Meu Pix → ${prefix}Meupix  
-📤 Fazer Pix → ${prefix}fazerpix  
+💠 Mi Pix → ${prefijo}Meupix  
+📤 Enviar Pix → ${prefijo}fazerpix  
 
 ━━━━━━━━━━━━━━━
-🚪 SAIR DO RPG
+🚪 SALIR DEL RPG
 ━━━━━━━━━━━━━━━
-❌ Sair do RPG → ${prefix}sairrpg  
+❌ Salir del RPG → ${prefijo}sairrpg  
 `;
 
     return {
-        imagem: {
-            image: { url: imagemAleatoria },
+        imagen: {
+            image: { url: imagenAleatoria },
             caption: textoMenuRPG,
             contextInfo: {
-                mentionedJid: [sender],
+                mentionedJid: [remitente],
                 externalAdReply: {
                     showAdAttribution: true,
                     mediaType: 1,
                     mediaUrl: null,
-                    title: `⚡️ ${NomeDoBot} ⚡️`,
-                    body: `ミ★ 》 𝘴𝘪𝘵𝘦 𝘰𝘧𝘤《★彡`,
-                    sourceUrl: linkOficial,
-                    thumbnailUrl: thumbnailAdUrl,
+                    title: `⚡️ ${nombreDelBot} ⚡️`,
+                    body: `ミ★ 》 Sitio oficial 《★彡`,
+                    sourceUrl: sitioOficial,
+                    thumbnailUrl: miniaturaAdUrl,
                 },
             },
         },
@@ -136,3 +137,4 @@ module.exports = (prefix, NomeDoBot, sender) => {
         }
     };
 };
+
